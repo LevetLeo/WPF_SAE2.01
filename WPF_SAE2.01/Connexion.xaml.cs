@@ -19,6 +19,9 @@ namespace WPF_SAE2._01
     /// </summary>
     public partial class Window1 : Window
     {
+        private bool TBlogin_isDefaultText = true;
+        private bool Lpassword_isShown = true;
+
         public Window1()
         {
             InitializeComponent();
@@ -31,7 +34,45 @@ namespace WPF_SAE2._01
             page.Show();
             this.Close();
         }
-        
-        
+
+        private void TBlogin_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (TBlogin_isDefaultText)
+            {
+                TBLogin.Text = string.Empty;
+                TBLogin.Foreground = new SolidColorBrush(Colors.Black);
+                TBlogin_isDefaultText = false;
+                TBLogin.FontWeight = FontWeights.Thin;
+            }
+        }
+
+        private void TBlogin_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TBLogin.Text))
+            {
+                TBLogin.Text = "login";
+                TBLogin.Foreground = new SolidColorBrush(Colors.Black);
+                TBLogin.Foreground.Opacity = 0.5;
+                TBlogin_isDefaultText = true;
+            }
+        }
+
+        private void TBpassword_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (Lpassword_isShown)
+            {
+                Lpassword.Opacity = 0;
+                Lpassword_isShown = false;
+            }
+        }
+
+        private void TBpassword_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TBPassword.Password))
+            {
+                Lpassword.Opacity = 1;
+                Lpassword_isShown = true;
+            }
+        }
     }
 }
