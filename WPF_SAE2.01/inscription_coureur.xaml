@@ -1,0 +1,55 @@
+﻿<Window x:Class="WPF_SAE2._01.inscription_coureur"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_SAE2._01"
+        mc:Ignorable="d"
+        Title="inscription_coureur" Height="530" Width="400">
+    <Grid Background="#FFD843D2">
+        <Rectangle RadiusX="20" RadiusY="20" Margin="50,30,30,0" Fill="#19000000" Height="457" VerticalAlignment="Top" />
+        <Rectangle RadiusX="20" RadiusY="20" Margin="40,20,40,0" Fill="#FFFF81FA" Height="457" VerticalAlignment="Top" />
+        
+        <StackPanel Margin="60,10,60,0">
+            <Label Content="Saisissez le nom du coureur"/>
+            <TextBox x:Name="TBNom"/>
+            <Label Content="Saisissez le prénom du coureur"/>
+            <TextBox x:Name="TBPreom"/>
+            <Label Content="Saisissez la ville coureur"/>
+            <TextBox x:Name="TBVille"/>
+            <Label Content="Selectionnez le sexe du coureur"/>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton Content="Homme"/>
+                <RadioButton Content="Femme"/>
+            </StackPanel>
+            <Label Content="dans quel Fédération le coureur est inscrit?"/>
+            <ComboBox>
+                <ComboBoxItem>Federation Francaise Atlétisme</ComboBoxItem>
+                <ComboBoxItem>Federation Francaise Cyclisme</ComboBoxItem>
+                <ComboBoxItem>Federation Francaise Tennix</ComboBoxItem>
+                <ComboBoxItem>Federation Francaise Golf</ComboBoxItem>
+            </ComboBox>
+            <Label Content="Saisissez le numero de license du coureur"/>
+            <TextBox x:Name="TBNum"/>
+            <Label Content="dans quel Club le coureur est inscrit?"/>
+            <ComboBox>
+                <ComboBoxItem>Club IUT</ComboBoxItem>
+                <ComboBoxItem>Club USMB</ComboBoxItem>
+                <ComboBoxItem>Club Annecy</ComboBoxItem>
+                <ComboBoxItem>Club Chambéry</ComboBoxItem>
+                <ComboBoxItem>Club du soir</ComboBoxItem>
+            </ComboBox>
+            <CheckBox Content="veut temps de passage aux bornes" Margin="0,5,0,0"/>
+            <Label Content="(optionel) Donner numero de téléphone"/>
+            <TextBox x:Name="TBNumTel"/>
+            <Button Content="Valider" Margin="60,10,60,0" Background="#00DDDDDD" BorderBrush="#00707070" />
+            <StackPanel.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="Margin" Value="0,5,0,0" />
+                </Style>
+            </StackPanel.Resources>
+        </StackPanel>
+        <Rectangle Fill="#19000000" Margin="120,438,120,0" RadiusX="20" RadiusY="20" Height="20" Width="160" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
