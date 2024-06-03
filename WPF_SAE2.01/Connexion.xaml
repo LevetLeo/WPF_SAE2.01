@@ -5,17 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_SAE2._01"
         mc:Ignorable="d"
-        Title="Window1" Height="400" Width="400">
+
+        Title="Window1" Height="430" Width="400">
     <Grid Background="#FFD843D2">
         <Rectangle RadiusX="20" RadiusY="20" Margin="50,50,30,30" Fill="#19000000" Panel.ZIndex="-2" />
         <Rectangle RadiusX="20" RadiusY="20" Margin="40,40,40,40" Fill="#FFFF81FA" Panel.ZIndex="-1" />
         <StackPanel Margin="40,40,40,40">
             <Label Content="Connexion" FontSize="22" HorizontalAlignment="Center" FontFamily="Britannic Bold" Foreground="#CC000000"  />
-            <TextBox Text="Login" BorderBrush="#00ABADB3" Height="40" FontSize="28" FontFamily="72 Black" Background="Transparent" Foreground="#7F000000" Margin="10,50,0,0" Panel.ZIndex="1"/>
-            <TextBox Text="Password" BorderBrush="#00ABADB3" Height="40" FontSize="28" FontFamily="72 Black" Background="Transparent" Foreground="#7F000000" Margin="10,40,0,0" Panel.ZIndex="1"/>
+            <Grid Height="40" Margin="0,50,0,0">
+                <Rectangle Fill="#FFEC48F5" RadiusY="20" RadiusX="20" MinWidth="20" MinHeight="20" />
+                <TextBox x:Name="TBLogin" Text="Login" BorderBrush="#00ABADB3" Height="40" FontSize="28" FontFamily="72 Black" Background="Transparent" Foreground="#7F000000" Panel.ZIndex="1" Margin="10,2,0,0" GotFocus="TBlogin_GotFocus"  LostFocus="TBlogin_LostFocus"/>
+
+            </Grid>
+            <Grid Height="40" Margin="0,50,0,0">
+                <Rectangle Fill="#FFEC48F5" RadiusY="20" RadiusX="20" MinWidth="20" MinHeight="20" />
+                <Label x:Name="Lpassword" Content="Password" Foreground="#7F000000" FontSize="28" FontFamily="72 Black" Padding="10,5,5,5"/>
+                <PasswordBox x:Name="TBPassword" PasswordChar="." BorderBrush="#00ABADB3" Height="40" FontSize="28" FontFamily="72 Black" Background="Transparent" Foreground="Black" Panel.ZIndex="1" Margin="10,2,0,0" GotFocus="TBpassword_GotFocus"  LostFocus="TBpassword_LostFocus"/>
+                
+
+            </Grid>
             <Button x:Name="butConnexion" Content="Se connecter" Background="#7FFFFFFF" BorderBrush="#00000000" Margin="70,40,70,0" FontSize="18" Click="butConnexion_Click"/>
         </StackPanel>
-        <Rectangle Fill="#FFEC48F5" Margin="40,122,57,222" Panel.ZIndex="-1" />
-        <Rectangle Fill="#FFEC48F5" Margin="40,202,57,142" Panel.ZIndex="-1" />
     </Grid>
 </Window>
