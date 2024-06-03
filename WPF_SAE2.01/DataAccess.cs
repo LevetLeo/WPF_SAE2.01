@@ -41,6 +41,7 @@ namespace WPF_SAE2._01
                 Connexion = new NpgsqlConnection();
                 Connexion.ConnectionString = strConnexion;
                 Connexion.Open();
+                Console.WriteLine("pb de connexion : ");
             }
             catch (Exception e)
             {
@@ -53,6 +54,7 @@ namespace WPF_SAE2._01
             try
             {
                 Connexion.Close();
+                Console.WriteLine("pb à la déconnexion : ");
             }
             catch (Exception e)
             { Console.WriteLine("pb à la déconnexion : " + e); }
