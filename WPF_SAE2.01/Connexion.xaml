@@ -7,6 +7,9 @@
         mc:Ignorable="d"
 
         Title="Window1" Height="430" Width="400">
+    <Window.DataContext>
+        <local: ApplicationData x:Name="data" />
+    </Window.DataContext>
     <Grid Background="#FFD843D2">
         <Rectangle RadiusX="20" RadiusY="20" Margin="50,50,30,30" Fill="#19000000" Panel.ZIndex="-2" />
         <Rectangle RadiusX="20" RadiusY="20" Margin="40,40,40,40" Fill="#FFFF81FA" Panel.ZIndex="-1" />
