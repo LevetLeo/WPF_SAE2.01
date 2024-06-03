@@ -23,5 +23,11 @@ namespace WPF_SAE2._01
         {
             InitializeComponent();
         }
+        private void butValider_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new Coureur();
+            page.Show();
+            this.Close();
+        }
     }
 }
