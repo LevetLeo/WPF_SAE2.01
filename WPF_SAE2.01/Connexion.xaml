@@ -13,6 +13,7 @@
         <local:DataAccess x:Name="data" />
     </Window.DataContext>
     <Grid Background="#FFD843D2">
+        
         <Rectangle
             Margin="50,50,30,30"
             Panel.ZIndex="-2"

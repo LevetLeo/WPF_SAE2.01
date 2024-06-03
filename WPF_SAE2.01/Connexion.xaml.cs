@@ -74,5 +74,10 @@ namespace WPF_SAE2._01
                 Lpassword_isShown = true;
             }
         }
+
+        private void TBLogin_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
