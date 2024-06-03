@@ -384,7 +384,7 @@
                 Background="#19000000"
                 BorderBrush="#00707070"
                 Content="choisir"
-                Foreground="White" />
+                Foreground="White" Click="butCourse_Click" />
             <StackPanel.Resources>
                 <Style TargetType="Label">
                     <Setter Property="Margin" Value="2,2,2,2" />
