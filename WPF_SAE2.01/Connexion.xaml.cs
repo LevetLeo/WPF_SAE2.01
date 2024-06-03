@@ -29,7 +29,7 @@ namespace WPF_SAE2._01
 
         private void butConnexion_Click(object sender, RoutedEventArgs e)
         {
-            ApplicationData.ConnexionBD();
+            data.ConnexionBD();
             var page = new Menu();
             page.Show();
             this.Close();

@@ -18,7 +18,7 @@ namespace WPF_SAE2._01
 
         private ObservableCollection<Coureur> lesCoureurs;
         private NpgsqlConnection connexion = null;   // futur lien à la BD
-        private string ConnectionString;
+        
 
         public ObservableCollection<Coureur> LesCoureurs
         {
@@ -57,7 +57,8 @@ namespace WPF_SAE2._01
         }
         public void ConnexionBD()
         {
-            ConnectionString = "Server=srv-peda-new;" +
+            Connexion = new NpgsqlConnection();
+            Connexion.ConnectionString = "Server=srv-peda-new;" +
                             "port=5433;" +
                             "Database=sae2.01;" +
                             "Search Path = sae2.01Marathon;" +
