@@ -31,7 +31,7 @@ namespace WPF_SAE2._01
         {
             data.ConnexionBD();
 
-            if(TBLogin is not null && TBPassword is not null)
+            //if(TBLogin is CoureurClasse.NomCoureur && TBPassword is not null)
             {
                 var page = new Menu();
                 page.Show();
