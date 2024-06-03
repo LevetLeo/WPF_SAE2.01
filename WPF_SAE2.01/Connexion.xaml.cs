@@ -30,11 +30,20 @@ namespace WPF_SAE2._01
         private void butConnexion_Click(object sender, RoutedEventArgs e)
         {
             data.ConnexionBD();
-            var page = new Menu();
-            page.Show();
+
+            if(TBLogin is not null && TBPassword is not null)
+            {
+                var page = new Menu();
+                page.Show();
+                this.Close();
+            }
+            
+        }
+        public void Fermer()
+        {
+            data.DeconnexionBD();
             this.Close();
         }
-
         private void TBlogin_GotFocus(object sender, RoutedEventArgs e)
         {
             if (TBlogin_isDefaultText)
@@ -75,9 +84,9 @@ namespace WPF_SAE2._01
             }
         }
 
-        private void TBLogin_TextChanged(object sender, TextChangedEventArgs e)
+        private void Grid_ContextMenuClosing(object sender, ContextMenuEventArgs e)
         {
-
+            Fermer();
         }
     }
 }
