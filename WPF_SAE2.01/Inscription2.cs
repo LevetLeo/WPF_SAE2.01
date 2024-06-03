@@ -17,7 +17,14 @@ namespace WPF_SAE2._01
 		public DateTime Temps_Prevue
 		{
 			get { return temps_Prevue; }
-			set { temps_Prevue = value; }
+			set {
+				DateTime dt = (new DateTime(00, 00, 00, 00, 00, 00));
+
+				if (value > dt)
+					temps_Prevue = value;
+				else
+					throw new ArgumentException("erreur Inscription2");
+			}
 		}
 
 
