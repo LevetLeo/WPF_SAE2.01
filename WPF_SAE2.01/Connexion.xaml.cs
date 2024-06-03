@@ -30,8 +30,8 @@ namespace WPF_SAE2._01
         private void butConnexion_Click(object sender, RoutedEventArgs e)
         {
             data.ConnexionBD();
-
-            //if(TBLogin is CoureurClasse.NomCoureur && TBPassword is not null)
+            Agent.Read();
+            //if(TBLogin is Agent.LoginAgent && TBPassword is Agent.MDP_Agent)
             {
                 var page = new Menu();
                 page.Show();
@@ -41,7 +41,7 @@ namespace WPF_SAE2._01
         }
         public void Fermer()
         {
-            data.DeconnexionBD();
+            //data.DeconnexionBD();
             this.Close();
         }
         private void TBlogin_GotFocus(object sender, RoutedEventArgs e)
