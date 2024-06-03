@@ -13,7 +13,12 @@ namespace WPF_SAE2._01
 		public int NumBorne
 		{
 			get { return numBorne; }
-			set { numBorne = value; }
+			set {
+				if (value >= 1 && value <= 5)
+					numBorne = value;
+				else
+					throw new ArgumentException("borne erreur");
+			}
 		}
 
 

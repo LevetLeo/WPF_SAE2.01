@@ -17,7 +17,12 @@ namespace WPF_SAE2._01
 		public int Nb_Km
 		{
 			get { return nb_Km; }
-			set { nb_Km = value; }
+			set 
+			{
+				if (value < 0)
+					throw new ArgumentException("erreur Distance");
+				nb_Km = value; 
+			}
 		}
 
 	}

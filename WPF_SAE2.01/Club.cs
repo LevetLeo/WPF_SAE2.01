@@ -8,6 +8,7 @@ namespace WPF_SAE2._01
 {
     public class Club
     {
+		public enum CodeClub { C1 =0, C2 =1, C3=2,C4=3, C5=4 }
 		private string nomClub;
 
 		public string NomClub
@@ -16,12 +17,15 @@ namespace WPF_SAE2._01
 			set { nomClub = value; }
 		}
 
-		private int codeClub;
+		private CodeClub codeCluB;
 
-		public int CodeClub
+		public CodeClub CodeCluB
 		{
-			get { return codeClub; }
-			set { codeClub = value; }
+			get { return codeCluB; }
+			set 
+			{				
+				codeCluB = value; 
+			}
 		}
 
 	}

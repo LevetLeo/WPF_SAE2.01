@@ -17,9 +17,9 @@ namespace WPF_SAE2._01
 			set { numCourse = value; }
 		}
 
-		private double heureDepartCourse;
+		private DateTime heureDepartCourse;
 
-		public double HeureDepartCourse
+		public DateTime HeureDepartCourse
 		{
 			get { return heureDepartCourse; }
 			set { heureDepartCourse = value; }
@@ -30,7 +30,12 @@ namespace WPF_SAE2._01
 		public double PrixInscriptionCourse
 		{
 			get { return prixInscriptionCourse; }
-			set { prixInscriptionCourse = value; }
+			set {
+				if (value < 0)
+					prixInscriptionCourse = value;
+				else
+					throw new ArgumentException("erreur coureur prix");
+			}
 		}
 
 

@@ -55,7 +55,12 @@ namespace WPF_SAE2._01
 		public char SexeCoureur
 		{
 			get { return sexeCoureur; }
-			set { sexeCoureur = value; }
+			set {
+				if (value is 'H' || value is 'F')
+					sexeCoureur = value;
+				else
+					throw new ArgumentException("erreur Coureur");
+			}
 		}
 
 		private int licenceCoureur;
