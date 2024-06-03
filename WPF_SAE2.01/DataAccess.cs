@@ -11,9 +11,14 @@ namespace WPF_SAE2._01
     public class DataAccess
     {
         private static DataAccess instance;
-        private static string strConnexion = "Server=srv-peda-new;port=5433;"
-        + "Database=;Search Path=;uid=;password=;";
-        private DataAccess()
+        private static string strConnexion = "Server=srv-peda-new;" +
+                            "port=5433;" +
+                            "Database=SAE201Marathon;" +
+                            "Search Path =SchemaSAE201;" +
+                            "uid=guzmanma;" +
+                            "password=VnZlZ5;";
+
+        public DataAccess()
         {
             ConnexionBD();
         }
@@ -41,7 +46,7 @@ namespace WPF_SAE2._01
                 Connexion = new NpgsqlConnection();
                 Connexion.ConnectionString = strConnexion;
                 Connexion.Open();
-                Console.WriteLine("pb de connexion : ");
+                Console.WriteLine("connexion : ");
             }
             catch (Exception e)
             {
@@ -54,7 +59,7 @@ namespace WPF_SAE2._01
             try
             {
                 Connexion.Close();
-                Console.WriteLine("pb à la déconnexion : ");
+                Console.WriteLine("déconnexion : ");
             }
             catch (Exception e)
             { Console.WriteLine("pb à la déconnexion : " + e); }

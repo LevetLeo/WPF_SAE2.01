@@ -10,7 +10,7 @@
     Height="430"
     mc:Ignorable="d">
     <Window.DataContext>
-        <local:ApplicationData x:Name="data" />
+        <local:DataAccess x:Name="data" />
     </Window.DataContext>
     <Grid Background="#FFD843D2">
         <Rectangle

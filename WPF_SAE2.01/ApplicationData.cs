@@ -46,25 +46,22 @@ namespace WPF_SAE2._01
             }
         }
 
+        
+
+       public ApplicationData()
+       {
+
+           this.ConnexionBD();
+           this.Read();
+
+       }
 
 
-        public ApplicationData()
-        {
-
-            this.ConnexionBD();
-            this.Read();
-
-        }
         public void ConnexionBD()
         {
-            Connexion = new NpgsqlConnection();
-            Connexion.ConnectionString = "Server=srv-peda-new;" +
-                            "port=5433;" +
-                            "Database=sae2.01;" +
-                            "Search Path = sae2.01Marathon;" +
-                            "uid=guzmanma;" +
-                            "password=VnZlZ5;";
+            //data.ConnexionBD();
         }
+       
         public void Read()
         {
             this.LesCoureurs = new ObservableCollection<Coureur>();
