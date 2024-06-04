@@ -42,15 +42,17 @@ namespace WPF_SAE2._01
         }
 
         public static ObservableCollection<Agent> Read()
-		{
-
+        {
             ObservableCollection<Agent> lesAgents = new ObservableCollection<Agent>();
-            String sql = "SELECT num_agent,login_agent, mdp_agent FROM agent";
+            String sql = "SELECT num_agent, login_agent, mdp_agent FROM agent";
             DataTable dt = DataAccess.Instance.GetData(sql);
             foreach (DataRow res in dt.Rows)
             {
-				Agent nouveau = new Agent(int.Parse(res["numAgent"].ToString()),res["login_agent"].ToString(),res["mdp_agent"].ToString());
-                
+                Agent nouveau = new Agent(
+                    int.Parse(res["num_agent"].ToString()),
+                    res["login_agent"].ToString(),
+                    res["mdp_agent"].ToString()
+                );
                 lesAgents.Add(nouveau);
             }
             return lesAgents;
