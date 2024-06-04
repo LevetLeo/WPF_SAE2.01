@@ -167,25 +167,26 @@ namespace WPF_SAE2._01
 
             return lesCoureurs;
         }
-        /*public int Create(Coureur c)
+        public int Create(CoureurClasse c)
         {
-            String sql = $"insert into client (nom,prenom,email,genre,telephone, dateNaissance)"
-            + $" values ('{c.Nom}','{c.Prenom}','{c.Email}'"
-            + $",'{(char)c.Genre}','{c.Telephone}', "
-            + $"'{c.DateNaissance.Year}-{c.DateNaissance.Month}-{c.DateNaissance.Day}'); ";
+            String sql = $"insert into Coureur(nomCoureur, prenomCoureur,villeCoureur,sexeCoureur, LicenceCoureur,ClubCoureur,FederationCoureur) "
+            + $" values ('{c.NomCoureur}','{c.PrenomCoureur}','{c.villeCoureur}'"
+            + $"'{c.SexeCoureur}',{c.LicenceCoureur}'"
+            + $"'{c.CodeClub}','{c.IdFederation}');";
             try
             {
-                SqlCommand cmd = new SqlCommand(sql, Connexion);
+                int nb;
+                // a corriger
+                SqlCommand cmd = new SqlCommand(sql,DataAccess.Connexion);
                 nb = cmd.ExecuteNonQuery();
                 return nb;
                 //nb permet de connaître le nb de lignes affectées par un insert, update, delete
             }
             catch (Exception sqlE)
             {
-                Console.WriteLine("pb de requete : " + sql + "" + sqlE);
-                // juste pour le debug : à transformer en MsgBox 
+                MessageBox.Show("pb de requete :" + sql + " " + sqlE);
                 return 0;
             }
-        }*/
+        }
     }
 }

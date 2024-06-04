@@ -27,8 +27,8 @@ namespace WPF_SAE2._01
         private void butValider_Click(object sender, RoutedEventArgs e)
         {
             char sexe;
-            string federation;
-            string codeClub;
+            Club.CodeClub federation;
+            Federation.codeFederation codeClub;
             if(TBNom.Text.ToString() is not null && TBPreom.Text.ToString() is not null && TBVille.Text.ToString() is not null && (RDFemme.IsChecked == true || RDHomme.IsChecked == true) && TBNum.Text.ToString() is not null && (ComboBoxFFA.IsSelected == true || ComboBoxFFC.IsSelected == true || ComboBoxFFG.IsSelected == true || ComboBoxFFT.IsSelected == true) && (ComboBoxIUT.IsSelected == true || ComboBoxUSMB.IsSelected ==true || ComboBoxAnnecy.IsSelected==true || ComboBoxChambery.IsSelected == true || ComboBoxSoir.IsSelected == true))
             {
                 if (RDFemme.IsChecked == true)
@@ -39,32 +39,35 @@ namespace WPF_SAE2._01
                     sexe = 'H';
                 if (ComboBoxFFA.IsSelected == true)
                 {
-                    federation = "1";
+                    codeClub = Federation.codeFederation.FFA;
                 }
                 else if (ComboBoxFFT.IsSelected == true)
                 {
-                    federation = "2";
+                    codeClub = Federation.codeFederation.FFT;
                 }
                 else if (ComboBoxFFG.IsSelected == true)
                 {
-                    federation = "3";
+                    codeClub = Federation.codeFederation.FFG;
                 }
                 else
-                    federation = "0";
+                    codeClub = Federation.codeFederation.FFC;
+
+
                 if (ComboBoxIUT.IsSelected == true)
-                    codeClub = "C1";
+                    federation = Club.CodeClub.C1;
                 else if (ComboBoxUSMB.IsSelected == true)
-                    codeClub = "C2";
+                    federation = Club.CodeClub.C2;
                 else if (ComboBoxSoir.IsSelected == true)
-                    codeClub = "C3";
+                    federation = Club.CodeClub.C3;
                 else if(ComboBoxAnnecy.IsSelected == true)
-                { codeClub = "C4"; }
+                    federation = Club.CodeClub.C4; 
                 else
-                    codeClub = "C5";
-                /*Club club1 = new Club(federation);
-                Federation federation1 = new Federation(federation);
-                CoureurClasse coureur = new CoureurClasse(TBNom.Text.ToString,TBPreom.Text.ToString(),TBVille.Text.ToString(),sexe,int.Parse(TBNum.Text.ToString()),federation,federation);
-                CoureurClasse.Create(coureur);*/
+                    federation = Club.CodeClub.C5;
+
+                Club club1 = new Club(federation);
+                Federation federation1 = new Federation(codeClub);
+                CoureurClasse coureur = new CoureurClasse(TBNom.Text.ToString(),TBPreom.Text.ToString(),TBVille.Text.ToString(),sexe,int.Parse(TBNum.Text.ToString()),federation,federation);
+                CoureurClasse.Create(coureur);
 
                 var page = new Coureur();
                 page.Show();

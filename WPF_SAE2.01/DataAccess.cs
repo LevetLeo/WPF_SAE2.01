@@ -55,33 +55,7 @@ namespace WPF_SAE2._01
             }
         }
 
-        public void TestDatabaseConnection()
-        {
-            string connectionString = strConnexion;
-            string sql = "SELECT num_agent, login_agent, mdp_agent FROM agent";
-
-            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    using (NpgsqlCommand command = new NpgsqlCommand(sql, connection))
-                    {
-                        using (NpgsqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                Console.WriteLine($"num_agent: {reader["num_agent"]}, login_agent: {reader["login_agent"]}, mdp_agent: {reader["mdp_agent"]}");
-                            }
-                        }
-                    }
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Error: " + e.Message);
-                }
-            }
-        }
+        
         public void DeconnexionBD()
         {
             try
