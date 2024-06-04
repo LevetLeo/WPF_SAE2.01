@@ -19,6 +19,11 @@ namespace WPF_SAE2._01
             set { portable_SMS = value; }
         }
 
-
+        public Envoi_SMS(Ami numAmi, Inscription numInscription, string portable_SMS)
+        {
+            this.numAmi = numAmi;
+            this.numInscription = numInscription;
+            this.Portable_SMS = portable_SMS;
+        }
     }
 }

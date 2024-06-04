@@ -36,9 +36,9 @@ namespace WPF_SAE2._01
 
         public Agent(int numAgent, string loginAgent, string mdp_Agent)
         {
-            NumAgent = numAgent;
-            LoginAgent = loginAgent;
-            MDP_Agent = mdp_Agent;
+            this.NumAgent = numAgent;
+            this.LoginAgent = loginAgent;
+            this.MDP_Agent = mdp_Agent;
         }
 
         public static ObservableCollection<Agent> Read()

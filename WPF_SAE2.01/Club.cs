@@ -28,5 +28,10 @@ namespace WPF_SAE2._01
 			}
 		}
 
-	}
+        public Club(string nomClub, CodeClub codeCluB)
+        {
+            this.NomClub = nomClub;
+            this.CodeCluB = codeCluB;
+        }
+    }
 }

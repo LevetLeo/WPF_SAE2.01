@@ -27,9 +27,11 @@ namespace WPF_SAE2._01
 			}
 		}
 
-
-
-
-
-	}
+        public Inscription2(Inscription numInscription, Coureur numCoureur, DateTime temps_Prevue)
+        {
+            this.numInscription = numInscription;
+            this.numCoureur = numCoureur;
+            this.Temps_Prevue = temps_Prevue;
+        }
+    }
 }
