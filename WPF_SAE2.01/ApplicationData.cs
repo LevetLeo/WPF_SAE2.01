@@ -17,7 +17,8 @@ namespace WPF_SAE2._01
     {
 
         private ObservableCollection<Coureur> lesCoureurs;
-        private NpgsqlConnection connexion = null;   // futur lien à la BD
+        private NpgsqlConnection 
+            connexion = null;   // futur lien à la BD
         private string ConnectionString;
 
         public ObservableCollection<Coureur> LesCoureurs
