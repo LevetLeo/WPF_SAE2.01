@@ -23,12 +23,21 @@ namespace WPF_SAE2._01
         {
             InitializeComponent();
             Console.WriteLine(Course.Read());
+            int i = 0;
+            string unNom;
             List<string> LesNoms = Course.ReadNom();
 
-           foreach(string unNom in LesNoms)
-           {
+            do
+            {
+                Console.WriteLine(LesNoms[0]);
+                unNom = LesNoms[i];
+                i++;
                 Console.WriteLine(unNom);
-            }
+
+            } while (i > LesNoms.Count);
+
+            LabelNom1.Content = unNom;
+
         }
     }
 }
