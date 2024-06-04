@@ -42,17 +42,35 @@ namespace WPF_SAE2._01
         }
 
         public static ObservableCollection<Agent> Read()
-		{
-
+        {
             ObservableCollection<Agent> lesAgents = new ObservableCollection<Agent>();
-            String sql = "SELECT num_agent,login_agent, mdp_agent FROM agent";
+            string sql = "SELECT num_agent, login_agent, mdp_agent FROM SchemaSAE201.agent;";
             DataTable dt = DataAccess.Instance.GetData(sql);
-            foreach (DataRow res in dt.Rows)
+            Console.WriteLine(dt);
+
+            if (dt != null)
             {
-				Agent nouveau = new Agent(int.Parse(res["numAgent"].ToString()),res["login_agent"].ToString(),res["mdp_agent"].ToString());
-                
-                lesAgents.Add(nouveau);
+                foreach (DataRow res in dt.Rows)
+                {
+                    try
+                    {
+                        int numAgent = int.Parse(res["num_agent"].ToString());
+                        string loginAgent = res["login_agent"].ToString();
+                        string mdpAgent = res["mdp_agent"].ToString();
+                        Agent nouveau = new Agent(numAgent, loginAgent, mdpAgent);
+                        lesAgents.Add(nouveau);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error parsing DataRow: " + ex.Message);
+                    }
+                }
             }
+            else
+            {
+                Console.WriteLine("DataTable is null. Check database connection and query.");
+            }
+
             return lesAgents;
         }
 

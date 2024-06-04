@@ -30,6 +30,7 @@ namespace WPF_SAE2._01
         private void butConnexion_Click(object sender, RoutedEventArgs e)
         {
             data.ConnexionBD();
+            data.TestDatabaseConnection();
             Agent.Read();
             //if(TBLogin is Agent.LoginAgent && TBPassword is Agent.MDP_Agent)
             {
