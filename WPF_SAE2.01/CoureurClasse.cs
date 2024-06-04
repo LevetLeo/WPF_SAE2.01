@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data;
 using System.Linq;
 using System.Runtime;
 using System.Text;
@@ -88,6 +90,6 @@ namespace WPF_SAE2._01
             this.CodeClub = codeClub;
             this.IdFederation = idFederation;
         }
-
+        
     }
 }
