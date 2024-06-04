@@ -75,16 +75,26 @@ namespace WPF_SAE2._01
 			set { licenceCoureur = value; }
 		}
 
+        private string lienPhotoCoureur;
+
+        public string LienPhotoCoureur
+        {
+            get { return lienPhotoCoureur; }
+            set { lienPhotoCoureur = value; }
+        }
+
+
         public Club CodeClub { get; set; }
 		public Federation IdFederation { get; set; }
 
-        public CoureurClasse(int idCoureur, string nomCoureur, string prenomCoureur, string villeCoureur, int portableCoureur, char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
+        public CoureurClasse(int idCoureur, string nomCoureur, string prenomCoureur, string villeCoureur, int portableCoureur,string lienPhotoCoureur char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
         {
             this.IdCoureur = idCoureur;
             this.NomCoureur = nomCoureur;
             this.PrenomCoureur = prenomCoureur;
             this.VilleCoureur = villeCoureur;
             this.PortableCoureur = portableCoureur;
+            this.LienPhotoCoureur = lienPhotoCoureur;
             this.SexeCoureur = sexeCoureur;
             this.LicenceCoureur = licenceCoureur;
             this.CodeClub = codeClub;
@@ -114,6 +124,18 @@ namespace WPF_SAE2._01
             CodeClub = codeClub;
             IdFederation = idFederation;
         }
+        public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur,string lienPhotoCoureur, char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
+        {
+            NomCoureur = nomCoureur;
+            PrenomCoureur = prenomCoureur;
+            VilleCoureur = villeCoureur;
+            this.LienPhotoCoureur = lienPhotoCoureur;
+            SexeCoureur = sexeCoureur;
+            LicenceCoureur = licenceCoureur;
+            CodeClub = codeClub;
+            IdFederation = idFederation;
+        }
+
         public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
         {
             NomCoureur = nomCoureur;
@@ -125,7 +147,6 @@ namespace WPF_SAE2._01
             CodeClub = codeClub;
             IdFederation = idFederation;
         }
-       
 
         public static ObservableCollection<CoureurClasse> Read()
         {
@@ -147,10 +168,11 @@ namespace WPF_SAE2._01
                         string lienPhoto = res["lien_photo"].ToString();
                         string prenomCoureur = res["prenom_coureur"].ToString();
                         string villeCoureur = res["ville_coureur"].ToString();
+                        string lienPhotoCoureur = res["lien_photo"].ToString(); ;
                         int portable = int.Parse(res["potable"].ToString());
                         Char sexe = Convert.ToChar(res["sexe"]);
                         int numLicence = int.Parse(res["num_licence"].ToString());
-                        CoureurClasse nouveau = new CoureurClasse(numCoureur, nomCoureur, prenomCoureur, villeCoureur, portable, sexe, numLicence,codeClub, numFederation);
+                        CoureurClasse nouveau = new CoureurClasse(numCoureur, nomCoureur, prenomCoureur, villeCoureur, portable,lienPhotoCoureur, sexe, numLicence,codeClub, numFederation);
                         lesCoureurs.Add(nouveau);
 
                     }
@@ -169,10 +191,11 @@ namespace WPF_SAE2._01
         }
         public int Create(CoureurClasse c)
         {
-            String sql = $"insert into Coureur(nomCoureur, prenomCoureur,villeCoureur,sexeCoureur, LicenceCoureur,ClubCoureur,FederationCoureur) "
-            + $" values ('{c.NomCoureur}','{c.PrenomCoureur}','{c.villeCoureur}'"
-            + $"'{c.SexeCoureur}',{c.LicenceCoureur}'"
-            + $"'{c.CodeClub}','{c.IdFederation}');";
+            String sql = $"insert into Coureur(ClubCoureur,FederationCoureur ,nomCoureur,lienPhoto prenomCoureur,villeCoureur,potable,sexeCoureur, LicenceCoureur) "
+             +$" values ('{c.CodeClub}','{c.IdFederation}',"
+            +$"'{c.NomCoureur}','{c.PrenomCoureur}','{c.villeCoureur}'"
+            + $"'{c.portableCoureur}','{c.SexeCoureur}',{c.LicenceCoureur}'"
+            + $");";
             try
             {
                 int nb;
