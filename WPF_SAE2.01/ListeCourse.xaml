@@ -109,27 +109,15 @@
             x:Name="LabelNom"
             Grid.Row="1"
             Margin="20,20,20,20">
-            <Label x:Name="LabelNom1" Margin="10,10,10,10" />
-            <Label
+            <Label x:Name="LabelCourse" 
+                   MinWidth="2"
+                MinHeight="2"
                 HorizontalAlignment="Center"
-                Content="Distance :"
-                Foreground="White" />
-            <Label x:Name="LabelDistance" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Date départ :"
-                Foreground="White" />
-            <Label x:Name="LabelDepart" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Heure départ :"
-                Foreground="White" />
-            <Label x:Name="LabelHeure" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Prix :"
-                Foreground="White" />
-            <Label x:Name="LabelPrix" />
+                Background="#00403838"
+                BorderBrush="#00000000"
+                FontSize="16"
+                Foreground="White"/>
+
 
             <StackPanel.Resources>
                 <Style TargetType="Label">
@@ -142,45 +130,13 @@
             Grid.Column="1"
             Margin="20,20,20,18">
             <Label
+                x:Name="LabelCourse2"
                 MinWidth="2"
                 MinHeight="2"
                 HorizontalAlignment="Center"
                 Background="#00403838"
                 BorderBrush="#00000000"
-                Content="Semi marathon"
                 FontSize="16"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Distance :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="21 km"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Date départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="11/08/2024"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Heure départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="10H"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Prix :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="30 euros"
                 Foreground="White" />
 
             <StackPanel.Resources>
@@ -194,45 +150,14 @@
             Grid.Column="2"
             Margin="20,20,20,18">
             <Label
+                x:Name="LabelCourse3"
                 MinWidth="2"
                 MinHeight="2"
                 HorizontalAlignment="Center"
                 Background="#00403838"
                 BorderBrush="#00000000"
-                Content="10 km"
+                Content=""
                 FontSize="16"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Distance :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="10 km"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Date départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="30/06/2024"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Heure départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="11H"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Prix :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="25 euros"
                 Foreground="White" />
 
             <StackPanel.Resources>
@@ -246,45 +171,14 @@
             Grid.Column="3"
             Margin="20,20,20,18">
             <Label
+                x:Name="LabelCourse4"
                 MinWidth="2"
                 MinHeight="2"
                 HorizontalAlignment="Center"
                 Background="#00403838"
                 BorderBrush="#00000000"
-                Content="Duo"
+                Content=""
                 FontSize="16"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Distance :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="15 km"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Date départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="07/07/2024"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Heure départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="10H30"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Prix :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="40 euros"
                 Foreground="White" />
 
             <StackPanel.Resources>
@@ -298,45 +192,13 @@
             Grid.Column="4"
             Margin="20,20,20,18">
             <Label
+                x:Name="LabelCourse5"
                 MinWidth="2"
                 MinHeight="2"
                 HorizontalAlignment="Center"
                 Background="#00403838"
                 BorderBrush="#00000000"
-                Content="Relais"
                 FontSize="16"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Distance :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="40 km"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Date départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="02/09/2024"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Heure départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="9H30"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Prix :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="70 euros"
                 Foreground="White" />
 
             <StackPanel.Resources>

@@ -42,7 +42,7 @@ namespace WPF_SAE2._01
 		{
 			get { return prixInscriptionCourse; }
 			set {
-				if (value < 0)
+				if (value > 0)
 					prixInscriptionCourse = value;
 				else
 					throw new ArgumentException("erreur coureur prix");
@@ -57,12 +57,21 @@ namespace WPF_SAE2._01
             set { distance = value; }
         }
 
+        private DateTime dateDepart;
 
-        public Course(int numCourse,double distance,string nomCourse, DateTime heureDepartCourse, double prixInscriptionCourse)
+        public DateTime DateDepart
+        {
+            get { return dateDepart; }
+            set { dateDepart = value; }
+        }
+
+
+        public Course(int numCourse,double distance,string nomCourse,DateTime dateDepart, DateTime heureDepartCourse, double prixInscriptionCourse)
         {
             this.NumCourse = numCourse;
             this.Distance = distance;
             this.NomCourse = nomCourse;
+            this.DateDepart = dateDepart;
             this.HeureDepartCourse = heureDepartCourse;
             this.PrixInscriptionCourse = prixInscriptionCourse;
         }
@@ -77,9 +86,10 @@ namespace WPF_SAE2._01
             
             foreach (DataRow res in dt.Rows)
             {
+                Console.WriteLine("test");
                 try
                 {
-                    Course nouveau = new Course(int.Parse(res["num_course"].ToString()), double.Parse(res["distance"].ToString()),res["nom_Course"].ToString(), DateTime.Parse(res["heure_depart"].ToString()),double.Parse(res["prix_inscription"].ToString()));
+                    Course nouveau = new Course(int.Parse(res["num_course"].ToString()), double.Parse(res["distance"].ToString()),res["nom_Course"].ToString(),DateTime.Parse(res["DateCourse"].ToString()), DateTime.Parse(res["heure_depart"].ToString()), double.Parse(res["prix_inscription"].ToString())); //
                     lesCourses.Add(nouveau);
                 }
                 catch (Exception ex)
@@ -89,50 +99,6 @@ namespace WPF_SAE2._01
                 
             }
             return lesCourses;
-        }
-        public static List<double> ReadDistance()
-        {
-            ObservableCollection<Course> LesCourses = Read();
-            List<double> distanceCourse = new List<double>();
-
-            foreach(Course uneCourse in LesCourses)
-            {
-                distanceCourse.Add(uneCourse.Distance);
-            }
-            return distanceCourse;
-        }
-        public static List<DateTime> ReadHeureDepart()
-        {
-            ObservableCollection<Course> LesCourses = Read();
-            List<DateTime> HeureDepartCourseList = new List<DateTime>();
-
-            foreach (Course uneCourse in LesCourses)
-            {
-                HeureDepartCourseList.Add(uneCourse.HeureDepartCourse);
-            }
-            return HeureDepartCourseList;
-        }
-        public static List<double> ReadPrix()
-        {
-            ObservableCollection<Course> LesCourses = Read();
-            List<double> PrixCourse = new List<double>();
-
-            foreach (Course uneCourse in LesCourses)
-            {
-                PrixCourse.Add(uneCourse.PrixInscriptionCourse);
-            }
-            return PrixCourse;
-        }
-        public static List<string> ReadNom()
-        {
-            ObservableCollection<Course> LesCourses = Read();
-            List<string> NomCourseList = new List<string>();
-
-            foreach (Course uneCourse in LesCourses)
-            {
-                NomCourseList.Add(uneCourse.NomCourse);
-            }
-            return NomCourseList;
         }
     }
 }

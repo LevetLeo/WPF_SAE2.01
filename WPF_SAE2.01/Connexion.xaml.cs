@@ -34,14 +34,23 @@ namespace WPF_SAE2._01
             //data.TestDatabaseConnection();
             int i = 0;
             int j = 0;
-            /*List<string> login = Agent.ReadLogin();
+            List<string> login = Agent.ReadLogin();
             List<string> mdp = Agent.ReadMdp();
             string unLogin = login[i];
             string unMdp = mdp[j];
             do
             {
-                unLogin = login[i];
-                i++;
+                if(unLogin is null)
+                {
+                    MessageBox.Show("erreur");
+                }
+                else
+                {
+                    Console.WriteLine(login[i]);
+                    unLogin = login[i];
+                    i++;
+                }
+                
                 
 
             } while (unLogin != TBLogin.Text.ToString() || i > login.Count);
@@ -64,13 +73,13 @@ namespace WPF_SAE2._01
             {
                   
                  if (TBPassword.Password.ToString() == unMdp && TBLogin.Text.ToString() == unLogin)
-                 {*/
+                 {
                     var page = new Menu();
                     page.Show();
-                    this.Close();/*
+                    this.Close();
                  }
 
-            }*/
+            }
                 
             
         }
