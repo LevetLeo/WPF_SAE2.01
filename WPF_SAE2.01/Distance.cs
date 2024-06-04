@@ -66,38 +66,6 @@ namespace WPF_SAE2._01
 
             return lesDistances;
         }
-        public static List<Course> ReadNumCourse()
-        {
-            ObservableCollection<Distance> lesDistances = Read();
-            List<Course> numCourses = new List<Course>();
-            foreach (Distance uneDistance in lesDistances)
-            {
-                numCourses.Add(uneDistance.NumCourse);
-
-            }
-            return numCourses;
-        }
-        public static List<Borne> ReadNumBorne()
-        {
-            ObservableCollection<Distance> lesDistances = Read();
-            List<Borne> numBornes = new List<Borne>();
-            foreach (Distance uneDistance in lesDistances)
-            {
-                numBornes.Add(uneDistance.NumBorne);
-
-            }
-            return numBornes;
-        }
-        public static List<int> ReadNb_Km()
-        {
-            ObservableCollection<Distance> lesDistances = Read();
-            List<int> nbs_Kms = new List<int>();
-            foreach (Distance uneDistance in lesDistances)
-            {
-                nbs_Kms.Add(uneDistance.nb_Km);
-
-            }
-            return nbs_Kms;
-        }
+        
     }
 }

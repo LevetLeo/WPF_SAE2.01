@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Security.Cryptography.Xml;
 using System.Text;
@@ -26,11 +27,21 @@ namespace WPF_SAE2._01
         }
         private void butValider_Click(object sender, RoutedEventArgs e)
         {
+            ObservableCollection<CoureurClasse> lesCoureurs = CoureurClasse.Read();
+
             char sexe;
             Club.CodeClub federation;
             Federation.codeFederation codeClub;
             if(TBNom.Text.ToString() is not null && TBPreom.Text.ToString() is not null && TBVille.Text.ToString() is not null && (RDFemme.IsChecked == true || RDHomme.IsChecked == true) && TBNum.Text.ToString() is not null && (ComboBoxFFA.IsSelected == true || ComboBoxFFC.IsSelected == true || ComboBoxFFG.IsSelected == true || ComboBoxFFT.IsSelected == true) && (ComboBoxIUT.IsSelected == true || ComboBoxUSMB.IsSelected ==true || ComboBoxAnnecy.IsSelected==true || ComboBoxChambery.IsSelected == true || ComboBoxSoir.IsSelected == true))
             {
+                foreach(CoureurClasse unCoureur in lesCoureurs)
+                {
+                    if(unCoureur.NomCoureur == TBNom.Text.ToString() && unCoureur.PrenomCoureur == TBPreom.Text.ToString())
+                    {
+                        // fairee update
+                        MessageBox.Show("erreur coureur deja enrengistre");
+                    }
+                }
                 if (RDFemme.IsChecked == true)
                 {
                     sexe = 'F';
