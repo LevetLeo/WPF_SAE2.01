@@ -44,7 +44,7 @@ namespace WPF_SAE2._01
         public static ObservableCollection<Agent> Read()
         {
             ObservableCollection<Agent> lesAgents = new ObservableCollection<Agent>();
-            string sql = "SELECT num_agent, login_agent, mdp_agent FROM SchemaSAE201.agent;";
+            string sql = "SELECT num_agent, login_agent, mdp_agent FROM agent;";
             DataTable dt = DataAccess.Instance.GetData(sql);
             Console.WriteLine(dt);
 
