@@ -88,11 +88,10 @@ namespace WPF_SAE2._01
         {
             ObservableCollection<Agent> LesAgents = Read();
             List<string> Mdp = new List<string>();
-            string mdpstr;
             foreach (Agent unAgent in LesAgents)
             {
-                mdpstr = unAgent.LoginAgent;
-                Mdp.Add(mdpstr);
+               
+                Mdp.Add(unAgent.mdp_agent);
 
             }
             return Mdp;
