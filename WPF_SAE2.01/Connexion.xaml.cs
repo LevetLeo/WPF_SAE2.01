@@ -36,7 +36,7 @@ namespace WPF_SAE2._01
             List<string> mdp = Agent.ReadMdp();
             foreach(string unLogin in Agent.ReadLogin())
             {
-                if(TBLogin.ToString() is unLogin)
+                if(TBLogin.ToString() == unLogin)
                 {
                     var page = new Menu();
                     page.Show();
