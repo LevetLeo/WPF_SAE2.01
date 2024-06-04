@@ -22,6 +22,13 @@ namespace WPF_SAE2._01
         public ListeCourse()
         {
             InitializeComponent();
+            Console.WriteLine(Course.Read());
+            List<string> LesNoms = Course.ReadNom();
+
+           foreach(string unNom in LesNoms)
+           {
+                Console.WriteLine(unNom);
+            }
         }
     }
 }

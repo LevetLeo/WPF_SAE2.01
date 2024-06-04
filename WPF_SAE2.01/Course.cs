@@ -19,7 +19,16 @@ namespace WPF_SAE2._01
 			set { numCourse = value; }
 		}
 
-		private DateTime heureDepartCourse;
+        private string nomCourse;
+
+        public string NomCourse
+        {
+            get { return nomCourse; }
+            set { nomCourse = value; }
+        }
+
+
+        private DateTime heureDepartCourse;
 
 		public DateTime HeureDepartCourse
 		{
@@ -40,19 +49,20 @@ namespace WPF_SAE2._01
 			}
 		}
 
-        private Distance distance;
+        private double distance;
 
-        public Distance Distance
+        public double Distance
         {
             get { return distance; }
             set { distance = value; }
         }
 
 
-        public Course(int numCourse,/*Distance distance,*/ DateTime heureDepartCourse, double prixInscriptionCourse)
+        public Course(int numCourse,double distance,string nomCourse, DateTime heureDepartCourse, double prixInscriptionCourse)
         {
             this.NumCourse = numCourse;
-            //this.Distance = distance;
+            this.Distance = distance;
+            this.NomCourse = nomCourse;
             this.HeureDepartCourse = heureDepartCourse;
             this.PrixInscriptionCourse = prixInscriptionCourse;
         }
@@ -64,27 +74,65 @@ namespace WPF_SAE2._01
             DataTable dt = DataAccess.Instance.GetData(sql);
             Console.WriteLine(dt);
 
-            if (dt != null)
+            
+            foreach (DataRow res in dt.Rows)
             {
-                foreach (DataRow res in dt.Rows)
+                try
                 {
-                    try
-                    {
-                        Course nouveau = new Course(int.Parse(res["num_course"].ToString()), /*res["distance"].ToString(),*/ DateTime.Parse(res["heure_depart"].ToString()),double.Parse(res["prix_inscription"].ToString()));
-                        lesCourses.Add(nouveau);
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Error parsing DataRow: " + ex.Message);
-                    }
+                    Course nouveau = new Course(int.Parse(res["num_course"].ToString()), double.Parse(res["distance"].ToString()),res["nom_Course"].ToString(), DateTime.Parse(res["heure_depart"].ToString()),double.Parse(res["prix_inscription"].ToString()));
+                    lesCourses.Add(nouveau);
                 }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+                
             }
-            else
-            {
-                Console.WriteLine("DataTable is null. Check database connection and query.");
-            }
-
             return lesCourses;
+        }
+        public static List<double> ReadDistance()
+        {
+            ObservableCollection<Course> LesCourses = Read();
+            List<double> distanceCourse = new List<double>();
+
+            foreach(Course uneCourse in LesCourses)
+            {
+                distanceCourse.Add(uneCourse.Distance);
+            }
+            return distanceCourse;
+        }
+        public static List<DateTime> ReadHeureDepart()
+        {
+            ObservableCollection<Course> LesCourses = Read();
+            List<DateTime> HeureDepartCourseList = new List<DateTime>();
+
+            foreach (Course uneCourse in LesCourses)
+            {
+                HeureDepartCourseList.Add(uneCourse.HeureDepartCourse);
+            }
+            return HeureDepartCourseList;
+        }
+        public static List<double> ReadPrix()
+        {
+            ObservableCollection<Course> LesCourses = Read();
+            List<double> PrixCourse = new List<double>();
+
+            foreach (Course uneCourse in LesCourses)
+            {
+                PrixCourse.Add(uneCourse.PrixInscriptionCourse);
+            }
+            return PrixCourse;
+        }
+        public static List<string> ReadNom()
+        {
+            ObservableCollection<Course> LesCourses = Read();
+            List<string> NomCourseList = new List<string>();
+
+            foreach (Course uneCourse in LesCourses)
+            {
+                NomCourseList.Add(uneCourse.NomCourse);
+            }
+            return NomCourseList;
         }
     }
 }
