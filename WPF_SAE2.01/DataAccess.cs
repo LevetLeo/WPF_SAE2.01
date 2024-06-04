@@ -62,7 +62,9 @@ namespace WPF_SAE2._01
                 Console.WriteLine("déconnexion : ");
             }
             catch (Exception e)
-            { Console.WriteLine("pb à la déconnexion : " + e); }
+            { 
+                Console.WriteLine("pb à la déconnexion : " + e); 
+            }
         }
 
         public DataTable GetData(string selectSQL)

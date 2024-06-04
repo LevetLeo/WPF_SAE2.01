@@ -30,11 +30,20 @@ namespace WPF_SAE2._01
         private void butConnexion_Click(object sender, RoutedEventArgs e)
         {
             data.ConnexionBD();
-            var page = new Menu();
-            page.Show();
+            Agent.Read();
+            //if(TBLogin is Agent.LoginAgent && TBPassword is Agent.MDP_Agent)
+            {
+                var page = new Menu();
+                page.Show();
+                this.Close();
+            }
+            
+        }
+        public void Fermer()
+        {
+            //data.DeconnexionBD();
             this.Close();
         }
-
         private void TBlogin_GotFocus(object sender, RoutedEventArgs e)
         {
             if (TBlogin_isDefaultText)
@@ -73,6 +82,11 @@ namespace WPF_SAE2._01
                 Lpassword.Opacity = 1;
                 Lpassword_isShown = true;
             }
+        }
+
+        private void Grid_ContextMenuClosing(object sender, ContextMenuEventArgs e)
+        {
+            Fermer();
         }
     }
 }

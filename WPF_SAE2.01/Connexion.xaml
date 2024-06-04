@@ -12,7 +12,8 @@
     <Window.DataContext>
         <local:DataAccess x:Name="data" />
     </Window.DataContext>
-    <Grid Background="#FFD843D2">
+    <Grid Background="#FFD843D2" ContextMenuClosing="Grid_ContextMenuClosing">
+
         <Rectangle
             Margin="50,50,30,30"
             Panel.ZIndex="-2"
@@ -52,6 +53,16 @@
                     GotFocus="TBlogin_GotFocus"
                     LostFocus="TBlogin_LostFocus"
                     Text="Login" />
+                <DataGrid
+                    Name="logAgent"
+                    MinHeight="150"
+                    Margin="0,60,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    AutoGenerateColumns="False"
+                    IsReadOnly="True"
+                    ItemsSource="{Binding LesAgents}" />
+
 
             </Grid>
             <Grid Height="40" Margin="0,50,0,0">
@@ -81,6 +92,15 @@
                     GotFocus="TBpassword_GotFocus"
                     LostFocus="TBpassword_LostFocus"
                     PasswordChar="." />
+                <DataGrid
+                    Name="PassAggent"
+                    MinHeight="150"
+                    Margin="0,60,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    AutoGenerateColumns="False"
+                    IsReadOnly="True"
+                    ItemsSource="{Binding LesAgents}" />
 
 
             </Grid>
