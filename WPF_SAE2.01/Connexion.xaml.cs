@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Input.Manipulations;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -31,20 +32,46 @@ namespace WPF_SAE2._01
         {
             data.ConnexionBD();
             //data.TestDatabaseConnection();
-
+            int i = 0;
+            int j = 0;
             List<string> login = Agent.ReadLogin();
             List<string> mdp = Agent.ReadMdp();
-            foreach(string unLogin in Agent.ReadLogin())
+            string unLogin = login[i];
+            string unMdp = mdp[j];
+            do
             {
+                unLogin = login[i];
+                i++;
+                
 
-                if(TBLogin.ToString() is unLogin)
-                {
+            } while (unLogin != TBLogin.Text.ToString() || i > login.Count);
+
+            do
+            {
+                unMdp = mdp[j];
+                j++;
+
+
+            } while (unMdp != TBPassword.Password.ToString() || j > mdp.Count);
+
+            if(j > mdp.Count || i > login.Count)
+            {
+                Console.WriteLine("erreur identifiant ou mot de passe");
+            }
+            
+                
+            else if(j == i)
+            {
+                  
+                 if (TBPassword.Password.ToString() == unMdp && TBLogin.Text.ToString() == unLogin)
+                 {
                     var page = new Menu();
                     page.Show();
                     this.Close();
-                }
-                
+                 }
+
             }
+                
             
         }
         public void Fermer()
