@@ -184,5 +184,49 @@ namespace WPF_SAE2._01
             }
             return portableCoureurs;
         }
+        public static List<char> ReadSexe()
+        {
+            ObservableCollection<CoureurClasse> LesCoureurs = Read();
+            List<char> sexeCoureurs = new List<char>();
+            foreach (CoureurClasse unCoureur in LesCoureurs)
+            {
+                sexeCoureurs.Add(unCoureur.sexeCoureur);
+
+            }
+            return sexeCoureurs;
+        }
+        public static List<int> ReadLicenseCoureur()
+        {
+            ObservableCollection<CoureurClasse> LesCoureurs = Read();
+            List<int> licenceCoureurs = new List<int>();
+            foreach (CoureurClasse unCoureur in LesCoureurs)
+            {
+                licenceCoureurs.Add(unCoureur.licenceCoureur);
+
+            }
+            return licenceCoureurs;
+        }
+        public static List<Club> ReadCodeClub()
+        {
+            ObservableCollection<CoureurClasse> LesCoureurs = Read();
+            List<Club> CodesClubs = new List<Club>();
+            foreach (CoureurClasse unCoureur in LesCoureurs)
+            {
+                CodesClubs.Add(unCoureur.CodeClub);
+
+            }
+            return CodesClubs;
+        }
+        public static List<Federation> ReadIdFederation()
+        {
+            ObservableCollection<CoureurClasse> LesCoureurs = Read();
+            List<Federation> IdFederations = new List<Federation>();
+            foreach (CoureurClasse unCoureur in LesCoureurs)
+            {
+                IdFederations.Add(unCoureur.IdFederation);
+
+            }
+            return IdFederations;
+        }
     }
 }
