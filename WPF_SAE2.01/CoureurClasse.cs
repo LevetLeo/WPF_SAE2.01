@@ -81,7 +81,7 @@ namespace WPF_SAE2._01
         public CoureurClasse(int idCoureur, string nomCoureur, string prenomCoureur, string villeCoureur, int portableCoureur, char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
         {
             this.IdCoureur = idCoureur;
-			this.NomCoureur = nomCoureur;
+            this.NomCoureur = nomCoureur;
             this.PrenomCoureur = prenomCoureur;
             this.VilleCoureur = villeCoureur;
             this.PortableCoureur = portableCoureur;
@@ -90,6 +90,43 @@ namespace WPF_SAE2._01
             this.CodeClub = codeClub;
             this.IdFederation = idFederation;
         }
+
+            public CoureurClasse(int idCoureur, string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
+            {
+                this.IdCoureur = idCoureur;
+                this.NomCoureur = nomCoureur;
+                this.PrenomCoureur = prenomCoureur;
+                this.VilleCoureur = villeCoureur;
+                this.SexeCoureur = sexeCoureur;
+                this.LicenceCoureur = licenceCoureur;
+                this.CodeClub = codeClub;
+                this.IdFederation = idFederation;
+            }
+
+            public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur, int portableCoureur, char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
+        {
+            NomCoureur = nomCoureur;
+            PrenomCoureur = prenomCoureur;
+            VilleCoureur = villeCoureur;
+            PortableCoureur = portableCoureur;
+            SexeCoureur = sexeCoureur;
+            LicenceCoureur = licenceCoureur;
+            CodeClub = codeClub;
+            IdFederation = idFederation;
+        }
+        public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
+        {
+            NomCoureur = nomCoureur;
+            PrenomCoureur = prenomCoureur;
+            VilleCoureur = villeCoureur;
+            
+            SexeCoureur = sexeCoureur;
+            LicenceCoureur = licenceCoureur;
+            CodeClub = codeClub;
+            IdFederation = idFederation;
+        }
+       
+
         public static ObservableCollection<CoureurClasse> Read()
         {
             ObservableCollection<CoureurClasse> lesCoureurs = new ObservableCollection<CoureurClasse>();
@@ -130,103 +167,25 @@ namespace WPF_SAE2._01
 
             return lesCoureurs;
         }
-        public static List<int> ReadIdCoureur()
+        /*public int Create(Coureur c)
         {
-            ObservableCollection<CoureurClasse> LesCoureurs = Read();
-            List<int> idCoureurs = new List<int>();
-            foreach (CoureurClasse unCoureur in LesCoureurs)
+            String sql = $"insert into client (nom,prenom,email,genre,telephone, dateNaissance)"
+            + $" values ('{c.Nom}','{c.Prenom}','{c.Email}'"
+            + $",'{(char)c.Genre}','{c.Telephone}', "
+            + $"'{c.DateNaissance.Year}-{c.DateNaissance.Month}-{c.DateNaissance.Day}'); ";
+            try
             {
-                idCoureurs.Add(unCoureur.idCoureur);
+                SqlCommand cmd = new SqlCommand(sql, Connexion);
+                nb = cmd.ExecuteNonQuery();
+                return nb;
+                //nb permet de connaître le nb de lignes affectées par un insert, update, delete
             }
-            return idCoureurs;
-        }
-        public static List<string> ReadNomCoureur()
-        {
-            ObservableCollection<CoureurClasse> LesCoureurs = Read();
-            List<string> nomCoureurs = new List<string>();
-            foreach (CoureurClasse unCoureur in LesCoureurs)
+            catch (Exception sqlE)
             {
-                nomCoureurs.Add(unCoureur.nomCoureur);
-
+                Console.WriteLine("pb de requete : " + sql + "" + sqlE);
+                // juste pour le debug : à transformer en MsgBox 
+                return 0;
             }
-            return nomCoureurs;
-        }
-        public static List<string> ReadPrenomCoureur()
-        {
-            ObservableCollection<CoureurClasse> LesCoureurs = Read();
-            List<string> prenomCoureurs = new List<string>();
-            foreach (CoureurClasse unCoureur in LesCoureurs)
-            {
-                prenomCoureurs.Add(unCoureur.prenomCoureur);
-
-            }
-            return prenomCoureurs;
-        }
-        public static List<string> ReadVilleCoureur()
-        {
-            ObservableCollection<CoureurClasse> LesCoureurs = Read();
-            List<string> villeCoureurs = new List<string>();
-            foreach (CoureurClasse unCoureur in LesCoureurs)
-            {
-                villeCoureurs.Add(unCoureur.nomCoureur);
-
-            }
-            return villeCoureurs;
-        }
-        public static List<int> ReadPortable()
-        {
-            ObservableCollection<CoureurClasse> LesCoureurs = Read();
-            List<int> portableCoureurs = new List<int>();
-            foreach (CoureurClasse unCoureur in LesCoureurs)
-            {
-                portableCoureurs.Add(unCoureur.portableCoureur);
-
-            }
-            return portableCoureurs;
-        }
-        public static List<char> ReadSexe()
-        {
-            ObservableCollection<CoureurClasse> LesCoureurs = Read();
-            List<char> sexeCoureurs = new List<char>();
-            foreach (CoureurClasse unCoureur in LesCoureurs)
-            {
-                sexeCoureurs.Add(unCoureur.sexeCoureur);
-
-            }
-            return sexeCoureurs;
-        }
-        public static List<int> ReadLicenseCoureur()
-        {
-            ObservableCollection<CoureurClasse> LesCoureurs = Read();
-            List<int> licenceCoureurs = new List<int>();
-            foreach (CoureurClasse unCoureur in LesCoureurs)
-            {
-                licenceCoureurs.Add(unCoureur.licenceCoureur);
-
-            }
-            return licenceCoureurs;
-        }
-        public static List<Club> ReadCodeClub()
-        {
-            ObservableCollection<CoureurClasse> LesCoureurs = Read();
-            List<Club> CodesClubs = new List<Club>();
-            foreach (CoureurClasse unCoureur in LesCoureurs)
-            {
-                CodesClubs.Add(unCoureur.CodeClub);
-
-            }
-            return CodesClubs;
-        }
-        public static List<Federation> ReadIdFederation()
-        {
-            ObservableCollection<CoureurClasse> LesCoureurs = Read();
-            List<Federation> IdFederations = new List<Federation>();
-            foreach (CoureurClasse unCoureur in LesCoureurs)
-            {
-                IdFederations.Add(unCoureur.IdFederation);
-
-            }
-            return IdFederations;
-        }
+        }*/
     }
 }

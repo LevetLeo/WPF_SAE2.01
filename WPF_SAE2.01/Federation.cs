@@ -37,5 +37,10 @@ namespace WPF_SAE2._01
             this.IdFederation = idFederation;
             this.NomFederation = nomFederation;
         }
+
+        public Federation(codeFederation idFederation)
+        {
+            IdFederation = idFederation;
+        }
     }
 }

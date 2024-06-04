@@ -35,6 +35,12 @@ namespace WPF_SAE2._01
             this.NomClub = nomClub;
             this.CodeCluB = codeCluB;
         }
+
+        public Club(CodeClub codeCluB)
+        {
+            CodeCluB = codeCluB;
+        }
+
         public static ObservableCollection<Club> Read()
         {
             ObservableCollection<Club> lesClubs = new ObservableCollection<Club>();
