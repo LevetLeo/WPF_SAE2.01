@@ -30,13 +30,19 @@ namespace WPF_SAE2._01
         private void butConnexion_Click(object sender, RoutedEventArgs e)
         {
             data.ConnexionBD();
-            data.TestDatabaseConnection();
-            Agent.Read();
-            //if(TBLogin is Agent.LoginAgent && TBPassword is Agent.MDP_Agent)
+            //data.TestDatabaseConnection();
+
+            List<string> login = Agent.ReadLogin();
+            List<string> mdp = Agent.ReadMdp();
+            foreach(string unLogin in Agent.ReadLogin())
             {
-                var page = new Menu();
-                page.Show();
-                this.Close();
+                if(TBLogin.ToString() is unLogin)
+                {
+                    var page = new Menu();
+                    page.Show();
+                    this.Close();
+                }
+                
             }
             
         }

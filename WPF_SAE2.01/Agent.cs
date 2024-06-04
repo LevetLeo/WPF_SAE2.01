@@ -44,7 +44,7 @@ namespace WPF_SAE2._01
         public static ObservableCollection<Agent> Read()
         {
             ObservableCollection<Agent> lesAgents = new ObservableCollection<Agent>();
-            string sql = "SELECT num_agent, login_agent, mdp_agent FROM agent;";
+            string sql = "SELECT num_agent, login_agent, mdp_agent FROM schemasae201.agent";
             DataTable dt = DataAccess.Instance.GetData(sql);
             Console.WriteLine(dt);
 
@@ -59,6 +59,7 @@ namespace WPF_SAE2._01
                         string mdpAgent = res["mdp_agent"].ToString();
                         Agent nouveau = new Agent(numAgent, loginAgent, mdpAgent);
                         lesAgents.Add(nouveau);
+                        
                     }
                     catch (Exception ex)
                     {
@@ -73,6 +74,30 @@ namespace WPF_SAE2._01
 
             return lesAgents;
         }
+        public static List<string> ReadLogin()
+        {
+            ObservableCollection<Agent> LesAgents = Read();
+            List<string> login =  new List<string>();
+            foreach (Agent unAgent in LesAgents)
+            {
+                login.Add(unAgent.LoginAgent);
+            }
+            return login;
+        }
+        public static List<string> ReadMdp()
+        {
+            ObservableCollection<Agent> LesAgents = Read();
+            List<string> Mdp = new List<string>();
+            string mdpstr;
+            foreach (Agent unAgent in LesAgents)
+            {
+                mdpstr = unAgent.LoginAgent;
+                Mdp.Add(mdpstr);
+
+            }
+            return Mdp;
+        }
+
 
 
     }
