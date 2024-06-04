@@ -16,6 +16,9 @@ namespace WPF_SAE2._01
 			set { numAmi = value; }
 		}
 
-
-	}
+        public Ami(int numAmi)
+        {
+            this.NumAmi = numAmi;
+        }
+    }
 }

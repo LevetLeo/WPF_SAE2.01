@@ -25,5 +25,11 @@ namespace WPF_SAE2._01
 			}
 		}
 
-	}
+        public Distance(Course numCourse, Borne numBorne, int nb_Km)
+        {
+            this.NumCourse = numCourse;
+            this.NumBorne = numBorne;
+            this.Nb_Km = nb_Km;
+        }
+    }
 }

@@ -38,7 +38,11 @@ namespace WPF_SAE2._01
 			}
 		}
 
-
-
-	}
+        public Course(int numCourse, DateTime heureDepartCourse, double prixInscriptionCourse)
+        {
+            this.NumCourse = numCourse;
+            this.HeureDepartCourse = heureDepartCourse;
+            this.PrixInscriptionCourse = prixInscriptionCourse;
+        }
+    }
 }

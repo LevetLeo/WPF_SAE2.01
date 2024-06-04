@@ -21,6 +21,9 @@ namespace WPF_SAE2._01
 			}
 		}
 
-
-	}
+        public Borne(int numBorne)
+        {
+            this.NumBorne = numBorne;
+        }
+    }
 }

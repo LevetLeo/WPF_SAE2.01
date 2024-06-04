@@ -26,7 +26,11 @@ namespace WPF_SAE2._01
 			set { date_Federation = value; }
 		}
 
-
-
-	}
+        public Inscription(int numInscription, Course numCourse, DateTime date_Federation)
+        {
+            this.NumInscription = numInscription;
+            this.numCourse = numCourse;
+            this.Date_Federation = date_Federation;
+        }
+    }
 }
