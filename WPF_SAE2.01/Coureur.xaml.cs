@@ -24,7 +24,7 @@ namespace WPF_SAE2._01
         {
             InitializeComponent();
             ObservableCollection<CoureurClasse>  LesCoureurs = CoureurClasse.Read();
-
+            LabelCoureur1.Content = LesCoureurs[0].NomCoureur;
         }
     }
 }

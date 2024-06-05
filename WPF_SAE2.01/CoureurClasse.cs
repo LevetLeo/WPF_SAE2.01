@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
@@ -87,7 +88,7 @@ namespace WPF_SAE2._01
         public Club CodeClub { get; set; }
 		public Federation IdFederation { get; set; }
 
-        public CoureurClasse(int idCoureur, string nomCoureur, string prenomCoureur, string villeCoureur, int portableCoureur,string lienPhotoCoureur char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
+        public CoureurClasse(int idCoureur, string nomCoureur, string prenomCoureur, string villeCoureur, int portableCoureur,string lienPhotoCoureur ,char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
         {
             this.IdCoureur = idCoureur;
             this.NomCoureur = nomCoureur;
@@ -167,7 +168,7 @@ namespace WPF_SAE2._01
                         string lienPhoto = res["lien_photo"].ToString();
                         string prenomCoureur = res["prenom_coureur"].ToString();
                         string villeCoureur = res["ville_coureur"].ToString();
-                        string lienPhotoCoureur = res["lien_photo"].ToString(); ;
+                        string lienPhotoCoureur = res["lien_photo"].ToString();
                         int portable = int.Parse(res["potable"].ToString());
                         Char sexe = Convert.ToChar(res["sexe"]);
                         int numLicence = int.Parse(res["num_licence"].ToString());
@@ -188,7 +189,7 @@ namespace WPF_SAE2._01
 
             return lesCoureurs;
         }
-        public int Create(CoureurClasse c)
+        /*public int Create(CoureurClasse c)
         {
             String sql = $"insert into Coureur(ClubCoureur,FederationCoureur ,nomCoureur,lienPhoto prenomCoureur,villeCoureur,potable,sexeCoureur, LicenceCoureur) "
              +$" values ('{c.CodeClub}','{c.IdFederation}',"
@@ -199,7 +200,7 @@ namespace WPF_SAE2._01
             {
                 int nb;
                 // a corriger
-                npg cmd = new SqlCommand(sql,DataAccess.Connexion);
+                NpgsqlDataAdapter cmd = new NpgsqlDataAdapter(sql,Connexion);
                 nb = cmd.ExecuteNonQuery();
                 return nb;
                 //nb permet de connaître le nb de lignes affectées par un insert, update, delete
@@ -209,6 +210,6 @@ namespace WPF_SAE2._01
                 MessageBox.Show("pb de requete :" + sql + " " + sqlE);
                 return 0;
             }
-        }
+        }*/
     }
 }

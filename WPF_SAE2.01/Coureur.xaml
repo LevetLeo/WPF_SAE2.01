@@ -15,9 +15,7 @@
             <ColumnDefinition Width="20*" />
         </Grid.ColumnDefinitions>
 
-        <StackPanel
-            Grid.Column="1"
-            Margin="0,50,0,50">
+        <StackPanel Grid.Column="1" Margin="0,50,0,50">
             <Label Content="Selectionnez nom" />
             <TextBox x:Name="TBSelNom" />
             <Label Margin="0,49,0,0" Content="Selectionnez ville" />
@@ -30,11 +28,11 @@
                 <ComboBoxItem>Federation Francaise Golf</ComboBoxItem>
             </ComboBox>
         </StackPanel>
-        <StackPanel x:Name="LabelCoureur1" Grid.Column="0">
-            
-            <Label Content="Name"/>
-            <Label/>
+        <StackPanel Grid.Column="0">
+
+            <Label Content="Name" />
+            <Label x:Name="LabelCoureur1" />
         </StackPanel>
-        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True"/>
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" />
     </Grid>
 </Window>

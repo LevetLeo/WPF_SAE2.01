@@ -34,15 +34,16 @@ namespace WPF_SAE2._01
 				nomFederation = value; }
 		}
 
+        public Federation(codeFederation idFederation)
+        {
+            this.IdFederation = idFederation;
+        }
         public Federation(codeFederation idFederation, string nomFederation)
         {
             this.IdFederation = idFederation;
             this.NomFederation = nomFederation;
         }
-        public Federation(codeFederation idFederation)
-        {
-            this.IdFederation = idFederation;
-        }
+        
         public static ObservableCollection<Federation> Read()
         {
             ObservableCollection<Federation> lesFederations = new ObservableCollection<Federation>();
