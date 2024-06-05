@@ -151,7 +151,7 @@ namespace WPF_SAE2._01
         public static ObservableCollection<CoureurClasse> Read()
         {
             ObservableCollection<CoureurClasse> lesCoureurs = new ObservableCollection<CoureurClasse>();
-            string sql = "SELECT num_coureur, code_club, num_federation, nom_coureur, lien_photo, prenom_coureur, ville_coureur, potable, sexe, num_license FROM schemasae201.course";
+            string sql = "SELECT * FROM schemasae201.coureur";
             DataTable dt = DataAccess.Instance.GetData(sql);
             Console.WriteLine(dt);
 

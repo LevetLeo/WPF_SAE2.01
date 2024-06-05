@@ -25,8 +25,13 @@ namespace WPF_SAE2._01
 		{
 			get { return codeCluB; }
 			set 
-			{				
-				codeCluB = value; 
+			{
+                if (value == CodeClub.C1 || value == CodeClub.C2 || value == CodeClub.C3 || value == CodeClub.C4 || value == CodeClub.C5)
+                {
+                    codeCluB = value;
+                }
+                else
+                    throw new ArgumentException("erreur codeclub");
 			}
 		}
 
