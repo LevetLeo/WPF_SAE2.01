@@ -102,7 +102,9 @@ namespace WPF_SAE2._01
             this.IdFederation = idFederation;
         }
 
-            public CoureurClasse(int idCoureur, string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
+        
+
+        public CoureurClasse(int idCoureur, string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
             {
                 this.IdCoureur = idCoureur;
                 this.NomCoureur = nomCoureur;
@@ -162,7 +164,8 @@ namespace WPF_SAE2._01
                     try
                     {
                         int numCoureur = int.Parse(res["num_coureur"].ToString());
-                        Club codeClub = (Club)res["code_club"];
+                        Club codeClub =(Club)res["code_club"];
+                        
                         Federation numFederation = (Federation)res["num_federation"];
                         string nomCoureur = res["nom_coureur"].ToString();
                         string lienPhoto = res["lien_photo"].ToString();

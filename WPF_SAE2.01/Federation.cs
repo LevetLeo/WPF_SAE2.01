@@ -11,11 +11,11 @@ namespace WPF_SAE2._01
 {
     public class Federation
     {
-		public enum codeFederation { FFA = 0, FFT = 1,FFG = 2,FFC = 3 }
+		//public enum codeFederation { FFA = 0, FFT = 1,FFG = 2,FFC = 3 }
 
-		private codeFederation idFederation;
+		private string idFederation;
 
-		public codeFederation IdFederation
+		public string IdFederation
 		{
 			get { return idFederation; }
 			set 
@@ -34,11 +34,11 @@ namespace WPF_SAE2._01
 				nomFederation = value; }
 		}
 
-        public Federation(codeFederation idFederation)
+        public Federation(string idFederation)
         {
             this.IdFederation = idFederation;
         }
-        public Federation(codeFederation idFederation, string nomFederation)
+        public Federation(string idFederation, string nomFederation)
         {
             this.IdFederation = idFederation;
             this.NomFederation = nomFederation;
@@ -57,7 +57,7 @@ namespace WPF_SAE2._01
                 {
                     try
                     {
-                        codeFederation idFederation = (codeFederation)res["num_federation"];
+                        string idFederation = res["num_federation"].ToString();
                         string nomFederation = res["nom_federation"].ToString();
                         Federation nouveau = new Federation(idFederation, nomFederation);
                         lesFederations.Add(nouveau);
@@ -76,10 +76,10 @@ namespace WPF_SAE2._01
 
             return lesFederations;
         }
-        public static List<codeFederation> ReadIdFederation()
+        public static List<string> ReadIdFederation()
         {
             ObservableCollection<Federation> lesFederations = Read();
-            List<codeFederation> idFederations = new List<codeFederation>();
+            List<string> idFederations = new List<string>();
             foreach (Federation uneDistance in lesFederations)
             {
                 idFederations.Add(uneDistance.IdFederation);

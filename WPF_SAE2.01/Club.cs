@@ -19,21 +19,26 @@ namespace WPF_SAE2._01
 			set { nomClub = value; }
 		}
 
-		private CodeClub codeCluB;
+
+        private CodeClub codeCluB;
 
 		public CodeClub CodeCluB
-		{
-			get { return codeCluB; }
-			set 
-			{
-                if (value == CodeClub.C1 || value == CodeClub.C2 || value == CodeClub.C3 || value == CodeClub.C4 || value == CodeClub.C5)
+        {
+            get { return codeCluB; }
+            set
+            {
+                codeCluB = value;
+                /*
+                if (value == "C1" || value == "C2" || value == "C3" || value == "C4" || value == "C5")
                 {
                     codeCluB = value;
                 }
                 else
                     throw new ArgumentException("erreur codeclub");
-			}
-		}
+                */
+            }
+        }
+		
 
         public Club(string nomClub, CodeClub codeCluB)
         {
@@ -59,9 +64,18 @@ namespace WPF_SAE2._01
                 {
                     try
                     {
-                        CodeClub CodeCluB = (CodeClub)res["code_club"];
+                        bool success = Enum.TryParse(res["code_club"].ToString(), out CodeClub Codecb);
+                        if (success)
+                        {
+                            Console.WriteLine(Codecb.ToString());
+                        }
+                        else
+                        {
+                            Console.WriteLine("Couldn't convert");
+                        }
+
                         string nomClub = res["nom_club"].ToString();
-                        Club nouveau = new Club(nomClub, CodeCluB);
+                        Club nouveau = new Club(nomClub, Codecb);
                         lesClubs.Add(nouveau);
 
                     }
@@ -78,27 +92,6 @@ namespace WPF_SAE2._01
 
             return lesClubs;
         }
-        public static List<string> ReadNomClub()
-        {
-            ObservableCollection<Club> LesClubs = Read();
-            List<string> nomClubs = new List<string>();
-            foreach (Club unClub in LesClubs)
-            {
-                nomClubs.Add(unClub.nomClub);
-
-            }
-            return nomClubs;
-        }
-        public static List<CodeClub> ReadCodeClub()
-        {
-            ObservableCollection<Club> LesClubs = Read();
-            List<CodeClub> CodeClubs = new List<CodeClub>();
-            foreach (Club unClub in LesClubs)
-            {
-                CodeClubs.Add(unClub.CodeCluB);
-
-            }
-            return CodeClubs;
-        }
+        
     }
 }
