@@ -44,5 +44,21 @@ namespace WPF_SAE2._01
             page.Show();
             this.Close();
         }
+
+        private void butmenu_Click(object sender, RoutedEventArgs e)
+        {
+            if (butmenu.Content == ">>")
+            {
+            colone.Width = new System.Windows.GridLength(200);
+            assobrir.Opacity = 10;
+            butmenu.Content = "<<";
+            }
+            else
+            {
+                colone.Width = new System.Windows.GridLength(0);
+                assobrir.Opacity = 0;
+                butmenu.Content = ">>";
+            }
+        }
     }
 }
