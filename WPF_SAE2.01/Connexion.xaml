@@ -6,14 +6,25 @@
     xmlns:local="clr-namespace:WPF_SAE2._01"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Window1"
-    Width="400"
-    Height="430"
+    Width="1080"
+    Height="720"
+    WindowState="Maximized"
     mc:Ignorable="d">
     <Window.DataContext>
         <local:DataAccess x:Name="data" />
     </Window.DataContext>
     <Grid Background="#FFD843D2" ContextMenuClosing="Grid_ContextMenuClosing">
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="33*" />
+            <ColumnDefinition Width="33*" />
+            <ColumnDefinition Width="33*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="60*" />
+            <RowDefinition Height="20*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1">
         <Rectangle
             Margin="50,50,30,30"
             Panel.ZIndex="-2"
@@ -27,13 +38,17 @@
             RadiusX="20"
             RadiusY="20" />
         <StackPanel Margin="40,40,40,40">
-            <Label
+                <Grid>
+                    <Rectangle Fill="#FFE0E0E0"  Height="40" VerticalAlignment="Top" RadiusY="20" RadiusX="20"/>
+                    <Rectangle Fill="#FFE0E0E0"  Height="20" VerticalAlignment="Top" Margin="0,20,0,0"/>
+                <Label
                 HorizontalAlignment="Center"
                 Content="Connexion"
                 FontFamily="Britannic Bold"
                 FontSize="22"
                 Foreground="#CC000000" />
-            <Grid Height="40" Margin="0,50,0,0">
+                </Grid>
+                <Grid Height="40" Margin="20,50,20,0">
                 <Rectangle
                     MinWidth="20"
                     MinHeight="20"
@@ -65,7 +80,7 @@
 
 
             </Grid>
-            <Grid Height="40" Margin="0,50,0,0">
+            <Grid Height="40" Margin="20,50,20,0">
                 <Rectangle
                     MinWidth="20"
                     MinHeight="20"
@@ -106,12 +121,14 @@
             </Grid>
             <Button
                 x:Name="butConnexion"
-                Margin="70,40,70,0"
+                Margin="70,70,70,0"
                 Background="#7FFFFFFF"
                 BorderBrush="#00000000"
                 Click="butConnexion_Click"
                 Content="Se connecter"
                 FontSize="18" />
         </StackPanel>
+            
+        </Grid>
     </Grid>
 </Window>
