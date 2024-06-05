@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography.Xml;
 using System.Text;
@@ -78,7 +80,8 @@ namespace WPF_SAE2._01
                 Club club1 = new Club(federation);
                 Federation federation1 = new Federation(codeClub);
                 CoureurClasse coureur = new CoureurClasse(TBNom.Text.ToString(),TBPreom.Text.ToString(),TBVille.Text.ToString(),sexe,int.Parse(TBNum.Text.ToString()),club1,federation1);
-                //CoureurClasse.Create(coureur);
+                //CoureurClasse.Create(coureur, );
+                //à corriger
 
                 var page = new Coureur();
                 page.Show();

@@ -11,7 +11,7 @@ namespace WPF_SAE2._01
     public class DataAccess
     {
         private static DataAccess instance;
-        private static string strConnexion = "Server=srv-peda-new;" +
+        public static string strConnexion = "Server=srv-peda-new;" +
                             "port=5433;" +
                             "Database=SAE201Marathon;" +
                             "Search Path =SchemaSAE201;" +

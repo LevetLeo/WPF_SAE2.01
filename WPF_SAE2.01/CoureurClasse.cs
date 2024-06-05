@@ -199,11 +199,30 @@ namespace WPF_SAE2._01
             try
             {
                 int nb;
-                // a corriger
                 SqlCommand cmd = new SqlCommand(sql, Connexion);
                 nb = cmd.ExecuteNonQuery();
                 return nb;
                 //nb permet de connaître le nb de lignes affectées par un insert, update, delete
+            }
+            catch (Exception sqlE)
+            {
+                MessageBox.Show("pb de requete :" + sql + " " + sqlE);
+                return 0;
+            }
+        }
+        public int Update(CoureurClasse c, SqlConnection Connexion)
+        {
+            String sql = $"insert into Coureur(ClubCoureur,FederationCoureur ,nomCoureur,lienPhoto prenomCoureur,villeCoureur,potable,sexeCoureur, LicenceCoureur) "
+             + $" values ('{c.CodeClub}','{c.IdFederation}',"
+            + $"'{c.NomCoureur}','{c.PrenomCoureur}','{c.villeCoureur}'"
+            + $"'{c.portableCoureur}','{c.SexeCoureur}',{c.LicenceCoureur}'"
+            + $");";
+            try
+            {
+                int nb;
+                SqlCommand cmd = new SqlCommand(sql, Connexion);
+                nb = cmd.ExecuteNonQuery();
+                return nb;
             }
             catch (Exception sqlE)
             {
