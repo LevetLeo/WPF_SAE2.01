@@ -22,20 +22,33 @@ namespace WPF_SAE2._01
     /// </summary>
     public partial class inscription_coureur : Window
     {
+        private ObservableCollection<CoureurClasse> lesCoureurss = new ObservableCollection<CoureurClasse>();
+        private ObservableCollection<Federation> lesFederationss = new ObservableCollection<Federation>();
+        private ObservableCollection<Club> lesClubss = new ObservableCollection<Club>();
+
+
+        public ObservableCollection<CoureurClasse> LesCoureurss { get => lesCoureurss; set => lesCoureurss = value; }
+        public ObservableCollection<Federation> LesFederationss { get => lesFederationss; set => lesFederationss = value; }
+        public ObservableCollection<Club> LesClubss { get => lesClubss; set => lesClubss = value; }
+
+
         public inscription_coureur()
         {
             InitializeComponent();
+            LesCoureurss = CoureurClasse.Read();
+            LesFederationss = Federation.Read();
+            LesClubss = Club.Read();
         }
+
         private void butValider_Click(object sender, RoutedEventArgs e)
         {
-            ObservableCollection<CoureurClasse> lesCoureurs = CoureurClasse.Read();
 
             char sexe;
             string federation;
             string codeClub;
             if(TBNom.Text.ToString() is not null && TBPreom.Text.ToString() is not null && TBVille.Text.ToString() is not null && (RDFemme.IsChecked == true || RDHomme.IsChecked == true) && TBNum.Text.ToString() is not null && (ComboBoxFFA.IsSelected == true || ComboBoxFFC.IsSelected == true || ComboBoxFFG.IsSelected == true || ComboBoxFFT.IsSelected == true) && (ComboBoxIUT.IsSelected == true || ComboBoxUSMB.IsSelected ==true || ComboBoxAnnecy.IsSelected==true || ComboBoxChambery.IsSelected == true || ComboBoxSoir.IsSelected == true))
             {
-                foreach(CoureurClasse unCoureur in lesCoureurs)
+                foreach(CoureurClasse unCoureur in LesCoureurss)
                 {
                     if(unCoureur.NomCoureur == TBNom.Text.ToString() && unCoureur.PrenomCoureur == TBPreom.Text.ToString())
                     {
@@ -85,7 +98,7 @@ namespace WPF_SAE2._01
                 {
                     Console.WriteLine("Couldn't convert");
                 }
-                Federation federation1 = new Federation(codeClub);
+
                 CoureurClasse coureur = new CoureurClasse(TBNom.Text.ToString(),TBPreom.Text.ToString(),TBVille.Text.ToString(),sexe,int.Parse(TBNum.Text.ToString()),club1,federation1);
                 //CoureurClasse.Create(coureur,DataAccess.Connexion);
 

@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace WPF_SAE2._01
@@ -51,6 +52,20 @@ namespace WPF_SAE2._01
             CodeCluB = codeCluB;
         }
 
+        public static CodeClub ConvertionStringClub(string chaine)
+        {
+            bool success = Enum.TryParse(chaine, out CodeClub Codecb);
+            if (success)
+            {
+                Console.WriteLine(Codecb.ToString());
+            }
+            else
+            {
+                Console.WriteLine("Couldn't convert");
+            }
+            return Codecb;
+        }
+
         public static ObservableCollection<Club> Read()
         {
             ObservableCollection<Club> lesClubs = new ObservableCollection<Club>();
@@ -64,18 +79,10 @@ namespace WPF_SAE2._01
                 {
                     try
                     {
-                        bool success = Enum.TryParse(res["code_club"].ToString(), out CodeClub Codecb);
-                        if (success)
-                        {
-                            Console.WriteLine(Codecb.ToString());
-                        }
-                        else
-                        {
-                            Console.WriteLine("Couldn't convert");
-                        }
+                        
 
                         string nomClub = res["nom_club"].ToString();
-                        Club nouveau = new Club(nomClub, Codecb);
+                        Club nouveau = new Club(nomClub, ConvertionStringClub(res["code_club"].ToString()));
                         lesClubs.Add(nouveau);
 
                     }

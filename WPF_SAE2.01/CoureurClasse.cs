@@ -85,10 +85,10 @@ namespace WPF_SAE2._01
         }
 
 
-        public Club CodeClub { get; set; }
+        public Club.CodeClub CodeClub { get; set; }
 		public Federation IdFederation { get; set; }
 
-        public CoureurClasse(int idCoureur, string nomCoureur, string prenomCoureur, string villeCoureur, int portableCoureur,string lienPhotoCoureur ,char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
+        public CoureurClasse(int idCoureur, string nomCoureur, string prenomCoureur, string villeCoureur, int portableCoureur,string lienPhotoCoureur ,char sexeCoureur, int licenceCoureur, Club.CodeClub codeClub, Federation idFederation)
         {
             this.IdCoureur = idCoureur;
             this.NomCoureur = nomCoureur;
@@ -104,7 +104,7 @@ namespace WPF_SAE2._01
 
         
 
-        public CoureurClasse(int idCoureur, string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
+        public CoureurClasse(int idCoureur, string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, int licenceCoureur, Club.CodeClub codeClub, Federation idFederation)
             {
                 this.IdCoureur = idCoureur;
                 this.NomCoureur = nomCoureur;
@@ -116,7 +116,7 @@ namespace WPF_SAE2._01
                 this.IdFederation = idFederation;
             }
 
-            public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur, int portableCoureur, char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
+            public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur, int portableCoureur, char sexeCoureur, int licenceCoureur, Club.CodeClub codeClub, Federation idFederation)
         {
             NomCoureur = nomCoureur;
             PrenomCoureur = prenomCoureur;
@@ -127,7 +127,7 @@ namespace WPF_SAE2._01
             CodeClub = codeClub;
             IdFederation = idFederation;
         }
-        public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur,string lienPhotoCoureur, char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
+        public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur,string lienPhotoCoureur, char sexeCoureur, int licenceCoureur, Club.CodeClub codeClub, Federation idFederation)
         {
             NomCoureur = nomCoureur;
             PrenomCoureur = prenomCoureur;
@@ -139,7 +139,7 @@ namespace WPF_SAE2._01
             IdFederation = idFederation;
         }
 
-        public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, int licenceCoureur, Club codeClub, Federation idFederation)
+        public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, int licenceCoureur, Club.CodeClub codeClub, Federation idFederation)
         {
             NomCoureur = nomCoureur;
             PrenomCoureur = prenomCoureur;
@@ -163,9 +163,9 @@ namespace WPF_SAE2._01
                 {
                     try
                     {
-                        int numCoureur = int.Parse(res["num_coureur"].ToString());
-                        Club codeClub =(Club)res["code_club"];
-                        
+                        int numCoureur = (int)res["num_coureur"];
+
+                        Club.CodeClub codeClub = Club.ConvertionStringClub(res["code_club"].ToString()); ;
                         Federation numFederation = (Federation)res["num_federation"];
                         string nomCoureur = res["nom_coureur"].ToString();
                         string lienPhoto = res["lien_photo"].ToString();
@@ -174,7 +174,7 @@ namespace WPF_SAE2._01
                         string lienPhotoCoureur = res["lien_photo"].ToString();
                         int portable = int.Parse(res["potable"].ToString());
                         Char sexe = Convert.ToChar(res["sexe"]);
-                        int numLicence = int.Parse(res["num_licence"].ToString());
+                        int numLicence = (int)res["num_licence"];
                         CoureurClasse nouveau = new CoureurClasse(numCoureur, nomCoureur, prenomCoureur, villeCoureur, portable,lienPhotoCoureur, sexe, numLicence,codeClub, numFederation);
                         lesCoureurs.Add(nouveau);
 

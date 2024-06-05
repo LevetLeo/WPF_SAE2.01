@@ -5,17 +5,19 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Channels;
 using System.Threading.Tasks;
+using static WPF_SAE2._01.Club;
 
 namespace WPF_SAE2._01
 {
     public class Federation
     {
-		//public enum codeFederation { FFA = 0, FFT = 1,FFG = 2,FFC = 3 }
+		public enum codeFederation { FFA = 0, FFC = 1,FFG = 2, FFT = 3 }
 
-		private string idFederation;
+		private int idFederation;
 
-		public string IdFederation
+		public int IdFederation
 		{
 			get { return idFederation; }
 			set 
@@ -34,16 +36,38 @@ namespace WPF_SAE2._01
 				nomFederation = value; }
 		}
 
-        public Federation(string idFederation)
+        private string codefede;
+
+        public string Codefede
         {
-            this.IdFederation = idFederation;
+            get { return codefede; }
+            set { codefede = value; }
         }
-        public Federation(string idFederation, string nomFederation)
+
+
+
+        public Federation(int idFederation, string nomFederation)
         {
             this.IdFederation = idFederation;
             this.NomFederation = nomFederation;
+            this.Codefede = Enum.GetNames(typeof(codeFederation))[idFederation];
+
         }
-        
+
+        public static codeFederation ConvertionStringFederation(string chaine)
+        {
+            bool success = Enum.TryParse(chaine, out codeFederation fede);
+            if (success)
+            {
+                Console.WriteLine(fede.ToString());
+            }
+            else
+            {
+                Console.WriteLine("Couldn't convert");
+            }
+            return fede;
+        }
+
         public static ObservableCollection<Federation> Read()
         {
             ObservableCollection<Federation> lesFederations = new ObservableCollection<Federation>();
@@ -57,8 +81,9 @@ namespace WPF_SAE2._01
                 {
                     try
                     {
-                        string idFederation = res["num_federation"].ToString();
+                        int idFederation = (int)res["num_federation"];
                         string nomFederation = res["nom_federation"].ToString();
+
                         Federation nouveau = new Federation(idFederation, nomFederation);
                         lesFederations.Add(nouveau);
 
@@ -75,28 +100,6 @@ namespace WPF_SAE2._01
             }
 
             return lesFederations;
-        }
-        public static List<string> ReadIdFederation()
-        {
-            ObservableCollection<Federation> lesFederations = Read();
-            List<string> idFederations = new List<string>();
-            foreach (Federation uneDistance in lesFederations)
-            {
-                idFederations.Add(uneDistance.IdFederation);
-
-            }
-            return idFederations;
-        }
-        public static List<string> ReadNomFederation()
-        {
-            ObservableCollection<Federation> lesFederations = Read();
-            List<string> nomFederations = new List<string>();
-            foreach (Federation uneDistance in lesFederations)
-            {
-                nomFederations.Add(uneDistance.nomFederation);
-
-            }
-            return nomFederations;
         }
     }
 }
