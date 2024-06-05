@@ -14,67 +14,67 @@ namespace WPF_SAE2._01
 {
     public class CoureurClasse
     {
-		private int idCoureur;
+        private int idCoureur;
 
-		public int IdCoureur
-		{
-			get { return idCoureur; }
-			set { idCoureur = value; }
-		}
+        public int IdCoureur
+        {
+            get { return idCoureur; }
+            set { idCoureur = value; }
+        }
 
-		private string nomCoureur;
+        private string nomCoureur;
 
-		public string NomCoureur
-		{
-			get { return nomCoureur; }
-			set { if (value is null) throw new ArgumentNullException("la valeur ne doit pas être null");
-				nomCoureur = value; }
-		}
+        public string NomCoureur
+        {
+            get { return nomCoureur; }
+            set { if (value is null) throw new ArgumentNullException("la valeur ne doit pas être null");
+                nomCoureur = value; }
+        }
 
-		private string prenomCoureur;
+        private string prenomCoureur;
 
-		public string PrenomCoureur
-		{
-			get { return prenomCoureur; }
-			set { if (value is null) throw new ArgumentNullException("la valeur ne doit pas être null"); prenomCoureur = value; }
-		}
+        public string PrenomCoureur
+        {
+            get { return prenomCoureur; }
+            set { if (value is null) throw new ArgumentNullException("la valeur ne doit pas être null"); prenomCoureur = value; }
+        }
 
-		private string villeCoureur;
+        private string villeCoureur;
 
-		public string VilleCoureur
-		{
-			get { return villeCoureur; }
-			set { if (value is null) throw new ArgumentNullException("la valeur ne doit pas être null"); villeCoureur = value; }
-		}
+        public string VilleCoureur
+        {
+            get { return villeCoureur; }
+            set { if (value is null) throw new ArgumentNullException("la valeur ne doit pas être null"); villeCoureur = value; }
+        }
 
-		private int portableCoureur;
+        private string portableCoureur;
 
-		public int PortableCoureur
-		{
-			get { return portableCoureur; }
-			set { portableCoureur = value; }
-		}
+        public string PortableCoureur
+        {
+            get { return portableCoureur; }
+            set { portableCoureur = value; }
+        }
 
-		private char sexeCoureur;
+        private char sexeCoureur;
 
-		public char SexeCoureur
-		{
-			get { return sexeCoureur; }
-			set {
-				if (value is 'H' || value is 'F')
-					sexeCoureur = value;
-				else
-					throw new ArgumentException("erreur Coureur");
-			}
-		}
+        public char SexeCoureur
+        {
+            get { return sexeCoureur; }
+            set {
+                if (value is 'H' || value is 'F')
+                    sexeCoureur = value;
+                else
+                    throw new ArgumentException("erreur Coureur");
+            }
+        }
 
-		private int licenceCoureur;
+        private string licenceCoureur;
 
-		public int LicenceCoureur
-		{
-			get { return licenceCoureur; }
-			set { licenceCoureur = value; }
-		}
+        public string LicenceCoureur
+        {
+            get { return licenceCoureur; }
+            set { licenceCoureur = value; }
+        }
 
         private string lienPhotoCoureur;
 
@@ -86,69 +86,38 @@ namespace WPF_SAE2._01
 
 
         public Club.CodeClub CodeClub { get; set; }
-		public Federation IdFederation { get; set; }
-
-        public CoureurClasse(int idCoureur, string nomCoureur, string prenomCoureur, string villeCoureur, int portableCoureur,string lienPhotoCoureur ,char sexeCoureur, int licenceCoureur, Club.CodeClub codeClub, Federation idFederation)
-        {
-            this.IdCoureur = idCoureur;
-            this.NomCoureur = nomCoureur;
-            this.PrenomCoureur = prenomCoureur;
-            this.VilleCoureur = villeCoureur;
-            this.PortableCoureur = portableCoureur;
-            this.LienPhotoCoureur = lienPhotoCoureur;
-            this.SexeCoureur = sexeCoureur;
-            this.LicenceCoureur = licenceCoureur;
-            this.CodeClub = codeClub;
-            this.IdFederation = idFederation;
-        }
+        public Federation.codeFederation Federation { get; set; }
 
         
 
-        public CoureurClasse(int idCoureur, string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, int licenceCoureur, Club.CodeClub codeClub, Federation idFederation)
-            {
-                this.IdCoureur = idCoureur;
-                this.NomCoureur = nomCoureur;
-                this.PrenomCoureur = prenomCoureur;
-                this.VilleCoureur = villeCoureur;
-                this.SexeCoureur = sexeCoureur;
-                this.LicenceCoureur = licenceCoureur;
-                this.CodeClub = codeClub;
-                this.IdFederation = idFederation;
-            }
 
-            public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur, int portableCoureur, char sexeCoureur, int licenceCoureur, Club.CodeClub codeClub, Federation idFederation)
+        public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, string licenceCoureur, Club.CodeClub codeClub, Federation.codeFederation federation)
         {
-            NomCoureur = nomCoureur;
-            PrenomCoureur = prenomCoureur;
-            VilleCoureur = villeCoureur;
-            PortableCoureur = portableCoureur;
-            SexeCoureur = sexeCoureur;
-            LicenceCoureur = licenceCoureur;
-            CodeClub = codeClub;
-            IdFederation = idFederation;
+            this.NomCoureur = nomCoureur;
+            this.PrenomCoureur = prenomCoureur;
+            this.VilleCoureur = villeCoureur;
+            this.SexeCoureur = sexeCoureur;
+            this.LicenceCoureur = licenceCoureur;
+            this.CodeClub = codeClub;
+            this.Federation = federation;
         }
-        public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur,string lienPhotoCoureur, char sexeCoureur, int licenceCoureur, Club.CodeClub codeClub, Federation idFederation)
+
+        public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, string licenceCoureur, Club.CodeClub codeClub, Federation.codeFederation federation, string portableCoureur, string lienPhotoCoureur) : this (nomCoureur,prenomCoureur,villeCoureur,sexeCoureur,licenceCoureur,codeClub,federation) 
         {
-            NomCoureur = nomCoureur;
-            PrenomCoureur = prenomCoureur;
-            VilleCoureur = villeCoureur;
+            this.PortableCoureur = portableCoureur;
             this.LienPhotoCoureur = lienPhotoCoureur;
-            SexeCoureur = sexeCoureur;
-            LicenceCoureur = licenceCoureur;
-            CodeClub = codeClub;
-            IdFederation = idFederation;
         }
-
-        public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, int licenceCoureur, Club.CodeClub codeClub, Federation idFederation)
+        /*
+        public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, int licenceCoureur, Club.CodeClub codeClub, Federation.codeFederation federation, string portableCoureur) : this(nomCoureur, prenomCoureur, villeCoureur, sexeCoureur, licenceCoureur, codeClub, federation)
         {
-            NomCoureur = nomCoureur;
-            PrenomCoureur = prenomCoureur;
-            VilleCoureur = villeCoureur;
-            SexeCoureur = sexeCoureur;
-            LicenceCoureur = licenceCoureur;
-            CodeClub = codeClub;
-            IdFederation = idFederation;
+            this.PortableCoureur = portableCoureur;
         }
+        public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, int licenceCoureur, Club.CodeClub codeClub, Federation.codeFederation federation, string lienPhotoCoureur) : this(nomCoureur, prenomCoureur, villeCoureur, sexeCoureur, licenceCoureur, codeClub, federation)
+        { 
+            this.LienPhotoCoureur = lienPhotoCoureur;
+        }
+        */
+
 
         public static ObservableCollection<CoureurClasse> Read()
         {
@@ -163,19 +132,21 @@ namespace WPF_SAE2._01
                 {
                     try
                     {
-                        int numCoureur = (int)res["num_coureur"];
+                        string numCoureur = res["num_coureur"].ToString();
 
-                        Club.CodeClub codeClub = Club.ConvertionStringClub(res["code_club"].ToString()); ;
-                        Federation numFederation = (Federation)res["num_federation"];
+                        Club.CodeClub codeClub = Club.ConvertionStringClub(res["code_club"].ToString());
+                        Federation.codeFederation fede = (Federation.codeFederation)res["num_federation"];
+
                         string nomCoureur = res["nom_coureur"].ToString();
                         string lienPhoto = res["lien_photo"].ToString();
                         string prenomCoureur = res["prenom_coureur"].ToString();
                         string villeCoureur = res["ville_coureur"].ToString();
                         string lienPhotoCoureur = res["lien_photo"].ToString();
-                        int portable = int.Parse(res["potable"].ToString());
+                        string portable = res["potable"].ToString();
                         Char sexe = Convert.ToChar(res["sexe"]);
-                        int numLicence = (int)res["num_licence"];
-                        CoureurClasse nouveau = new CoureurClasse(numCoureur, nomCoureur, prenomCoureur, villeCoureur, portable,lienPhotoCoureur, sexe, numLicence,codeClub, numFederation);
+                        string numLicence = res["num_licence"].ToString();
+
+                        CoureurClasse nouveau = new CoureurClasse(nomCoureur, prenomCoureur, villeCoureur, sexe, numLicence, codeClub, fede, portable, lienPhotoCoureur);
                         lesCoureurs.Add(nouveau);
 
                     }
@@ -192,46 +163,23 @@ namespace WPF_SAE2._01
 
             return lesCoureurs;
         }
-        public int Create(CoureurClasse c, SqlConnection Connexion)
+        public int Create()
         {
             String sql = $"insert into Coureur(ClubCoureur,FederationCoureur ,nomCoureur,lienPhoto prenomCoureur,villeCoureur,potable,sexeCoureur, LicenceCoureur) "
-             +$" values ('{c.CodeClub}','{c.IdFederation}',"
-            +$"'{c.NomCoureur}','{c.PrenomCoureur}','{c.villeCoureur}'"
-            + $"'{c.portableCoureur}','{c.SexeCoureur}',{c.LicenceCoureur}'"
+             +$" values ('{this.CodeClub}','{this.Federation}',"
+            +$"'{this.NomCoureur}','{this.PrenomCoureur}','{this.villeCoureur}'"
+            + $"'{this.portableCoureur}','{this.SexeCoureur}',{this.LicenceCoureur}'"
             + $");";
-            try
-            {
-                int nb;
-                SqlCommand cmd = new SqlCommand(sql, Connexion);
-                nb = cmd.ExecuteNonQuery();
-                return nb;
-                //nb permet de connaître le nb de lignes affectées par un insert, update, delete
-            }
-            catch (Exception sqlE)
-            {
-                MessageBox.Show("pb de requete :" + sql + " " + sqlE);
-                return 0;
-            }
+            return DataAccess.Instance.SetData(sql);
         }
-        public int Update(CoureurClasse c, SqlConnection Connexion)
+        public int Update()
         {
             String sql = $"insert into Coureur(ClubCoureur,FederationCoureur ,nomCoureur,lienPhoto prenomCoureur,villeCoureur,potable,sexeCoureur, LicenceCoureur) "
-             + $" values ('{c.CodeClub}','{c.IdFederation}',"
-            + $"'{c.NomCoureur}','{c.PrenomCoureur}','{c.villeCoureur}'"
-            + $"'{c.portableCoureur}','{c.SexeCoureur}',{c.LicenceCoureur}'"
+             + $" values ('{this.CodeClub}','{this.Federation}',"
+            + $"'{this.NomCoureur}','{this.PrenomCoureur}','{this.villeCoureur}'"
+            + $"'{this.portableCoureur}','{this.SexeCoureur}',{this.LicenceCoureur}'"
             + $");";
-            try
-            {
-                int nb;
-                SqlCommand cmd = new SqlCommand(sql, Connexion);
-                nb = cmd.ExecuteNonQuery();
-                return nb;
-            }
-            catch (Exception sqlE)
-            {
-                MessageBox.Show("pb de requete :" + sql + " " + sqlE);
-                return 0;
-            }
+            return DataAccess.Instance.SetData(sql);
         }
     }
 }

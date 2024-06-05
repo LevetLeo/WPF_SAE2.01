@@ -91,18 +91,10 @@ namespace WPF_SAE2._01
                 else
                     federation = "C5";
 
-                bool success = Enum.TryParse(federation, out Club.CodeClub club1);
-                if (success)
-                {
-                    Console.WriteLine(club1.ToString());
-                }
-                else
-                {
-                    Console.WriteLine("Couldn't convert");
-                }
-
-                CoureurClasse coureur = new CoureurClasse(TBNom.Text.ToString(),TBPreom.Text.ToString(),TBVille.Text.ToString(),sexe,int.Parse(TBNum.Text.ToString()),club1,federation1);
-                CoureurClasse.Create(coureur,DataAccess.Connexion);
+                Club.CodeClub club1 = Club.ConvertionStringClub(codeClub);
+                Federation.codeFederation fedede1 = Federation.ConvertionStringFederation(federation);
+                CoureurClasse coureur = new CoureurClasse(TBNom.Text.ToString(),TBPreom.Text.ToString(),TBVille.Text.ToString(),sexe,TBNum.Text,club1, fedede1);
+                coureur.Create();
 
                 var page = new Coureur();
                 page.Show();

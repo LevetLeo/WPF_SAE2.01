@@ -24,8 +24,15 @@ namespace WPF_SAE2._01
         {
             InitializeComponent();
             ObservableCollection<CoureurClasse>  LesCoureurs = CoureurClasse.Read();
-            Console.WriteLine(LesCoureurs.Count);
-            //LabelCoureur1.Content = LesCoureurs[0].NomCoureur + LesCoureurs[0].PrenomCoureur;
+            //Console.WriteLine("count " + LesCoureurs.Count);
+            LabelCoureur1.Content = LesCoureurs[0].LienPhotoCoureur + " " + LesCoureurs[0].NomCoureur + " " + LesCoureurs[0].PrenomCoureur + " " +
+                LesCoureurs[0].VilleCoureur + " " + LesCoureurs[0].SexeCoureur + " " + LesCoureurs[0].CodeClub + " " + LesCoureurs[0].Federation
+                + " " + LesCoureurs[0].LicenceCoureur + " " + LesCoureurs[0].PortableCoureur;
+
+            foreach(CoureurClasse coureur in LesCoureurs)
+            {
+                //data.dgLesCoureurs.Add(coureur);
+            }
         }
     }
 }
