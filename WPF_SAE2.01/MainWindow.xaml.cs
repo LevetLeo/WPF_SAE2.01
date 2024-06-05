@@ -20,8 +20,13 @@ namespace WPF_SAE2._01
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public ApplicationData data;
+        
+            
+            public MainWindow()
         {
+            data = new ApplicationData();
+            this.DataContext = data;
             InitializeComponent();
         }
 

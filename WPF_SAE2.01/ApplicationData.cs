@@ -15,6 +15,8 @@ namespace WPF_SAE2._01
 
     public class ApplicationData
     {
+       
+
 
         private ObservableCollection<Coureur> lesCoureurs;
         private NpgsqlConnection connexion = null;   // futur lien à la BD
