@@ -100,7 +100,7 @@ namespace WPF_SAE2._01
                 }
 
                 CoureurClasse coureur = new CoureurClasse(TBNom.Text.ToString(),TBPreom.Text.ToString(),TBVille.Text.ToString(),sexe,int.Parse(TBNum.Text.ToString()),club1,federation1);
-                //CoureurClasse.Create(coureur,DataAccess.Connexion);
+                CoureurClasse.Create(coureur,DataAccess.Connexion);
 
                 var page = new Coureur();
                 page.Show();
