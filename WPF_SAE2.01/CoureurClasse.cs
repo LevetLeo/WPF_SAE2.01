@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime;
 using System.Text;
@@ -189,7 +190,7 @@ namespace WPF_SAE2._01
 
             return lesCoureurs;
         }
-        /*public int Create(CoureurClasse c)
+        public int Create(CoureurClasse c, SqlConnection Connexion)
         {
             String sql = $"insert into Coureur(ClubCoureur,FederationCoureur ,nomCoureur,lienPhoto prenomCoureur,villeCoureur,potable,sexeCoureur, LicenceCoureur) "
              +$" values ('{c.CodeClub}','{c.IdFederation}',"
@@ -200,7 +201,7 @@ namespace WPF_SAE2._01
             {
                 int nb;
                 // a corriger
-                NpgsqlDataAdapter cmd = new NpgsqlDataAdapter(sql,Connexion);
+                SqlCommand cmd = new SqlCommand(sql, Connexion);
                 nb = cmd.ExecuteNonQuery();
                 return nb;
                 //nb permet de connaître le nb de lignes affectées par un insert, update, delete
@@ -210,6 +211,6 @@ namespace WPF_SAE2._01
                 MessageBox.Show("pb de requete :" + sql + " " + sqlE);
                 return 0;
             }
-        }*/
+        }
     }
 }
