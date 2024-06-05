@@ -30,6 +30,11 @@
                 <ComboBoxItem>Federation Francaise Golf</ComboBoxItem>
             </ComboBox>
         </StackPanel>
+        <StackPanel x:Name="LabelCoureur1" Grid.Column="0">
+            
+            <Label Content="Name"/>
+            <Label/>
+        </StackPanel>
         <DataGrid x:Name="dataGrid" AutoGenerateColumns="True"/>
     </Grid>
 </Window>

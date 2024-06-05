@@ -141,7 +141,6 @@ namespace WPF_SAE2._01
             NomCoureur = nomCoureur;
             PrenomCoureur = prenomCoureur;
             VilleCoureur = villeCoureur;
-            
             SexeCoureur = sexeCoureur;
             LicenceCoureur = licenceCoureur;
             CodeClub = codeClub;
@@ -200,7 +199,7 @@ namespace WPF_SAE2._01
             {
                 int nb;
                 // a corriger
-                SqlCommand cmd = new SqlCommand(sql,DataAccess.Connexion);
+                npg cmd = new SqlCommand(sql,DataAccess.Connexion);
                 nb = cmd.ExecuteNonQuery();
                 return nb;
                 //nb permet de connaître le nb de lignes affectées par un insert, update, delete
