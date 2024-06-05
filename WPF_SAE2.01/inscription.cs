@@ -50,7 +50,7 @@ namespace WPF_SAE2._01
                     {
                         int numInscription = int.Parse(res["num_federation"].ToString());
                         Course numCourse = (Course)res["nom_federation"];
-                        DateTime date_Federation = Convert.ToDateTime(res["nom_federation"]);
+                        DateTime date_Federation = Convert.ToDateTime(res["date_inscription"]);
                         Inscription nouveau = new Inscription(numInscription, numCourse, date_Federation);
                         lesInscriptions.Add(nouveau);
 
