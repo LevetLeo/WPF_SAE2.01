@@ -22,6 +22,7 @@ namespace WPF_SAE2._01
     {
         public Coureur()
         {
+            
             InitializeComponent();
             ObservableCollection<CoureurClasse>  LesCoureurs = CoureurClasse.Read();
             //Console.WriteLine("count " + LesCoureurs.Count);

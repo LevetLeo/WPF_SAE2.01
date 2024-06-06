@@ -10,42 +10,70 @@
     Height="720"
     WindowState="Maximized"
     mc:Ignorable="d">
+
     <Grid Background="#FFD843D2">
         <Grid.RowDefinitions>
             <RowDefinition Height="20*" />
             <RowDefinition Height="80*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*" x:Name="colone" />
+            <ColumnDefinition x:Name="colone" Width="0*" />
             <ColumnDefinition Width="20*" />
             <ColumnDefinition Width="20*" />
             <ColumnDefinition Width="20*" />
             <ColumnDefinition Width="20*" />
             <ColumnDefinition Width="20*" />
         </Grid.ColumnDefinitions>
-        <StackPanel Background="#FFE837E1" Grid.RowSpan="2" Margin="0,0,0,0">
+        <StackPanel
+            Grid.RowSpan="2"
+            Margin="0,0,0,0"
+            Background="#FFE837E1">
             <StackPanel Orientation="Horizontal">
-                <Image Source="P:\Semestre_2\SAE2.01\WPF_SAE2 (1).01\WPF_SAE2.01\Image\hqc.png" Height="36" RenderTransformOrigin="0.5,0.5" Width="35" Margin="0,160,0,0">
+                <Image
+                    Width="35"
+                    Height="36"
+                    Margin="0,160,0,0"
+                    RenderTransformOrigin="0.5,0.5"
+                    Source="P:\Semestre_2\SAE2.01\WPF_SAE2 (1).01\WPF_SAE2.01\Image\hqc.png">
                     <Image.RenderTransform>
                         <TransformGroup>
-                            <ScaleTransform ScaleX="1" ScaleY="1"/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform/>
+                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                            <SkewTransform />
+                            <RotateTransform />
+                            <TranslateTransform />
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Button Content="Inscrire Coureur" FontSize="18" BorderBrush="#00707070" Background="#00DDDDDD" Margin="0,150,0,0"/>
+                <Button
+                    Margin="0,150,0,0"
+                    Background="#00DDDDDD"
+                    BorderBrush="#00707070"
+                    Content="Inscrire Coureur"
+                    FontSize="18" />
             </StackPanel>
-            <Button Content="Visualiser Course" FontSize="18" BorderBrush="#00707070" Background="#00DDDDDD" Margin="0,150,0,0"/>
-            <Button Content="Visualiser Coureur" FontSize="18" BorderBrush="#00707070" Background="#00DDDDDD" Margin="0,150,0,0"/>
+            <Button
+                Margin="0,150,0,0"
+                Background="#00DDDDDD"
+                BorderBrush="#00707070"
+                Content="Visualiser Course"
+                FontSize="18" />
+            <Button
+                Margin="0,150,0,0"
+                Background="#00DDDDDD"
+                BorderBrush="#00707070"
+                Content="Visualiser Coureur"
+                FontSize="18" />
         </StackPanel>
         <Label
-                HorizontalContentAlignment="Center"
-                Background="Black"
-                Content="Liste course"
-                FontSize="60"
-                Foreground="White" Padding="0,0,0,0" Grid.Column="1" VerticalContentAlignment="Center" Grid.ColumnSpan="5"/>
+            Grid.Column="1"
+            Grid.ColumnSpan="5"
+            Padding="0,0,0,0"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Background="Black"
+            Content="Liste course"
+            FontSize="60"
+            Foreground="White" />
         <Rectangle
             Grid.Row="1"
             Grid.Column="2"
@@ -124,7 +152,26 @@
             Fill="#FFFF81FA"
             RadiusX="20"
             RadiusY="20" />
-        <Rectangle x:Name="assobrir" Grid.Column="1" Fill="#19000000" Opacity="0" Grid.RowSpan="2" Grid.ColumnSpan="5"/>
-        <Button Content=">>" Grid.Column="1" Width="50" Height="50" Background="#FFDED0DD" BorderBrush="#00707070" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="butmenu" Panel.ZIndex="1" Click="butmenu_Click" FontSize="18" Grid.RowSpan="2"/>
+        <Rectangle
+            x:Name="assobrir"
+            Grid.RowSpan="2"
+            Grid.Column="1"
+            Grid.ColumnSpan="5"
+            Fill="#19000000"
+            Opacity="0" />
+        <Button
+            x:Name="butmenu"
+            Grid.RowSpan="2"
+            Grid.Column="1"
+            Width="50"
+            Height="50"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Panel.ZIndex="1"
+            Background="#FFDED0DD"
+            BorderBrush="#00707070"
+            Click="butmenu_Click"
+            Content="&gt;&gt;"
+            FontSize="18" />
     </Grid>
 </Window>

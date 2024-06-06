@@ -27,17 +27,19 @@ namespace WPF_SAE2._01
         private ObservableCollection<CoureurClasse> lesCoureurss = new ObservableCollection<CoureurClasse>();
         private ObservableCollection<Federation> lesFederationss = new ObservableCollection<Federation>();
         private ObservableCollection<Club> lesClubss = new ObservableCollection<Club>();
+        private ObservableCollection<Course> lesCourses = new ObservableCollection<Course>();
 
 
         public ObservableCollection<CoureurClasse> LesCoureurss { get => lesCoureurss; set => lesCoureurss = value; }
         public ObservableCollection<Federation> LesFederationss { get => lesFederationss; set => lesFederationss = value; }
         public ObservableCollection<Club> LesClubss { get => lesClubss; set => lesClubss = value; }
-
+        public ObservableCollection<Course> LesCourses { get => lesCourses; set => lesCourses = value; }
 
         public inscription_coureur()
         {
             InitializeComponent();
             LesCoureurss = CoureurClasse.Read();
+            LesCourses = Course.Read();
             LesFederationss = Federation.Read();
             LesClubss = Club.Read();
         }
@@ -54,7 +56,7 @@ namespace WPF_SAE2._01
                 {
                     if(unCoureur.NomCoureur == TBNom.Text.ToString() && unCoureur.PrenomCoureur == TBPreom.Text.ToString())
                     {
-                        // fairee update
+                        unCoureur.Update();
                         MessageBox.Show("erreur coureur deja enrengistre");
                     }
                 }
@@ -95,6 +97,31 @@ namespace WPF_SAE2._01
                 Federation.codeFederation fedede1 = Federation.ConvertionStringFederation(federation);
                 CoureurClasse coureur = new CoureurClasse(TBNom.Text.ToString(),TBPreom.Text.ToString(),TBVille.Text.ToString(),sexe,TBNum.Text,club1, fedede1);
                 coureur.Create();
+                ObservableCollection<Inscription>  lesInscrits = Inscription.Read();
+                DateTime dateTime = DateTime.Today;
+                int numeroCourse = ListeCourse.numeroCourse;
+                Course numCourse = new Course(numeroCourse);
+                
+                CoureurClasse idCoureurInscrit;
+                foreach(Course lesCourses in LesCourses)
+                {
+
+                }
+                foreach(CoureurClasse coureurClasse in lesCoureurss)
+                {
+                    if(TBNom.Text == coureurClasse.NomCoureur && TBPreom.Text == coureurClasse.PrenomCoureur)
+                    {
+                        
+                        idCoureurInscrit = new CoureurClasse(coureurClasse.IdCoureur);
+                        Inscription i1 = new Inscription(lesInscrits.Count, numCourse, dateTime, idCoureurInscrit);
+                        i1.Create();
+                        
+                    }
+                }
+                
+
+
+                
 
                 var page = new Coureur();
                 page.Show();

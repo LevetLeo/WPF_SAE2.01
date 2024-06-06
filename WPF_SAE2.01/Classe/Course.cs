@@ -65,7 +65,10 @@ namespace WPF_SAE2._01
             set { dateDepart = value; }
         }
 
-
+        public Course(int numCourse)
+        {
+            this.NumCourse = numCourse;
+        }
         public Course(int numCourse,double distance,string nomCourse,DateTime dateDepart, DateTime heureDepartCourse, double prixInscriptionCourse)
         {
             this.NumCourse = numCourse;

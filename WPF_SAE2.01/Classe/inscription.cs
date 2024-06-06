@@ -28,12 +28,21 @@ namespace WPF_SAE2._01
 			get { return date_Federation; }
 			set { date_Federation = value; }
 		}
+        private CoureurClasse idCoureur;
 
-        public Inscription(int numInscription, Course numCourse, DateTime date_Federation)
+        public CoureurClasse IdCoureur
+        {
+            get { return idCoureur; }
+            set { idCoureur = value; }
+        }
+
+
+        public Inscription(int numInscription, Course numCourse, DateTime date_Federation, CoureurClasse idCoureur)
         {
             this.NumInscription = numInscription;
             this.numCourse = numCourse;
             this.Date_Federation = date_Federation;
+            this.IdCoureur = idCoureur;
         }
         public static ObservableCollection<Inscription> Read()
         {
@@ -51,7 +60,8 @@ namespace WPF_SAE2._01
                         int numInscription = int.Parse(res["num_federation"].ToString());
                         Course numCourse = (Course)res["nom_federation"];
                         DateTime date_Federation = Convert.ToDateTime(res["date_inscription"]);
-                        Inscription nouveau = new Inscription(numInscription, numCourse, date_Federation);
+                        CoureurClasse numCoureur = (CoureurClasse)(res["numCoureur"]);
+                        Inscription nouveau = new Inscription(numInscription, numCourse, date_Federation,numCoureur);
                         lesInscriptions.Add(nouveau);
 
                     }
@@ -68,38 +78,14 @@ namespace WPF_SAE2._01
 
             return lesInscriptions;
         }
-        public static List<int> ReadnumInscription()
-        {
-            ObservableCollection<Inscription> lesInscriptions = Read();
-            List<int> numsInscriptions = new List<int>();
-            foreach (Inscription uneInscription in lesInscriptions)
-            {
-                numsInscriptions.Add(uneInscription.numInscription);
 
-            }
-            return numsInscriptions;
-        }
-        public static List<Course> ReadnumCourse()
+        public int Create()
         {
-            ObservableCollection<Inscription> lesInscriptions = Read();
-            List<Course> numsCourses = new List<Course>();
-            foreach (Inscription uneInscription in lesInscriptions)
-            {
-                numsCourses.Add(uneInscription.numCourse);
-
-            }
-            return numsCourses;
+            String sql = $"insert into Inscription(numInscription,numCourse,date_Federation,idCoureur) "
+             + $" values ('{this.numInscription}','{this.numCourse}',"
+            + $"'{this.date_Federation}','{this.idCoureur}');";
+            return DataAccess.Instance.SetData(sql);
         }
-        public static List<DateTime> ReadDateFederation()
-        {
-            ObservableCollection<Inscription> lesInscriptions = Read();
-            List<DateTime> DatesFederations = new List<DateTime>();
-            foreach (Inscription uneInscription in lesInscriptions)
-            {
-                DatesFederations.Add(uneInscription.date_Federation);
 
-            }
-            return DatesFederations;
-        }
     }
 }

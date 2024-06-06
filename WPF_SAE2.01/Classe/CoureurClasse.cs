@@ -90,7 +90,10 @@ namespace WPF_SAE2._01
 
         
 
-
+        public CoureurClasse(int idCoureur)
+        {
+            this.IdCoureur = idCoureur;
+        }
         public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, string licenceCoureur, Club.CodeClub codeClub, Federation.codeFederation federation)
         {
             this.NomCoureur = nomCoureur;
@@ -174,7 +177,7 @@ namespace WPF_SAE2._01
         }
         public int Update()
         {
-            String sql = $"insert into Coureur(ClubCoureur,FederationCoureur ,nomCoureur,lienPhoto prenomCoureur,villeCoureur,potable,sexeCoureur, LicenceCoureur) "
+            String sql = $"update into Coureur(ClubCoureur,FederationCoureur ,nomCoureur,lienPhoto prenomCoureur,villeCoureur,potable,sexeCoureur, LicenceCoureur) "
              + $" values ('{this.CodeClub}','{this.Federation}',"
             + $"'{this.NomCoureur}','{this.PrenomCoureur}','{this.villeCoureur}'"
             + $"'{this.portableCoureur}','{this.SexeCoureur}',{this.LicenceCoureur}'"

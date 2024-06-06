@@ -48,6 +48,15 @@
             Fill="#19000000"
             RadiusX="20"
             RadiusY="20" />
+        <RadioButton
+            x:Name="butChoisir"
+            Grid.Row="1"
+            Grid.Column="0"
+            Width="100"
+            Height="25"
+            Margin="35,283,25,39"
+            Background="#FFD420FF"
+            Content="Valider" Checked="butChoisir_Checked" />
         <Rectangle
             Grid.Row="1"
             Grid.Column="1"
@@ -109,14 +118,15 @@
             x:Name="LabelNom"
             Grid.Row="1"
             Margin="20,20,20,20">
-            <Label x:Name="LabelCourse" 
-                   MinWidth="2"
+            <Label
+                x:Name="LabelCourse"
+                MinWidth="2"
                 MinHeight="2"
                 HorizontalAlignment="Center"
                 Background="#00403838"
                 BorderBrush="#00000000"
                 FontSize="16"
-                Foreground="White"/>
+                Foreground="White" />
 
 
             <StackPanel.Resources>
@@ -207,5 +217,42 @@
                 </Style>
             </StackPanel.Resources>
         </StackPanel>
+        <RadioButton
+            x:Name="radioValider1"
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="100"
+            Height="25"
+            Margin="35,283,25,39"
+            Background="#FFD420FF"
+            Content="Valider" Checked="radioValider1_Checked" />
+        <RadioButton
+            x:Name="radioValider2"
+            Grid.Row="1"
+            Grid.Column="2"
+            Width="100"
+            Height="25"
+            Margin="35,283,25,39"
+            Background="#FFD420FF"
+            Content="Valider" />
+        <RadioButton
+            x:Name="radioValider3"
+            Grid.Row="1"
+            Grid.Column="3"
+            Width="100"
+            Height="25"
+            Margin="30,283,30,39"
+            Background="#FFD420FF"
+            Content="Valider" />
+        <RadioButton
+            x:Name="radioValider4"
+            Grid.Row="1"
+            Grid.Column="4"
+            Width="100"
+            Height="25"
+            Margin="30,283,30,39"
+            Background="#FFD420FF"
+            Content="Valider" />
+
     </Grid>
 </Window>

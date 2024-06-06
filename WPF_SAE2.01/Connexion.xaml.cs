@@ -74,7 +74,7 @@ namespace WPF_SAE2._01
                   
                  if (TBPassword.Password.ToString() == unMdp && TBLogin.Text.ToString() == unLogin)
                  {
-                    var page = new Menu();
+                    var page = new Coureur();
                     page.Show();
                     this.Close();
                  }
