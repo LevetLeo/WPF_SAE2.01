@@ -55,7 +55,10 @@
                 <Label Grid.Column="7" Content="Licence" />
                 <Label Grid.Column="8" Content="Portable" />
             </Grid>-->
-            <DataGrid x:Name="DataGridCoureur" ItemsSource="{Binding dgLesCoureurs}">
+            <DataGrid
+                x:Name="DataGridCoureur"
+                AutoGenerateColumns="True"
+                ItemsSource="{Binding dgLesCoureurs}">
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Photo}" Header="Photo" />
@@ -68,6 +71,7 @@
                     <DataGridTextColumn Binding="{Binding Licence}" Header="Licence" />
                     <DataGridTextColumn Binding="{Binding Portable}" Header="Portable" />
                 </DataGrid.Columns>
+
             </DataGrid>
             <Label x:Name="LabelCoureur1" Margin="0,10,0,10" />
         </StackPanel>

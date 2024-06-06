@@ -20,15 +20,21 @@ namespace WPF_SAE2._01
     /// </summary>
     public partial class Coureur : Window
     {
+       
+        
         public Coureur()
         {
             
             InitializeComponent();
             ObservableCollection<CoureurClasse>  LesCoureurs = CoureurClasse.Read();
             //Console.WriteLine("count " + LesCoureurs.Count);
-            LabelCoureur1.Content = LesCoureurs[0].LienPhotoCoureur + " " + LesCoureurs[0].NomCoureur + " " + LesCoureurs[0].PrenomCoureur + " " +
-                LesCoureurs[0].VilleCoureur + " " + LesCoureurs[0].SexeCoureur + " " + LesCoureurs[0].CodeClub + " " + LesCoureurs[0].Federation
-                + " " + LesCoureurs[0].LicenceCoureur + " " + LesCoureurs[0].PortableCoureur;
+            /*for(int i = 0; i < LesCoureurs.Count; i++)
+            {
+                LabelCoureur1.Content = LesCoureurs[i].LienPhotoCoureur + " " + LesCoureurs[i].NomCoureur + " " + LesCoureurs[i].PrenomCoureur + " " +
+                LesCoureurs[i].VilleCoureur + " " + LesCoureurs[i].SexeCoureur + " " + LesCoureurs[i].CodeClub + " " + LesCoureurs[i].Federation
+                + " " + LesCoureurs[i].LicenceCoureur + " " + LesCoureurs[i].PortableCoureur;
+            }*/
+            
 
             foreach(CoureurClasse coureur in LesCoureurs)
             {
