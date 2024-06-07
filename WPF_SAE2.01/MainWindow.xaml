@@ -155,14 +155,14 @@
             RadiusX="20"
             RadiusY="20" />
                     <RadioButton
-            x:Name="butChoisir0"
+            x:Name="radioChoisir0"
             Grid.Row="1"
             Grid.Column="0"
             Width="100"
             Height="25"
             Margin="35,283,25,39"
             Background="#FFD420FF"
-            Content="Choisir"/>
+            Content="Choisir" Checked="radioChoisir0_Checked"/>
                     <Rectangle
             Grid.Row="1"
             Grid.Column="1"

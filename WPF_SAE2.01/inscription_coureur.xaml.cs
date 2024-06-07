@@ -99,7 +99,7 @@ namespace WPF_SAE2._01
                 coureur.Create();
                 ObservableCollection<Inscription>  lesInscrits = Inscription.Read();
                 DateTime dateTime = DateTime.Today;
-                int numeroCourse = ListeCourse.numeroCourse;
+                int numeroCourse = MainWindow.numCourse;
                 Course numCourse = new Course(numeroCourse);
                 
                 CoureurClasse idCoureurInscrit;
