@@ -216,8 +216,9 @@
                         <Label
                 HorizontalContentAlignment="Center"
                 Background="Black"
-                Content="Liste course"
-                FontSize="48"
+                Content="Choisir Course"
+                FontSize="60"
+                VerticalContentAlignment="Center"
                 Foreground="White" Padding="5,28,5,5" />
                     </Grid>
                     <StackPanel
@@ -359,7 +360,8 @@
             Margin="30,283,30,39"
             Background="#FFD420FF"
             Content="Choisir" />
-                    <Button Grid.Row="2" Grid.ColumnSpan="5" Background="#7FDDDDDD" BorderBrush="#7F707070" Margin="200,50,200,50" Content="Valider"/>
+                    <Button Grid.Row="2" Grid.ColumnSpan="5" Background="Black" BorderBrush="White" Margin="200,40,200,40" Content="Valider" x:Name="Validation" Panel.ZIndex="1" Foreground="White" FontSize="24" Click="Validation_Click"/>
+                    <Rectangle Grid.Row="2" Grid.ColumnSpan="5" Fill="Black"/>
                 </Grid>
             </TabItem>
         </TabControl>

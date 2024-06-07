@@ -30,14 +30,10 @@ namespace WPF_SAE2._01
             InitializeComponent();
         }
 
-
-
-
-        private void butCourse_Click(object sender, RoutedEventArgs e)
+        private void Validation_Click(object sender, RoutedEventArgs e)
         {
             var page = new inscription_coureur();
             page.Show();
-            this.Close();
         }
     }
 }
