@@ -102,5 +102,12 @@ namespace WPF_SAE2._01
             }
             return TempsPrevus;
         }
+        public int Create()
+        {
+            String sql = $"insert into Inscription2(numInscription,numCoureur,temps_Prevue) "
+             + $" values ('{this.numInscription}','{this.numCoureur}',"
+            + $"'{this.temps_Prevue}');";
+            return DataAccess.Instance.SetData(sql);
+        }
     }
 }

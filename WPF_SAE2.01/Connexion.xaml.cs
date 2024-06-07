@@ -30,7 +30,23 @@ namespace WPF_SAE2._01
 
         private void butConnexion_Click(object sender, RoutedEventArgs e)
         {
-            data.ConnexionBD();
+            string strConnexion = "Server=srv-peda-new;" +
+                            "port=5433;" +
+                            "Database=SAE201Marathon;" +
+                            "Search Path =SchemaSAE201;" +
+                            $"uid={TBLogin.Text};" +
+                            $"password={TBPassword.Password.ToString()};";
+            try
+            {
+                DataAccess.Instance.ConnexionBD(strConnexion);
+
+                var page = new Coureur();
+                page.Show();
+                this.Close();
+            }
+            catch (Exception ex) { MessageBox.Show("erreur"); }
+            /*
+            catch (Exception ex) { }
             //data.TestDatabaseConnection();
             int i = 0;
             int j = 0;
@@ -74,12 +90,13 @@ namespace WPF_SAE2._01
                   
                  if (TBPassword.Password.ToString() == unMdp && TBLogin.Text.ToString() == unLogin)
                  {
-                    var page = new Menu();
+                    var page = new MainWindow();
                     page.Show();
                     this.Close();
                  }
 
             }
+            */
                 
             
         }

@@ -28,10 +28,10 @@
             <TextBox x:Name="TBSelVille" TextChanged="TBSelVille_TextChanged" />
             <Label Margin="0,50,0,0" Content="Selectionnez fédération" />
             <ComboBox x:Name="ComboBoxFederation" SelectionChanged="ComboBoxFederation_SelectionChanged">
-                <ComboBoxItem>Federation Francaise Atlétisme</ComboBoxItem>
-                <ComboBoxItem>Federation Francaise Cyclisme</ComboBoxItem>
-                <ComboBoxItem>Federation Francaise Tennix</ComboBoxItem>
-                <ComboBoxItem>Federation Francaise Golf</ComboBoxItem>
+                <ComboBoxItem>0,FFA</ComboBoxItem>
+                <ComboBoxItem>1,FFC</ComboBoxItem>
+                <ComboBoxItem>2,FFT</ComboBoxItem>
+                <ComboBoxItem>3,FFG</ComboBoxItem>
                 <ComboBoxItem>Aucun</ComboBoxItem>
             </ComboBox>
         </StackPanel>

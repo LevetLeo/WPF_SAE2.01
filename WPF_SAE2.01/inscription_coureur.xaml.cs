@@ -92,10 +92,11 @@ namespace WPF_SAE2._01
                     federation = "C4"; 
                 else
                     federation = "C5";
-
+                DateTime tempsPrevue = new DateTime(00, 00, 00, int.Parse(heure.Text),int.Parse(minutes.Text), 00);
                 Club.CodeClub club1 = Club.ConvertionStringClub(codeClub);
                 Federation.codeFederation fedede1 = Federation.ConvertionStringFederation(federation);
                 CoureurClasse coureur = new CoureurClasse(TBNom.Text.ToString(),TBPreom.Text.ToString(),TBVille.Text.ToString(),sexe,TBNum.Text,club1, fedede1);
+                CoureurClasse coureurnum = new CoureurClasse(coureur.IdCoureur);
                 coureur.Create();
                 ObservableCollection<Inscription>  lesInscrits = Inscription.Read();
                 DateTime dateTime = DateTime.Today;
@@ -112,6 +113,8 @@ namespace WPF_SAE2._01
                         idCoureurInscrit = new CoureurClasse(coureurClasse.IdCoureur);
                         Inscription i1 = new Inscription(lesInscrits.Count, numCourse, dateTime, idCoureurInscrit);
                         i1.Create();
+                        Inscription2 inscrit1 = new Inscription2(i1, coureurnum, tempsPrevue);
+                        inscrit1.Create();
                         
                     }
                 }
