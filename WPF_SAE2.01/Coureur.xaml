@@ -27,11 +27,12 @@
             <Label Margin="0,49,0,0" Content="Selectionnez ville" />
             <TextBox x:Name="TBSelVille" TextChanged="TBSelVille_TextChanged" />
             <Label Margin="0,50,0,0" Content="Selectionnez fédération" />
-            <ComboBox>
+            <ComboBox x:Name="ComboBoxFederation" SelectionChanged="ComboBoxFederation_SelectionChanged">
                 <ComboBoxItem>Federation Francaise Atlétisme</ComboBoxItem>
                 <ComboBoxItem>Federation Francaise Cyclisme</ComboBoxItem>
                 <ComboBoxItem>Federation Francaise Tennix</ComboBoxItem>
                 <ComboBoxItem>Federation Francaise Golf</ComboBoxItem>
+                <ComboBoxItem>Aucun</ComboBoxItem>
             </ComboBox>
         </StackPanel>
         <StackPanel Grid.Column="0">
