@@ -68,23 +68,16 @@ namespace WPF_SAE2._01
             CollectionViewSource.GetDefaultView(DataGridCoureur.ItemsSource).Refresh();
 
         }
-        /*public bool ContientMotCleFederation(object obj)
+
+        public bool ContientMotCleFederation(object obj)
         {
             CoureurClasse unCoureur = obj as CoureurClasse;
             if (String.IsNullOrEmpty(ComboBoxFederation.Text))
                 return true;
             else
-                return (unCoureur.Federation.StartsWith(ComboBoxFederation.Text, StringComparison.OrdinalIgnoreCase));
+                return (unCoureur.Federation.Equals(int.Parse(ComboBoxFederation.Text)));
 
-        }*/
-
-
-
-
-
-
-            
-            
+        }
         private void ComboBoxFederation_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
