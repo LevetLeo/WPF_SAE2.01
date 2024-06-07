@@ -56,7 +56,8 @@
             Height="25"
             Margin="35,283,25,39"
             Background="#FFD420FF"
-            Content="Valider" Checked="butChoisir_Checked" />
+            Checked="butChoisir_Checked"
+            Content="Valider" />
         <Rectangle
             Grid.Row="1"
             Grid.Column="1"
@@ -225,7 +226,8 @@
             Height="25"
             Margin="35,283,25,39"
             Background="#FFD420FF"
-            Content="Valider" Checked="radioValider1_Checked" />
+            Checked="radioValider1_Checked"
+            Content="Valider" />
         <RadioButton
             x:Name="radioValider2"
             Grid.Row="1"

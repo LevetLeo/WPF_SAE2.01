@@ -15,23 +15,23 @@ namespace WPF_SAE2._01
 
     public class ApplicationData
     {
-       
 
 
-        private ObservableCollection<Coureur> lesCoureurs;
+
+        private ObservableCollection<CoureurClasse> lesCoureurs;
         private NpgsqlConnection connexion = null;   // futur lien à la BD
-        
 
-        public ObservableCollection<Coureur> LesCoureurs
+
+        public ObservableCollection<CoureurClasse> LesCoureurs
         {
             get
             {
-                return this.LesCoureurs;
+                return this.lesCoureurs;
             }
 
             set
             {
-                this.LesCoureurs = value;
+                this.lesCoureurs = value;
             }
         }
 
@@ -48,27 +48,21 @@ namespace WPF_SAE2._01
             }
         }
 
-        
 
-       public ApplicationData()
-       {
 
-           this.ConnexionBD();
-           this.Read();
+        public ApplicationData()
+        {
 
-       }
+            this.ConnexionBD();
+            this.LesCoureurs = CoureurClasse.Read();
+
+
+        }
 
 
         public void ConnexionBD()
         {
             //data.ConnexionBD();
         }
-       
-        public void Read()
-        {
-            this.LesCoureurs = new ObservableCollection<Coureur>();
-        }
-
     }
-
 }
