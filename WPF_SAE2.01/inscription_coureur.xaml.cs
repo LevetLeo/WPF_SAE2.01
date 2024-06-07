@@ -103,10 +103,7 @@ namespace WPF_SAE2._01
                 Course numCourse = new Course(numeroCourse);
                 
                 CoureurClasse idCoureurInscrit;
-                foreach(Course lesCourses in LesCourses)
-                {
-
-                }
+                
                 foreach(CoureurClasse coureurClasse in lesCoureurss)
                 {
                     if(TBNom.Text == coureurClasse.NomCoureur && TBPreom.Text == coureurClasse.PrenomCoureur)

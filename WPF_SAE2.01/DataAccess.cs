@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -17,10 +18,14 @@ namespace WPF_SAE2._01
                             "Search Path =SchemaSAE201;" +
                             "uid=guzmanma;" +
                             "password=VnZlZ5;";
+        
 
         public DataAccess()
         {
             ConnexionBD();
+
+            
+
         }
         public static DataAccess Instance
         {
@@ -98,6 +103,11 @@ namespace WPF_SAE2._01
                 Console.WriteLine("pb avec : " + setSQL + e.ToString());
                 return 0;
             }
+        }
+        public ObservableCollection<CoureurClasse> DataGridCoureur()
+        {
+            ObservableCollection<CoureurClasse>  lesCoureurs  = CoureurClasse.Read();
+            return lesCoureurs;
         }
     }
 }

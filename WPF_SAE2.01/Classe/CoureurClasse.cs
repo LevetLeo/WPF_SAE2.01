@@ -110,16 +110,6 @@ namespace WPF_SAE2._01
             this.PortableCoureur = portableCoureur;
             this.LienPhotoCoureur = lienPhotoCoureur;
         }
-        /*
-        public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, int licenceCoureur, Club.CodeClub codeClub, Federation.codeFederation federation, string portableCoureur) : this(nomCoureur, prenomCoureur, villeCoureur, sexeCoureur, licenceCoureur, codeClub, federation)
-        {
-            this.PortableCoureur = portableCoureur;
-        }
-        public CoureurClasse(string nomCoureur, string prenomCoureur, string villeCoureur, char sexeCoureur, int licenceCoureur, Club.CodeClub codeClub, Federation.codeFederation federation, string lienPhotoCoureur) : this(nomCoureur, prenomCoureur, villeCoureur, sexeCoureur, licenceCoureur, codeClub, federation)
-        { 
-            this.LienPhotoCoureur = lienPhotoCoureur;
-        }
-        */
 
 
         public static ObservableCollection<CoureurClasse> Read()

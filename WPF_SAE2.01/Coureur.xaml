@@ -9,7 +9,9 @@
     Width="800"
     Height="550"
     mc:Ignorable="d">
-
+    <Window.DataContext>
+        <local:DataAccess x:Name="data" />
+    </Window.DataContext>
 
 
 
@@ -21,55 +23,40 @@
 
         <StackPanel Grid.Column="1" Margin="0,50,0,50">
             <Label Content="Selectionnez nom" />
-            <TextBox x:Name="TBSelNom" />
+            <TextBox x:Name="TBSelNom" TextChanged="TBSelNom_TextChanged" />
             <Label Margin="0,49,0,0" Content="Selectionnez ville" />
-            <TextBox x:Name="TBSelVille" />
+            <TextBox x:Name="TBSelVille" TextChanged="TBSelVille_TextChanged" />
             <Label Margin="0,50,0,0" Content="Selectionnez fédération" />
-            <ComboBox>
+            <ComboBox x:Name="ComboBoxFederation" SelectionChanged="ComboBoxFederation_SelectionChanged">
                 <ComboBoxItem>Federation Francaise Atlétisme</ComboBoxItem>
                 <ComboBoxItem>Federation Francaise Cyclisme</ComboBoxItem>
                 <ComboBoxItem>Federation Francaise Tennix</ComboBoxItem>
                 <ComboBoxItem>Federation Francaise Golf</ComboBoxItem>
+                <ComboBoxItem>Aucun</ComboBoxItem>
             </ComboBox>
         </StackPanel>
         <StackPanel Grid.Column="0">
-            <!--<Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="10*"/>
-                </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Content="URL Photo"/>
-                <Label Content="Nom" Grid.Column="1"/>
-                <Label Grid.Column="2" Content="Prenom"/>
-                <Label Grid.Column="3" Content="Ville"/>
-                <Label Grid.Column="4" Content="Sexe"/>
-                <Label Grid.Column="5" Content="Club" />
-                <Label Grid.Column="6" Content="Federation" />
-                <Label Grid.Column="7" Content="Licence" />
-                <Label Grid.Column="8" Content="Portable" />
-            </Grid>-->
+
             <DataGrid
                 x:Name="DataGridCoureur"
-                AutoGenerateColumns="True"
-                ItemsSource="{Binding dgLesCoureurs}" Height="529" Width="632">
+                Width="632"
+                Height="529"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                AutoGenerateColumns="False"
+                IsReadOnly="True"
+                ItemsSource="{Binding dgLesCoureurs}">
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Photo}" Header="Photo" />
-                    <DataGridTextColumn Binding="{Binding Nom}" Header="Nom" />
-                    <DataGridTextColumn Binding="{Binding Prenom}" Header="Prenom" />
-                    <DataGridTextColumn Binding="{Binding Ville}" Header="Ville" />
-                    <DataGridTextColumn Binding="{Binding Sexe}" Header="Sexe" />
-                    <DataGridTextColumn Binding="{Binding Club}" Header="Club" />
+                    <DataGridTextColumn Binding="{Binding LienPhotoCoureur}" Header="Photo" />
+                    <DataGridTextColumn Binding="{Binding NomCoureur}" Header="Nom" />
+                    <DataGridTextColumn Binding="{Binding PrenomCoureur}" Header="Prenom" />
+                    <DataGridTextColumn Binding="{Binding VilleCoureur}" Header="Ville" />
+                    <DataGridTextColumn Binding="{Binding SexeCoureur}" Header="Sexe" />
+                    <DataGridTextColumn Binding="{Binding CodeClub}" Header="Club" />
                     <DataGridTextColumn Binding="{Binding Federation}" Header="Federation" />
-                    <DataGridTextColumn Binding="{Binding Licence}" Header="Licence" />
-                    <DataGridTextColumn Binding="{Binding Portable}" Header="Portable" />
+                    <DataGridTextColumn Binding="{Binding LicenceCoureur}" Header="Licence" />
+                    <DataGridTextColumn Binding="{Binding PortableCoureur}" Header="Portable" />
                 </DataGrid.Columns>
 
             </DataGrid>
