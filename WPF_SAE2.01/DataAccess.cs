@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace WPF_SAE2._01
 {
@@ -67,7 +68,7 @@ namespace WPF_SAE2._01
         }
 
         
-        public void DeconnexionBD()
+        public void DeconnexionBD(object obj)
         {
             try
             {
@@ -78,6 +79,7 @@ namespace WPF_SAE2._01
             { 
                 Console.WriteLine("pb à la déconnexion : " + e); 
             }
+            
         }
 
         public DataTable GetData(string selectSQL)

@@ -118,5 +118,11 @@ namespace WPF_SAE2._01
             radioChoisir3.IsChecked = false;
             radioChoisir4.IsChecked = false;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DataAccess.DeconnexionBD(sender);
+            Visibility = Visibility.Visible;
+        }
     }
 }

@@ -42,62 +42,10 @@ namespace WPF_SAE2._01
 
                 var page = new Coureur();
                 page.Show();
-                this.Close();
+                Visibility = Visibility.Hidden;
             }
             catch (Exception ex) { MessageBox.Show("erreur"); }
-            /*
-            catch (Exception ex) { }
-            //data.TestDatabaseConnection();
-            int i = 0;
-            int j = 0;
-            List<string> login = Agent.ReadLogin();
-            List<string> mdp = Agent.ReadMdp();
-            string unLogin = login[i];
-            string unMdp = mdp[j];
-            do
-            {
-                if(unLogin is null)
-                {
-                    MessageBox.Show("erreur");
-                }
-                else
-                {
-                    Console.WriteLine(login[i]);
-                    unLogin = login[i];
-                    i++;
-                }
-                
-                
-
-            } while (unLogin != TBLogin.Text.ToString() || i > login.Count);
-
-            do
-            {
-                unMdp = mdp[j];
-                j++;
-
-
-            } while (unMdp != TBPassword.Password.ToString() || j > mdp.Count);
-
-            if(j > mdp.Count || i > login.Count)
-            {
-                Console.WriteLine("erreur identifiant ou mot de passe");
-            }
-            
-                
-            else if(j == i)
-            {
-                  
-                 if (TBPassword.Password.ToString() == unMdp && TBLogin.Text.ToString() == unLogin)
-                 {
-                    var page = new MainWindow();
-                    page.Show();
-                    this.Close();
-                 }
-
-            }
-            */
-                
+                           
             
         }
         public void Fermer()
