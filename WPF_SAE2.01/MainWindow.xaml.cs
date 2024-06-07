@@ -88,6 +88,16 @@ namespace WPF_SAE2._01
             + ListeOBJETCourse[4 + i].Distance + "\n DateHeure: \n" + ListeOBJETCourse[4 + i].DateDepart.Day + "/" + ListeOBJETCourse[4 + i].DateDepart.Month + "/" + ListeOBJETCourse[4 + i].DateDepart.Year +
             "\n Heure depart: \n " + ListeOBJETCourse[4 + i].HeureDepartCourse.Hour + ":" + ListeOBJETCourse[4 + i].HeureDepartCourse.Minute + "\n Prix: \n" +
             ListeOBJETCourse[4 + i].PrixInscriptionCourse;
+
+            LabelListeCourse.Content = ListeOBJETCourse[0 + i].NomCourse;
+
+            LabelListeCourse1.Content = ListeOBJETCourse[1 + i].NomCourse;
+
+            LabelListeCourse2.Content = ListeOBJETCourse[2 + i].NomCourse;
+
+            LabelListeCourse3.Content = ListeOBJETCourse[3 + i].NomCourse;
+
+            LabelListeCourse4.Content = ListeOBJETCourse[4 + i].NomCourse;
         }
         private void Validation_Click(object sender, RoutedEventArgs e)
         {

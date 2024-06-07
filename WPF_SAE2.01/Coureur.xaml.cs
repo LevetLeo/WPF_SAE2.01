@@ -68,7 +68,7 @@ namespace WPF_SAE2._01
             CollectionViewSource.GetDefaultView(DataGridCoureur.ItemsSource).Refresh();
 
         }
-        public bool ContientMotCleFederation(object obj)
+        /*public bool ContientMotCleFederation(object obj)
         {
             CoureurClasse unCoureur = obj as CoureurClasse;
             if (String.IsNullOrEmpty(ComboBoxFederation.Text))
@@ -76,7 +76,7 @@ namespace WPF_SAE2._01
             else
                 return (unCoureur.Federation.StartsWith(ComboBoxFederation.Text, StringComparison.OrdinalIgnoreCase));
 
-        }
+        }*/
 
 
 
@@ -90,9 +90,9 @@ namespace WPF_SAE2._01
             
 
 
-            DataGridCoureur.Items.Filter = ContientMotCleFederation;
+            /*DataGridCoureur.Items.Filter = ContientMotCleFederation;
             CollectionViewSource.GetDefaultView(DataGridCoureur.ItemsSource).Refresh();
-
+*/
         }
     }
 }
