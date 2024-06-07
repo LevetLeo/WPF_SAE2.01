@@ -9,7 +9,9 @@
     Width="800"
     Height="550"
     mc:Ignorable="d">
-
+    <Window.DataContext>
+        <local:DataAccess x:Name="data" />
+    </Window.DataContext>
 
 
 
@@ -33,32 +35,16 @@
             </ComboBox>
         </StackPanel>
         <StackPanel Grid.Column="0">
-            <!--<Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="10*"/>
-                </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Content="URL Photo"/>
-                <Label Content="Nom" Grid.Column="1"/>
-                <Label Grid.Column="2" Content="Prenom"/>
-                <Label Grid.Column="3" Content="Ville"/>
-                <Label Grid.Column="4" Content="Sexe"/>
-                <Label Grid.Column="5" Content="Club" />
-                <Label Grid.Column="6" Content="Federation" />
-                <Label Grid.Column="7" Content="Licence" />
-                <Label Grid.Column="8" Content="Portable" />
-            </Grid>-->
+
             <DataGrid
                 x:Name="DataGridCoureur"
-                AutoGenerateColumns="True"
-                ItemsSource="{Binding dgLesCoureurs}" Height="529" Width="632">
+                Width="632"
+                Height="529"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                AutoGenerateColumns="False"
+                IsReadOnly="True"
+                ItemsSource="{Binding dgLesCoureurs}">
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Photo}" Header="Photo" />
