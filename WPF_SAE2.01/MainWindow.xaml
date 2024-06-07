@@ -111,6 +111,55 @@
             Fill="#FFFF81FA"
             RadiusX="20"
             RadiusY="20" />
+                    <Label
+                        Grid.Row="1"
+                x:Name="LabelListeCourse"
+                MinWidth="2"
+                MinHeight="2"
+                Background="#00403838"
+                BorderBrush="#00000000"
+                FontSize="16"
+                Foreground="White" Margin="30,30,30,30" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                x:Name="LabelListeCourse1"
+                MinWidth="2"
+                MinHeight="2"
+                Background="#00403838"
+                BorderBrush="#00000000"
+                FontSize="16"
+                Foreground="White" Margin="30,30,30,30" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="2"
+                x:Name="LabelListeCourse2"
+                MinWidth="2"
+                MinHeight="2"
+                Background="#00403838"
+                BorderBrush="#00000000"
+                FontSize="16"
+                Foreground="White" Margin="30,30,30,30" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="3"
+                x:Name="LabelListeCourse3"
+                MinWidth="2"
+                MinHeight="2"
+                Background="#00403838"
+                BorderBrush="#00000000"
+                FontSize="16"
+                Foreground="White" Margin="30,30,30,30" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="4"
+                x:Name="LabelListeCourse4"
+                MinWidth="2"
+                MinHeight="2"
+                Background="#00403838"
+                BorderBrush="#00000000"
+                FontSize="16"
+                Foreground="White" Margin="30,30,30,30" />
                 </Grid>
             </TabItem>
             <TabItem Header="Inscription coureur">
