@@ -6,19 +6,19 @@
     xmlns:local="clr-namespace:WPF_SAE2._01"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="inscription_coureur"
-    Width="400"
-    Height="530"
+    Width="500"
+    Height="700"
     mc:Ignorable="d">
     <Grid Background="#FFD843D2">
         <Rectangle
-            Height="457"
+            Height="600"
             Margin="50,30,30,0"
             VerticalAlignment="Top"
             Fill="#19000000"
             RadiusX="20"
             RadiusY="20" />
         <Rectangle
-            Height="457"
+            Height="600"
             Margin="40,20,40,0"
             VerticalAlignment="Top"
             Fill="#FFFF81FA"
@@ -54,14 +54,20 @@
                 <ComboBoxItem x:Name="ComboBoxChambery">Club Chambéry</ComboBoxItem>
                 <ComboBoxItem x:Name="ComboBoxSoir">Club du soir</ComboBoxItem>
             </ComboBox>
+            <Label Content="Temps prévue du coureur pour la course"/>
+            <StackPanel Orientation="Horizontal" Height="30">
+                <Label Content="Heures :"/>
+                <TextBox x:Name="heure" Width="60"/>
+                <Label Content="minutes :" Margin="30,5,0,0"/>
+                <TextBox x:Name="minutes" Width="60"/>
+            </StackPanel>
             <CheckBox Margin="0,5,0,0" Content="veut temps de passage aux bornes" />
             <Label Content="(optionel) Donner numero de téléphone" />
             <TextBox x:Name="TBNumTel" />
             <Button
                 Margin="60,10,60,0"
-                Background="#00DDDDDD"
+                Background="#7FDDDDDD"
                 BorderBrush="#00707070"
-                Click="butValider_Click"
                 Content="Valider" />
             <StackPanel.Resources>
                 <Style TargetType="Label">
