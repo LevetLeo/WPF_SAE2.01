@@ -10,59 +10,19 @@
     Height="720"
     WindowState="Maximized"
     mc:Ignorable="d">
-
     <Grid Background="#FFD843D2">
-
         <Grid.ColumnDefinitions>
-            <ColumnDefinition x:Name="colone" Width="0*" />
             <ColumnDefinition Width="20*" />
             <ColumnDefinition Width="20*" />
             <ColumnDefinition Width="20*" />
             <ColumnDefinition Width="20*" />
             <ColumnDefinition Width="20*" />
         </Grid.ColumnDefinitions>
-        <StackPanel
-            Grid.RowSpan="2"
-            Margin="0,0,0,0"
-            Background="#FFE837E1">
-            <StackPanel Orientation="Horizontal">
-                <Image
-                    Width="35"
-                    Height="36"
-                    Margin="0,160,0,0"
-                    RenderTransformOrigin="0.5,0.5"
-                    Source="P:\Semestre_2\SAE2.01\WPF_SAE2 (1).01\WPF_SAE2.01\Image\hqc.png">
-                    <Image.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleX="1" ScaleY="1" />
-                            <SkewTransform />
-                            <RotateTransform />
-                            <TranslateTransform />
-                        </TransformGroup>
-                    </Image.RenderTransform>
-                </Image>
-                <Button
-                    Margin="0,150,0,0"
-                    Background="#00DDDDDD"
-                    BorderBrush="#00707070"
-                    Content="Inscrire Coureur"
-                    FontSize="18" />
-            </StackPanel>
-            <Button
-                Margin="0,150,0,0"
-                Background="#00DDDDDD"
-                BorderBrush="#00707070"
-                Content="Visualiser Course"
-                FontSize="18" />
-            <Button
-                Margin="0,150,0,0"
-                Background="#00DDDDDD"
-                BorderBrush="#00707070"
-                Content="Visualiser Coureur"
-                FontSize="18" />
-        </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="80*"/>
+        </Grid.RowDefinitions>
         <Label
-            Grid.Column="1"
             Grid.ColumnSpan="5"
             Padding="0,0,0,0"
             HorizontalContentAlignment="Center"
@@ -147,26 +107,6 @@
             Fill="#FFFF81FA"
             RadiusX="20"
             RadiusY="20" />
-        <Rectangle
-            x:Name="assobrir"
-            Grid.RowSpan="2"
-            Grid.Column="1"
-            Grid.ColumnSpan="5"
-            Fill="#19000000"
-            Opacity="0" />
-        <Button
-            x:Name="butmenu"
-            Grid.RowSpan="2"
-            Grid.Column="1"
-            Width="50"
-            Height="50"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Panel.ZIndex="1"
-            Background="#FFDED0DD"
-            BorderBrush="#00707070"
-            Click="butmenu_Click"
-            Content="&gt;&gt;"
-            FontSize="18" />
     </Grid>
+
 </Window>
