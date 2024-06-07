@@ -64,5 +64,11 @@ namespace WPF_SAE2._01
         {
             //data.ConnexionBD();
         }
+       
+        public void Read()
+        {
+            this.LesCoureurs = new ObservableCollection<CoureurClasse>();
+        }
+
     }
 }
