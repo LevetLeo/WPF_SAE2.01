@@ -33,5 +33,17 @@ namespace WPF_SAE2._01
 
             
         }
+
+        private void TBSelNom_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            CollectionViewSource.GetDefaultView(DataGridCoureur.ItemsSource).Refresh();
+
+        }
+
+        private void TBSelVille_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            CollectionViewSource.GetDefaultView(DataGridCoureur.ItemsSource).Refresh();
+
+        }
     }
 }
