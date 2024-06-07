@@ -58,7 +58,7 @@
             <DataGrid
                 x:Name="DataGridCoureur"
                 AutoGenerateColumns="True"
-                ItemsSource="{Binding dgLesCoureurs}">
+                ItemsSource="{Binding dgLesCoureurs}" Height="529" Width="632">
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Photo}" Header="Photo" />
