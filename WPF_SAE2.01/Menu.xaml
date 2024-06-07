@@ -10,7 +10,10 @@
     Height="720"
     WindowState="Maximized"
     mc:Ignorable="d">
-    <Grid Background="#FFD843D2">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Liste Course">
+                <Grid Background="#FFD843D2">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*" />
             <ColumnDefinition Width="20*" />
@@ -107,6 +110,8 @@
             Fill="#FFFF81FA"
             RadiusX="20"
             RadiusY="20" />
+            </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
-
 </Window>

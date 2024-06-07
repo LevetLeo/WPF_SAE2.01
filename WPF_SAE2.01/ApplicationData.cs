@@ -18,20 +18,20 @@ namespace WPF_SAE2._01
        
 
 
-        private ObservableCollection<Coureur> lesCoureurs;
+        private ObservableCollection<CoureurClasse> lesCoureurs;
         private NpgsqlConnection connexion = null;   // futur lien à la BD
         
 
-        public ObservableCollection<Coureur> LesCoureurs
+        public ObservableCollection<CoureurClasse> LesCoureurs
         {
             get
             {
-                return this.LesCoureurs;
+                return this.lesCoureurs;
             }
 
             set
             {
-                this.LesCoureurs = value;
+                this.lesCoureurs = value;
             }
         }
 
@@ -66,7 +66,7 @@ namespace WPF_SAE2._01
        
         public void Read()
         {
-            this.LesCoureurs = new ObservableCollection<Coureur>();
+            this.LesCoureurs = new ObservableCollection<CoureurClasse>();
         }
 
     }

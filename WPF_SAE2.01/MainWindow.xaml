@@ -6,392 +6,362 @@
     xmlns:local="clr-namespace:WPF_SAE2._01"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="MainWindow"
-    Width="800"
-    Height="500"
+    Width="1080"
+    Height="720"
+    WindowState="Maximized"
     mc:Ignorable="d">
-    <Grid Background="#FFD843D2">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="20*" />
-            <RowDefinition Height="80*" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20*" />
-            <ColumnDefinition Width="20*" />
-            <ColumnDefinition Width="20*" />
-            <ColumnDefinition Width="20*" />
-            <ColumnDefinition Width="20*" />
-        </Grid.ColumnDefinitions>
-        <Rectangle
+
+    <Grid>
+        <TabControl>
+            <TabItem Header="Liste Course">
+                <Grid Background="#FFD843D2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*" />
+                        <ColumnDefinition Width="20*" />
+                        <ColumnDefinition Width="20*" />
+                        <ColumnDefinition Width="20*" />
+                        <ColumnDefinition Width="20*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="80*"/>
+                    </Grid.RowDefinitions>
+                    <Label
+            Grid.ColumnSpan="5"
+            Padding="0,0,0,0"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Background="Black"
+            Content="Liste course"
+            FontSize="60"
+            Foreground="White" />
+                    <Rectangle
             Grid.Row="1"
             Grid.Column="1"
             Fill="#33000000" />
-        <Rectangle
+                    <Rectangle
             Grid.Row="1"
             Grid.Column="3"
             Fill="#33000000" />
-        <Rectangle
+                    <Rectangle
             Grid.Row="1"
             Margin="25,25,15,15"
             Fill="#19000000"
             RadiusX="20"
             RadiusY="20" />
-        <Rectangle
+                    <Rectangle
             Grid.Row="1"
             Margin="20,20,20,20"
             Fill="#FFFF81FA"
             RadiusX="20"
             RadiusY="20" />
-        <Rectangle
+                    <Rectangle
             Grid.Row="1"
             Grid.Column="1"
             Margin="25,25,15,15"
             Fill="#19000000"
             RadiusX="20"
             RadiusY="20" />
-        <Rectangle
+                    <Rectangle
             Grid.Row="1"
             Grid.Column="1"
             Margin="20,20,20,20"
             Fill="#FFFF81FA"
             RadiusX="20"
             RadiusY="20" />
-        <Rectangle
+                    <Rectangle
             Grid.Row="1"
             Grid.Column="2"
             Margin="25,25,15,15"
             Fill="#19000000"
             RadiusX="20"
             RadiusY="20" />
-        <Rectangle
+                    <Rectangle
             Grid.Row="1"
             Grid.Column="2"
             Margin="20,20,20,20"
             Fill="#FFFF81FA"
             RadiusX="20"
             RadiusY="20" />
-        <Rectangle
+                    <Rectangle
             Grid.Row="1"
             Grid.Column="3"
             Margin="25,25,15,15"
             Fill="#19000000"
             RadiusX="20"
             RadiusY="20" />
-        <Rectangle
+                    <Rectangle
             Grid.Row="1"
             Grid.Column="3"
             Margin="20,20,20,20"
             Fill="#FFFF81FA"
             RadiusX="20"
             RadiusY="20" />
-        <Rectangle
+                    <Rectangle
             Grid.Row="1"
             Grid.Column="4"
             Margin="25,25,15,15"
             Fill="#19000000"
             RadiusX="20"
             RadiusY="20" />
-        <Rectangle
+                    <Rectangle
             Grid.Row="1"
             Grid.Column="4"
             Margin="20,20,20,20"
             Fill="#FFFF81FA"
             RadiusX="20"
             RadiusY="20" />
-        <Grid Grid.ColumnSpan="5">
-            <Label
+                </Grid>
+            </TabItem>
+            <TabItem Header="Inscription coureur">
+                <Grid Background="#FFD843D2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*" />
+                        <RowDefinition Height="65*" />
+                        <RowDefinition Height="15*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*" />
+                        <ColumnDefinition Width="20*" />
+                        <ColumnDefinition Width="20*" />
+                        <ColumnDefinition Width="20*" />
+                        <ColumnDefinition Width="20*" />
+                    </Grid.ColumnDefinitions>
+                    <Rectangle
+            Grid.Row="1"
+            Grid.Column="1"
+            Fill="#33000000" />
+                    <Rectangle
+            Grid.Row="1"
+            Grid.Column="3"
+            Fill="#33000000" />
+                    <Rectangle
+            Grid.Row="1"
+            Margin="25,25,15,15"
+            Fill="#19000000"
+            RadiusX="20"
+            RadiusY="20" />
+                    <Rectangle
+            Grid.Row="1"
+            Margin="20,20,20,20"
+            Fill="#FFFF81FA"
+            RadiusX="20"
+            RadiusY="20" />
+                    <Rectangle
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="25,25,15,15"
+            Fill="#19000000"
+            RadiusX="20"
+            RadiusY="20" />
+                    <RadioButton
+            x:Name="butChoisir0"
+            Grid.Row="1"
+            Grid.Column="0"
+            Width="100"
+            Height="25"
+            Margin="35,283,25,39"
+            Background="#FFD420FF"
+            Content="Choisir"/>
+                    <Rectangle
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="20,20,20,20"
+            Fill="#FFFF81FA"
+            RadiusX="20"
+            RadiusY="20" />
+                    <Rectangle
+            Grid.Row="1"
+            Grid.Column="2"
+            Margin="25,25,15,15"
+            Fill="#19000000"
+            RadiusX="20"
+            RadiusY="20" />
+                    <Rectangle
+            Grid.Row="1"
+            Grid.Column="2"
+            Margin="20,20,20,20"
+            Fill="#FFFF81FA"
+            RadiusX="20"
+            RadiusY="20" />
+                    <Rectangle
+            Grid.Row="1"
+            Grid.Column="3"
+            Margin="25,25,15,15"
+            Fill="#19000000"
+            RadiusX="20"
+            RadiusY="20" />
+                    <Rectangle
+            Grid.Row="1"
+            Grid.Column="3"
+            Margin="20,20,20,20"
+            Fill="#FFFF81FA"
+            RadiusX="20"
+            RadiusY="20" />
+                    <Rectangle
+            Grid.Row="1"
+            Grid.Column="4"
+            Margin="25,25,15,15"
+            Fill="#19000000"
+            RadiusX="20"
+            RadiusY="20" />
+                    <Rectangle
+            Grid.Row="1"
+            Grid.Column="4"
+            Margin="20,20,20,20"
+            Fill="#FFFF81FA"
+            RadiusX="20"
+            RadiusY="20" />
+                    <Grid Grid.ColumnSpan="5">
+                        <Label
                 HorizontalContentAlignment="Center"
                 Background="Black"
-                Content="Choisissez une course"
+                Content="Liste course"
                 FontSize="48"
-                Foreground="White" />
-        </Grid>
-        <StackPanel Grid.Row="1" Margin="20,20,20,18">
-            <Label
+                Foreground="White" Padding="5,28,5,5" />
+                    </Grid>
+                    <StackPanel
+            x:Name="LabelNom"
+            Grid.Row="1"
+            Margin="20,20,20,20">
+                        <Label
+                x:Name="LabelCourse"
                 MinWidth="2"
                 MinHeight="2"
                 HorizontalAlignment="Center"
                 Background="#00403838"
                 BorderBrush="#00000000"
-                Content="Marathon"
                 FontSize="16"
                 Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Distance :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="42.195 km"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Date départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="06/10/2024"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Heure départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="8H"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Prix :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="50 euros"
-                Foreground="White" />
-            <Button
-                Margin="20,7,20,0"
-                Background="#19000000"
-                BorderBrush="#00707070"
-                Click="butCourse_Click"
-                Content="choisir"
-                Foreground="White" />
-            <StackPanel.Resources>
-                <Style TargetType="Label">
-                    <Setter Property="Margin" Value="2,2,2,2" />
-                </Style>
-            </StackPanel.Resources>
-        </StackPanel>
-        <StackPanel
+
+
+                        <StackPanel.Resources>
+                            <Style TargetType="Label">
+                                <Setter Property="Margin" Value="2,2,2,2" />
+                            </Style>
+                        </StackPanel.Resources>
+                    </StackPanel>
+                    <StackPanel
             Grid.Row="1"
             Grid.Column="1"
             Margin="20,20,20,18">
-            <Label
+                        <Label
+                x:Name="LabelCourse2"
                 MinWidth="2"
                 MinHeight="2"
                 HorizontalAlignment="Center"
                 Background="#00403838"
                 BorderBrush="#00000000"
-                Content="Semi marathon"
                 FontSize="16"
                 Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Distance :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="21 km"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Date départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="11/08/2024"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Heure départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="10H"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Prix :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="30 euros"
-                Foreground="White" />
-            <Button
-                Margin="20,7,20,0"
-                Background="#19000000"
-                BorderBrush="#00707070"
-                Click="butCourse_Click"
-                Content="choisir"
-                Foreground="White" />
-            <StackPanel.Resources>
-                <Style TargetType="Label">
-                    <Setter Property="Margin" Value="2,2,2,2" />
-                </Style>
-            </StackPanel.Resources>
-        </StackPanel>
-        <StackPanel
+
+                        <StackPanel.Resources>
+                            <Style TargetType="Label">
+                                <Setter Property="Margin" Value="2,2,2,2" />
+                            </Style>
+                        </StackPanel.Resources>
+                    </StackPanel>
+                    <StackPanel
             Grid.Row="1"
             Grid.Column="2"
             Margin="20,20,20,18">
-            <Label
+                        <Label
+                x:Name="LabelCourse3"
                 MinWidth="2"
                 MinHeight="2"
                 HorizontalAlignment="Center"
                 Background="#00403838"
                 BorderBrush="#00000000"
-                Content="10 km"
+                Content=""
                 FontSize="16"
                 Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Distance :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="10 km"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Date départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="30/06/2024"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Heure départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="11H"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Prix :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="25 euros"
-                Foreground="White" />
-            <Button
-                Margin="20,7,20,0"
-                Background="#19000000"
-                BorderBrush="#00707070"
-                Click="butCourse_Click"
-                Content="choisir"
-                Foreground="White" />
-            <StackPanel.Resources>
-                <Style TargetType="Label">
-                    <Setter Property="Margin" Value="2,2,2,2" />
-                </Style>
-            </StackPanel.Resources>
-        </StackPanel>
-        <StackPanel
+
+                        <StackPanel.Resources>
+                            <Style TargetType="Label">
+                                <Setter Property="Margin" Value="2,2,2,2" />
+                            </Style>
+                        </StackPanel.Resources>
+                    </StackPanel>
+                    <StackPanel
             Grid.Row="1"
             Grid.Column="3"
             Margin="20,20,20,18">
-            <Label
+                        <Label
+                x:Name="LabelCourse4"
                 MinWidth="2"
                 MinHeight="2"
                 HorizontalAlignment="Center"
                 Background="#00403838"
                 BorderBrush="#00000000"
-                Content="Duo"
+                Content=""
                 FontSize="16"
                 Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Distance :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="15 km"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Date départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="07/07/2024"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Heure départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="10H30"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Prix :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="40 euros"
-                Foreground="White" />
-            <Button
-                Margin="20,7,20,0"
-                Background="#19000000"
-                BorderBrush="#00707070"
-                Click="butCourse_Click"
-                Content="choisir"
-                Foreground="White" />
-            <StackPanel.Resources>
-                <Style TargetType="Label">
-                    <Setter Property="Margin" Value="2,2,2,2" />
-                </Style>
-            </StackPanel.Resources>
-        </StackPanel>
-        <StackPanel
+
+                        <StackPanel.Resources>
+                            <Style TargetType="Label">
+                                <Setter Property="Margin" Value="2,2,2,2" />
+                            </Style>
+                        </StackPanel.Resources>
+                    </StackPanel>
+                    <StackPanel
             Grid.Row="1"
             Grid.Column="4"
             Margin="20,20,20,18">
-            <Label
+                        <Label
+                x:Name="LabelCourse5"
                 MinWidth="2"
                 MinHeight="2"
                 HorizontalAlignment="Center"
                 Background="#00403838"
                 BorderBrush="#00000000"
-                Content="Relais"
                 FontSize="16"
                 Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Distance :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="40 km"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Date départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="02/09/2024"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Heure départ :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="9H30"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="Prix :"
-                Foreground="White" />
-            <Label
-                HorizontalAlignment="Center"
-                Content="70 euros"
-                Foreground="White" />
-            <Button
-                Margin="20,7,20,0"
-                Background="#19000000"
-                BorderBrush="#00707070"
-                Click="butCourse_Click"
-                Content="choisir"
-                Foreground="White" />
-            <StackPanel.Resources>
-                <Style TargetType="Label">
-                    <Setter Property="Margin" Value="2,2,2,2" />
-                </Style>
-            </StackPanel.Resources>
-        </StackPanel>
 
+                        <StackPanel.Resources>
+                            <Style TargetType="Label">
+                                <Setter Property="Margin" Value="2,2,2,2" />
+                            </Style>
+                        </StackPanel.Resources>
+                    </StackPanel>
+                    <RadioButton
+            x:Name="radioChoisir1"
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="100"
+            Height="25"
+            Margin="35,283,25,39"
+            Background="#FFD420FF"
+            Content="Choisir"/>
+                    <RadioButton
+            x:Name="radioChoisir2"
+            Grid.Row="1"
+            Grid.Column="2"
+            Width="100"
+            Height="25"
+            Margin="35,283,25,39"
+            Background="#FFD420FF"
+            Content="Choisir" />
+                    <RadioButton
+            x:Name="radioChoisir3"
+            Grid.Row="1"
+            Grid.Column="3"
+            Width="100"
+            Height="25"
+            Margin="30,283,30,39"
+            Background="#FFD420FF"
+            Content="Choisir" />
+                    <RadioButton
+            x:Name="radioChoisir4"
+            Grid.Row="1"
+            Grid.Column="4"
+            Width="100"
+            Height="25"
+            Margin="30,283,30,39"
+            Background="#FFD420FF"
+            Content="Choisir" />
+                    <Button Grid.Row="2" Grid.ColumnSpan="5" Background="#7FDDDDDD" BorderBrush="#7F707070" Margin="200,50,200,50" Content="Valider"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
