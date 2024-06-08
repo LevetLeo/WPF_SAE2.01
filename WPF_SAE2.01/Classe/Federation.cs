@@ -13,7 +13,7 @@ namespace WPF_SAE2._01
 {
     public class Federation
     {
-		public enum codeFederation { FFA = 0, FFC = 1,FFG = 2, FFT = 3 }
+		public enum codeFederation { FFA , FFC ,FFG, FFT }
 
 		private int idFederation;
 

@@ -60,38 +60,5 @@ namespace WPF_SAE2._01
 
             return lesEnvoi_SMS;
         }
-        public static List<Ami> ReadNumCourse()
-        {
-            ObservableCollection<Envoi_SMS> lesEnvoi_SMS = Read();
-            List<Ami> numAmis = new List<Ami>();
-            foreach (Envoi_SMS uneDistance in lesEnvoi_SMS)
-            {
-                numAmis.Add(uneDistance.numAmi);
-
-            }
-            return numAmis;
-        }
-        public static List<Inscription> ReadNumInscription()
-        {
-            ObservableCollection<Envoi_SMS> lesEnvoi_SMS = Read();
-            List<Inscription> numInscriptions = new List<Inscription>();
-            foreach (Envoi_SMS uneDistance in lesEnvoi_SMS)
-            {
-                numInscriptions.Add(uneDistance.numInscription);
-
-            }
-            return numInscriptions;
-        }
-        public static List<int> ReadPortableSMS()
-        {
-            ObservableCollection<Envoi_SMS> lesEnvoi_SMS = Read();
-            List<int> portables_SMS = new List<int>();
-            foreach (Envoi_SMS uneDistance in lesEnvoi_SMS)
-            {
-                portables_SMS.Add(uneDistance.portable_SMS);
-
-            }
-            return portables_SMS;
-        }
     }
 }

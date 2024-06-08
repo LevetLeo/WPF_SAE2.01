@@ -68,39 +68,5 @@ namespace WPF_SAE2._01
 
             return lesInscriptions2;
         }
-        public static List<Inscription> ReadnumInscription()
-        {
-            ObservableCollection<Inscription2> lesInscriptions2 = Read();
-            List<Inscription> numsInscriptions2 = new List<Inscription>();
-            foreach (Inscription2 uneInscription2 in lesInscriptions2)
-            {
-                numsInscriptions2.Add(uneInscription2.numInscription);
-
-            }
-            return numsInscriptions2;
-        }
-    
-        public static List<CoureurClasse> ReadnumCoureur()
-        {
-          ObservableCollection<Inscription2> lesInscriptions2 = Read();
-          List<CoureurClasse> numsCoureurs = new List<CoureurClasse>();
-           foreach (Inscription2 uneInscription2 in lesInscriptions2)
-           {
-               numsCoureurs.Add(uneInscription2.numCoureur);
-    
-           }
-            return numsCoureurs;
-        }
-        public static List<DateTime> ReadTempsPrevu()
-        {
-            ObservableCollection<Inscription2> lesInscriptions2 = Read();
-            List<DateTime> TempsPrevus = new List<DateTime>();
-            foreach (Inscription2 uneInscription2 in lesInscriptions2)
-            {
-                TempsPrevus.Add(uneInscription2.temps_Prevue);
-
-            }
-            return TempsPrevus;
-        }
     }
 }

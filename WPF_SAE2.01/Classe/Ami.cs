@@ -54,16 +54,5 @@ namespace WPF_SAE2._01
 
             return lesAmis;
         }
-        public static List<int> ReadNumAmis()
-        {
-            ObservableCollection<Ami> LesAmis = Read();
-            List<int> numAmis = new List<int>();
-            foreach (Ami unAmi in LesAmis)
-            {
-                numAmis.Add(unAmi.numAmi);
-
-            }
-            return numAmis;
-        }
     }
 }
