@@ -36,8 +36,16 @@ namespace WPF_SAE2._01
             int j = 0;
             List<string> login = Agent.ReadLogin();
             List<string> mdp = Agent.ReadMdp();
-            string unLogin = login[i];
-            string unMdp = mdp[j];
+            string unLogin = TBLogin.Text;
+            string unMdp = TBPassword.Password;
+            if (unLogin == login[i] && unMdp == mdp[j])
+            {
+                unLogin = login[i];
+                unMdp = mdp[j];
+            }
+            else
+                MessageBox.Show("erreur avec le login ou le mot de passe");
+             
             do
             {
                 if(unLogin is null)
