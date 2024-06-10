@@ -57,13 +57,13 @@ namespace WPF_SAE2._01
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine("Error parsing DataRow: " + ex.Message);
+                        Console.WriteLine("Erreur datarow: " + ex.Message);
                     }
                 }
             }
             else
             {
-                Console.WriteLine("DataTable is null. Check database connection and query.");
+                Console.WriteLine("database non existante");
             }
 
             return lesInscriptions2;

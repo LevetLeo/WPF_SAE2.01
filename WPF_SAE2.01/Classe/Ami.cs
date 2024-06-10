@@ -49,21 +49,10 @@ namespace WPF_SAE2._01
             }
             else
             {
-                Console.WriteLine("DataTable is null. Check database connection and query.");
+                Console.WriteLine("database non existante");
             }
 
             return lesAmis;
-        }
-        public static List<int> ReadNumAmis()
-        {
-            ObservableCollection<Ami> LesAmis = Read();
-            List<int> numAmis = new List<int>();
-            foreach (Ami unAmi in LesAmis)
-            {
-                numAmis.Add(unAmi.numAmi);
-
-            }
-            return numAmis;
         }
     }
 }
