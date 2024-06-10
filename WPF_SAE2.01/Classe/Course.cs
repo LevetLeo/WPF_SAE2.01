@@ -82,26 +82,31 @@ namespace WPF_SAE2._01
         public static ObservableCollection<Course> Read()
         {
             ObservableCollection<Course> lesCourses = new ObservableCollection<Course>();
-            string sql = "SELECT * FROM course;";
-            DataTable dt = DataAccess.Instance.GetData(sql);
-            Console.WriteLine(dt);
-
-            
-            foreach (DataRow res in dt.Rows)
+            //if (Connexion.connect == true)
             {
-                Console.WriteLine("test");
-                try
-                {
-                    Course nouveau = new Course(int.Parse(res["num_course"].ToString()), double.Parse(res["distance"].ToString()),res["nom_Course"].ToString(),DateTime.Parse(res["DateCourse"].ToString()), DateTime.Parse(res["heure_depart"].ToString()), double.Parse(res["prix_inscription"].ToString())); //
-                    lesCourses.Add(nouveau);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Error: " + ex.Message);
-                }
+
                 
+                string sql = "SELECT * FROM course;";
+                DataTable dt = DataAccess.Instance.GetData(sql);
+                Console.WriteLine(dt);
+
+
+                foreach (DataRow res in dt.Rows)
+                {
+                    Console.WriteLine("test");
+                    try
+                    {
+                        Course nouveau = new Course(int.Parse(res["num_course"].ToString()), double.Parse(res["distance"].ToString()), res["nom_Course"].ToString(), DateTime.Parse(res["DateCourse"].ToString()), DateTime.Parse(res["heure_depart"].ToString()), double.Parse(res["prix_inscription"].ToString()));
+                        lesCourses.Add(nouveau);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
+
+                }
             }
             return lesCourses;
-        }
+        } 
     }
 }

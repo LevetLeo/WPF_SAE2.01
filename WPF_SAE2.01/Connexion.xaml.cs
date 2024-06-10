@@ -20,6 +20,7 @@ namespace WPF_SAE2._01
     /// </summary>
     public partial class Window1 : Window
     {
+        public bool connect = false;
         private bool TBlogin_isDefaultText = true;
         private bool Lpassword_isShown = true;
 
@@ -30,65 +31,23 @@ namespace WPF_SAE2._01
 
         private void butConnexion_Click(object sender, RoutedEventArgs e)
         {
-            data.ConnexionBD();
-            //data.TestDatabaseConnection();
-            int i = 0;
-            int j = 0;
-            List<string> login = Agent.ReadLogin();
-            List<string> mdp = Agent.ReadMdp();
-            string unLogin = TBLogin.Text;
-            string unMdp = TBPassword.Password;
-            if (unLogin == login[i] && unMdp == mdp[j])
+            string strConnexion = "Server=srv-peda-new;" +
+                            "port=5433;" +
+                            "Database=SAE201Marathon;" +
+                            "Search Path =SchemaSAE201;" +
+                            $"uid={TBLogin.Text};" +
+                            $"password={TBPassword.Password};";
+            try
             {
-                unLogin = login[i];
-                unMdp = mdp[j];
+                DataAccess.Instance.ConnexionBD(strConnexion);
+
+                var page = new Coureur();
+                page.Show();
+                Visibility = Visibility.Hidden;
             }
-            else
-                MessageBox.Show("erreur avec le login ou le mot de passe");
-             
-            do
-            {
-                if(unLogin is null)
-                {
-                    MessageBox.Show("erreur");
-                }
-                else
-                {
-                    Console.WriteLine(login[i]);
-                    unLogin = login[i];
-                    i++;
-                }
-                
-                
+            catch (Exception ex) { MessageBox.Show("erreur"); }
 
-            } while (unLogin != TBLogin.Text.ToString() || i > login.Count);
-
-            do
-            {
-                unMdp = mdp[j];
-                j++;
-
-
-            } while (unMdp != TBPassword.Password.ToString() || j > mdp.Count);
-
-            if(j > mdp.Count || i > login.Count)
-            {
-                Console.WriteLine("erreur identifiant ou mot de passe");
-            }
-            
-                
-            else if(j == i)
-            {
-                  
-                 if (TBPassword.Password.ToString() == unMdp && TBLogin.Text.ToString() == unLogin)
-                 {
-                    var page = new MainWindow();
-                    page.Show();
-                    this.Close();
-                 }
-
-            }
-                
+             connect = true;
             
         }
         public void Fermer()

@@ -6,25 +6,26 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace WPF_SAE2._01
 {
     public class DataAccess
     {
         private static DataAccess instance;
-        public static string strConnexion = "Server=srv-peda-new;" +
+        
+        /*public static string strConnexion = "Server=srv-peda-new;" +
                             "port=5433;" +
                             "Database=SAE201Marathon;" +
                             "Search Path =SchemaSAE201;" +
                             "uid=guzmanma;" +
                             "password=VnZlZ5;";
+        */
         
 
         public DataAccess()
         {
-            ConnexionBD();
 
-            
 
         }
         public static DataAccess Instance
@@ -44,8 +45,9 @@ namespace WPF_SAE2._01
             set;
         }
 
-        public void ConnexionBD()
+        public void ConnexionBD(string strConnexion)
         {
+            
             try
             {
                 Connexion = new NpgsqlConnection();
@@ -58,6 +60,10 @@ namespace WPF_SAE2._01
                 Console.WriteLine("pb de connexion : " + e);
                 // juste pour le debug : à transformer en MsgBox 
             }
+            Connexion = new NpgsqlConnection();
+            Connexion.ConnectionString = strConnexion;
+            Connexion.Open();
+            Console.WriteLine("connexion : ");
         }
 
         
@@ -72,6 +78,7 @@ namespace WPF_SAE2._01
             { 
                 Console.WriteLine("pb à la déconnexion : " + e); 
             }
+            
         }
 
         public DataTable GetData(string selectSQL)
@@ -111,4 +118,3 @@ namespace WPF_SAE2._01
         }
     }
 }
-

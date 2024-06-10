@@ -52,12 +52,12 @@ namespace WPF_SAE2._01
 
         public ApplicationData()
         {
-
+            
             this.ConnexionBD();
             this.LesCoureurs = CoureurClasse.Read();
 
-
         }
+
 
 
         public void ConnexionBD()

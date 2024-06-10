@@ -253,7 +253,6 @@ namespace WPF_SAE2._01
         {
 
 
-
             DataGridCoureur.Items.Filter = ContientMotCleFederation;
             CollectionViewSource.GetDefaultView(DataGridCoureur.ItemsSource).Refresh();
 
@@ -265,5 +264,13 @@ namespace WPF_SAE2._01
             this.Hide();
             pageConnexion.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //DataAccess.DeconnexionBD();
+            Visibility = Visibility.Visible;
+        }
+
+        
     }
 }
