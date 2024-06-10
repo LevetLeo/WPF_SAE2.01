@@ -50,7 +50,7 @@ namespace WPF_SAE2._01
 
 
 
-        public ApplicationData(DataAccess dataAccess)
+        public ApplicationData()
         {
             
             this.ConnexionBD();
