@@ -260,7 +260,7 @@ Foreground="White" Margin="30,80,30,30" />
             Height="25"
             Margin="35,283,25,39"
             Background="#FFD420FF"
-            Content="Choisir" Checked="radioChoisir0_Checked"/>
+            Content="Choisir"/>
                     <Rectangle
             Grid.Row="1"
             Grid.Column="1"
