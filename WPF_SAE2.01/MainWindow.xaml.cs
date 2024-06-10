@@ -121,7 +121,7 @@ namespace WPF_SAE2._01
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DataAccess.DeconnexionBD(sender);
+            DataAccess.DeconnexionBD();
             Visibility = Visibility.Visible;
         }
     }

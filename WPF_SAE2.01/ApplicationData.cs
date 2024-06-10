@@ -50,14 +50,14 @@ namespace WPF_SAE2._01
 
 
 
-        public ApplicationData()
+        public ApplicationData(DataAccess dataAccess)
         {
-
+            
             this.ConnexionBD();
             this.LesCoureurs = CoureurClasse.Read();
 
-
         }
+
 
 
         public void ConnexionBD()

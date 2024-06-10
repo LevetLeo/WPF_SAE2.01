@@ -12,7 +12,7 @@ namespace WPF_SAE2._01
     {
         public Course NumCourse { get; set; }
 
-		public Borne NumBorne { get; set; }
+		public int NumBorne { get; set; }
 
 		private int nb_Km;
 
@@ -27,7 +27,7 @@ namespace WPF_SAE2._01
 			}
 		}
 
-        public Distance(Course numCourse, Borne numBorne, int nb_Km)
+        public Distance(Course numCourse, int numBorne, int nb_Km)
         {
             this.NumCourse = numCourse;
             this.NumBorne = numBorne;
@@ -47,7 +47,7 @@ namespace WPF_SAE2._01
                     try
                     {
                         Course numCourse = (Course)res["num_course"];
-                        Borne numBorne = (Borne)res["num_borne"];
+                        int numBorne = (int)res["num_borne"];
                         int nb_Km = int.Parse(res["nb_km"].ToString());
                         Distance nouveau = new Distance(numCourse, numBorne, nb_Km);
                         lesDistances.Add(nouveau);

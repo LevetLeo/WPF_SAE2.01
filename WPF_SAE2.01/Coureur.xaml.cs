@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -20,6 +22,8 @@ namespace WPF_SAE2._01
     /// <summary>
     /// Logique d'interaction pour Coureur.xaml
     /// </summary>
+    
+    
     public partial class Coureur : Window
     {
        
@@ -29,7 +33,7 @@ namespace WPF_SAE2._01
             
             InitializeComponent();
             
-            
+
             ObservableCollection<CoureurClasse>  lesCoureurs = CoureurClasse.Read();
             DataGridCoureur.ItemsSource = lesCoureurs;
 
@@ -68,31 +72,30 @@ namespace WPF_SAE2._01
             CollectionViewSource.GetDefaultView(DataGridCoureur.ItemsSource).Refresh();
 
         }
-        /*public bool ContientMotCleFederation(object obj)
+        public bool ContientMotCleFederation(object obj)
         {
             CoureurClasse unCoureur = obj as CoureurClasse;
             if (String.IsNullOrEmpty(ComboBoxFederation.Text))
                 return true;
             else
-                return (unCoureur.Federation.Equals((ComboBoxFederation.Text.Substring(1,4))));
+                return (unCoureur.Federation.Equals((ComboBoxFederation.Text)));
 
-        }*/
-
-
+        }
 
 
+        
+        
+        
 
 
-            
-            
         private void ComboBoxFederation_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+           
 
-
-            /*DataGridCoureur.Items.Filter = ContientMotCleFederation;
+            DataGridCoureur.Items.Filter = ContientMotCleFederation;
             CollectionViewSource.GetDefaultView(DataGridCoureur.ItemsSource).Refresh();
-*/
+
         }
+
     }
 }

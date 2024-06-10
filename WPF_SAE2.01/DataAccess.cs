@@ -68,7 +68,7 @@ namespace WPF_SAE2._01
         }
 
         
-        public void DeconnexionBD(object obj)
+        public void DeconnexionBD()
         {
             try
             {
