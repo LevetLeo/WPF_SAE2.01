@@ -55,7 +55,7 @@ namespace WPF_SAE2._01
             }
             else
             {
-                Console.WriteLine("DataTable is null. Check database connection and query.");
+                Console.WriteLine("database non existante");
             }
 
             return lesEnvoi_SMS;

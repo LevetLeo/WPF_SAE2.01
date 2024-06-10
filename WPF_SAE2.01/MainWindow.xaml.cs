@@ -23,6 +23,13 @@ namespace WPF_SAE2._01
     {
         public ApplicationData data;
         ObservableCollection<Course> ListeOBJETCourse;
+        ObservableCollection<Inscription> ListeOBJETinscription;
+        ObservableCollection<CoureurClasse> ListeOBJETCoureur;
+        ObservableCollection<CoureurClasse> ListeOBJETCoureurCourse1;
+        ObservableCollection<CoureurClasse> ListeOBJETCoureurCourse2;
+        ObservableCollection<CoureurClasse> ListeOBJETCoureurCourse3;
+        ObservableCollection<CoureurClasse> ListeOBJETCoureurCourse4;
+        ObservableCollection<CoureurClasse> ListeOBJETCoureurCourse5;
 
         public int NumeroCourseRecup()
         {
@@ -60,8 +67,6 @@ namespace WPF_SAE2._01
             ObservableCollection<CoureurClasse> lesCoureurs = CoureurClasse.Read();
             DataGridCoureur.ItemsSource = lesCoureurs;
 
-
-
             ListeOBJETCourse = Course.Read();
             Console.WriteLine(ListeOBJETCourse.Count);
             LabelCourse.Content = ListeOBJETCourse[0 + i].NomCourse;
@@ -73,41 +78,47 @@ namespace WPF_SAE2._01
             PrixCourse.Content = "\n Prix: \n" +
             ListeOBJETCourse[0 + i].PrixInscriptionCourse;
 
-            LabelCourse2.Content = ListeOBJETCourse[0 + i].NomCourse;
-            DistanceCourse2.Content = "\n Distance : \n" + ListeOBJETCourse[0 + i].Distance;
-            DateCourse2.Content = "\n Date de départ : \n" + ListeOBJETCourse[0 + i].DateDepart.Day +
-            "/" + ListeOBJETCourse[0 + i].DateDepart.Month + "/" + ListeOBJETCourse[0 + i].DateDepart.Year;
-            HeureCourse2.Content = "\n Heure depart : \n " + ListeOBJETCourse[0 + i].HeureDepartCourse.Hour + ":"
-            + ListeOBJETCourse[0 + i].HeureDepartCourse.Minute;
+            LabelCourse2.Content = ListeOBJETCourse[1 + i].NomCourse;
+            DistanceCourse2.Content = "\n Distance : \n" + ListeOBJETCourse[1 + i].Distance;
+            DateCourse2.Content = "\n Date de départ : \n" + ListeOBJETCourse[1 + i].DateDepart.Day +
+            "/" + ListeOBJETCourse[1 + i].DateDepart.Month + "/" + ListeOBJETCourse[1 + i].DateDepart.Year;
+            HeureCourse2.Content = "\n Heure depart : \n " + ListeOBJETCourse[1 + i].HeureDepartCourse.Hour + ":"
+            + ListeOBJETCourse[1 + i].HeureDepartCourse.Minute;
             PrixCourse2.Content = "\n Prix: \n" +
-            ListeOBJETCourse[0 + i].PrixInscriptionCourse;
+            ListeOBJETCourse[1 + i].PrixInscriptionCourse;
 
-            LabelCourse3.Content = ListeOBJETCourse[0 + i].NomCourse;
-            DistanceCourse3.Content = "\n Distance : \n" + ListeOBJETCourse[0 + i].Distance;
-            DateCourse3.Content = "\n Date de départ : \n" + ListeOBJETCourse[0 + i].DateDepart.Day +
-            "/" + ListeOBJETCourse[0 + i].DateDepart.Month + "/" + ListeOBJETCourse[0 + i].DateDepart.Year;
-            HeureCourse3.Content = "\n Heure depart : \n " + ListeOBJETCourse[0 + i].HeureDepartCourse.Hour + ":"
-            + ListeOBJETCourse[0 + i].HeureDepartCourse.Minute;
+            LabelCourse3.Content = ListeOBJETCourse[2 + i].NomCourse;
+            DistanceCourse3.Content = "\n Distance : \n" + ListeOBJETCourse[2 + i].Distance;
+            DateCourse3.Content = "\n Date de départ : \n" + ListeOBJETCourse[2 + i].DateDepart.Day +
+            "/" + ListeOBJETCourse[2 + i].DateDepart.Month + "/" + ListeOBJETCourse[2 + i].DateDepart.Year;
+            HeureCourse3.Content = "\n Heure depart : \n " + ListeOBJETCourse[2 + i].HeureDepartCourse.Hour + ":"
+            + ListeOBJETCourse[2 + i].HeureDepartCourse.Minute;
             PrixCourse3.Content = "\n Prix: \n" +
-            ListeOBJETCourse[0 + i].PrixInscriptionCourse;
+            ListeOBJETCourse[2 + i].PrixInscriptionCourse;
 
-            LabelCourse4.Content = ListeOBJETCourse[0 + i].NomCourse;
-            DistanceCourse4.Content = "\n Distance : \n" + ListeOBJETCourse[0 + i].Distance;
-            DateCourse4.Content = "\n Date de départ : \n" + ListeOBJETCourse[0 + i].DateDepart.Day +
-            "/" + ListeOBJETCourse[0 + i].DateDepart.Month + "/" + ListeOBJETCourse[0 + i].DateDepart.Year;
-            HeureCourse4.Content = "\n Heure depart : \n " + ListeOBJETCourse[0 + i].HeureDepartCourse.Hour + ":"
-            + ListeOBJETCourse[0 + i].HeureDepartCourse.Minute;
+            LabelCourse4.Content = ListeOBJETCourse[3 + i].NomCourse;
+            DistanceCourse4.Content = "\n Distance : \n" + ListeOBJETCourse[3 + i].Distance;
+            DateCourse4.Content = "\n Date de départ : \n" + ListeOBJETCourse[3 + i].DateDepart.Day +
+            "/" + ListeOBJETCourse[3 + i].DateDepart.Month + "/" + ListeOBJETCourse[3 + i].DateDepart.Year;
+            HeureCourse4.Content = "\n Heure depart : \n " + ListeOBJETCourse[3 + i].HeureDepartCourse.Hour + ":"
+            + ListeOBJETCourse[3 + i].HeureDepartCourse.Minute;
             PrixCourse4.Content = "\n Prix: \n" +
-            ListeOBJETCourse[0 + i].PrixInscriptionCourse;
+            ListeOBJETCourse[3 + i].PrixInscriptionCourse;
 
-            LabelCourse5.Content = ListeOBJETCourse[0 + i].NomCourse;
-            DistanceCourse5.Content = "\n Distance : \n" + ListeOBJETCourse[0 + i].Distance;
-            DateCourse5.Content = "\n Date de départ : \n" + ListeOBJETCourse[0 + i].DateDepart.Day +
-            "/" + ListeOBJETCourse[0 + i].DateDepart.Month + "/" + ListeOBJETCourse[0 + i].DateDepart.Year;
-            HeureCourse5.Content = "\n Heure depart : \n " + ListeOBJETCourse[0 + i].HeureDepartCourse.Hour + ":"
-            + ListeOBJETCourse[0 + i].HeureDepartCourse.Minute;
+            LabelCourse5.Content = ListeOBJETCourse[4 + i].NomCourse;
+            DistanceCourse5.Content = "\n Distance : \n" + ListeOBJETCourse[4 + i].Distance;
+            DateCourse5.Content = "\n Date de départ : \n" + ListeOBJETCourse[4 + i].DateDepart.Day +
+            "/" + ListeOBJETCourse[4 + i].DateDepart.Month + "/" + ListeOBJETCourse[4 + i].DateDepart.Year;
+            HeureCourse5.Content = "\n Heure depart : \n " + ListeOBJETCourse[4 + i].HeureDepartCourse.Hour + ":"
+            + ListeOBJETCourse[4 + i].HeureDepartCourse.Minute;
             PrixCourse5.Content = "\n Prix: \n" +
-            ListeOBJETCourse[0 + i].PrixInscriptionCourse;
+            ListeOBJETCourse[4 + i].PrixInscriptionCourse;
+
+
+
+
+            ListeOBJETinscription = Inscription.Read();
+            ListeOBJETCoureur = CoureurClasse.Read();
 
             LabelListeCourse.Content = ListeOBJETCourse[0 + i].NomCourse;
 
@@ -118,6 +129,70 @@ namespace WPF_SAE2._01
             LabelListeCourse3.Content = ListeOBJETCourse[3 + i].NomCourse;
 
             LabelListeCourse4.Content = ListeOBJETCourse[4 + i].NomCourse;
+
+            int countInscription = 0;
+            int countCoureur = 0;
+
+            foreach (var itemInscription in ListeOBJETinscription)
+            {
+                foreach (var itemCoureur in ListeOBJETCoureur)
+                {
+                    if (ListeOBJETCoureur[countCoureur].IdCoureur == int.Parse((ListeOBJETinscription[countInscription].IdCoureur).ToString()))
+                    {
+                        switch (int.Parse(ListeOBJETinscription[countInscription].numCourse.ToString()))
+                        {
+                            case 0:
+                                ListeOBJETCoureurCourse1.Add(ListeOBJETCoureur[countCoureur]);
+                                break;
+                            case 1:
+                                ListeOBJETCoureurCourse2.Add(ListeOBJETCoureur[countCoureur]);
+                                break;
+                            case 2:
+                                ListeOBJETCoureurCourse3.Add(ListeOBJETCoureur[countCoureur]);
+                                break;
+                            case 3:
+                                ListeOBJETCoureurCourse4.Add(ListeOBJETCoureur[countCoureur]);
+                                break;
+                            case 4:
+                                ListeOBJETCoureurCourse5.Add(ListeOBJETCoureur[countCoureur]);
+                                break;
+                        }
+                    }
+                    countCoureur ++;
+                }
+                countCoureur = 0;
+                countInscription ++;
+            }
+            int countCoureur1 = 0;
+            int countCoureur2 = 0;
+            int countCoureur3 = 0;
+            int countCoureur4 = 0;
+            int countCoureur5 = 0;
+            foreach (var item in ListeOBJETCoureurCourse1)
+            {
+                LabelListeCoureur.Content += "\n" + ListeOBJETCoureurCourse1[countCoureur1].NomCoureur + " " + ListeOBJETCoureurCourse1[countCoureur1].PrenomCoureur;
+                countCoureur1 ++;
+            }
+            foreach (var item in ListeOBJETCoureurCourse2)
+            {
+                LabelListeCoureur2.Content += "\n" + ListeOBJETCoureurCourse2[countCoureur2].NomCoureur + " " + ListeOBJETCoureurCourse2[countCoureur2].PrenomCoureur;
+                countCoureur2++;
+            }
+            foreach (var item in ListeOBJETCoureurCourse3)
+            {
+                LabelListeCoureur3.Content += "\n" + ListeOBJETCoureurCourse3[countCoureur3].NomCoureur + " " + ListeOBJETCoureurCourse3[countCoureur3].PrenomCoureur;
+                countCoureur3++;
+            }
+            foreach (var item in ListeOBJETCoureurCourse4)
+            {
+                LabelListeCoureur4.Content += "\n" + ListeOBJETCoureurCourse4[countCoureur4].NomCoureur + " " + ListeOBJETCoureurCourse4[countCoureur4].PrenomCoureur;
+                countCoureur4++;
+            }
+            foreach (var item in ListeOBJETCoureurCourse5)
+            {
+                LabelListeCoureur5.Content += "\n" + ListeOBJETCoureurCourse5[countCoureur5].NomCoureur + " " + ListeOBJETCoureurCourse5[countCoureur5].PrenomCoureur;
+                countCoureur5++;
+            }
         }
         private void Validation_Click(object sender, RoutedEventArgs e)
         {
@@ -129,14 +204,6 @@ namespace WPF_SAE2._01
             }
                 
 
-        }
-
-        private void radioChoisir0_Checked(object sender, RoutedEventArgs e)
-        {
-            radioChoisir1.IsChecked = false; 
-            radioChoisir2.IsChecked = false;
-            radioChoisir3.IsChecked = false;
-            radioChoisir4.IsChecked = false;
         }
         public bool ContientMotCleNom(object obj)
         {

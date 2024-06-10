@@ -160,6 +160,55 @@
                 BorderBrush="#00000000"
                 FontSize="16"
                 Foreground="White" Margin="30,30,30,30" />
+                    <Label
+        Grid.Row="1"
+x:Name="LabelListeCoureur"
+MinWidth="2"
+MinHeight="2"
+Background="#00403838"
+BorderBrush="#00000000"
+FontSize="12"
+Foreground="White" Margin="30,80,30,30" />
+                    <Label
+        Grid.Row="1"
+                        Grid.Column="1"
+x:Name="LabelListeCoureur2"
+MinWidth="2"
+MinHeight="2"
+Background="#00403838"
+BorderBrush="#00000000"
+FontSize="12"
+Foreground="White" Margin="30,80,30,30" />
+                    <Label
+        Grid.Row="1"
+                        Grid.Column="2"
+x:Name="LabelListeCoureur3"
+MinWidth="2"
+MinHeight="2"
+Background="#00403838"
+BorderBrush="#00000000"
+FontSize="12"
+Foreground="White" Margin="30,80,30,30" />
+                    <Label
+        Grid.Row="1"
+                        Grid.Column="3"
+x:Name="LabelListeCoureur4"
+MinWidth="2"
+MinHeight="2"
+Background="#00403838"
+BorderBrush="#00000000"
+FontSize="12"
+Foreground="White" Margin="30,80,30,30" />
+                    <Label
+        Grid.Row="1"
+                        Grid.Column="4"
+x:Name="LabelListeCoureur5"
+MinWidth="2"
+MinHeight="2"
+Background="#00403838"
+BorderBrush="#00000000"
+FontSize="12"
+Foreground="White" Margin="30,80,30,30" />
                 </Grid>
             </TabItem>
             <TabItem Header="Inscription coureur">
@@ -637,13 +686,9 @@ Foreground="White" Margin="2,10,2,2" />
 
                         <DataGrid
             x:Name="DataGridCoureur"
-            Width="632"
-            Height="529"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top"
             AutoGenerateColumns="False"
             IsReadOnly="True"
-            ItemsSource="{Binding dgLesCoureurs}">
+            ItemsSource="{Binding dgLesCoureurs}" Background="#00F0F0F0" Height="700">
 
                             <DataGrid.Columns>
                                 <DataGridTextColumn Binding="{Binding LienPhotoCoureur}" Header="Photo" />
