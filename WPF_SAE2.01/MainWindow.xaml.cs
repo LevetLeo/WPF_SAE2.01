@@ -60,6 +60,9 @@ namespace WPF_SAE2._01
 
         public MainWindow()
         {
+            this.Hide();
+            var pageConnexion = new Window1();
+            pageConnexion.Show();
             data = new ApplicationData();
             this.DataContext = data;
             InitializeComponent();
@@ -254,6 +257,13 @@ namespace WPF_SAE2._01
             DataGridCoureur.Items.Filter = ContientMotCleFederation;
             CollectionViewSource.GetDefaultView(DataGridCoureur.ItemsSource).Refresh();
 
+        }
+
+        private void Bouton_Deconnexion_Click(object sender, RoutedEventArgs e)
+        {
+            var pageConnexion = new Window1();
+            this.Hide();
+            pageConnexion.Show();
         }
     }
 }

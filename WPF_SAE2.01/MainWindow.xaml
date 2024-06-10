@@ -708,5 +708,8 @@ Foreground="White" Margin="2,10,2,2" />
                 </Grid>
             </TabItem>
         </TabControl>
+        <Button x:Name="Bouton_Deconnexion" Background="#FFDDDDDD" VerticalAlignment="Top" HorizontalAlignment="Right" Width="50" Height="50" Margin="0,25,0,0" Click="Bouton_Deconnexion_Click">
+            <Image Height="40" Source="/Image/image.deco.png" Stretch="Fill" Width="40"/>
+        </Button>
     </Grid>
 </Window>
