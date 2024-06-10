@@ -171,62 +171,69 @@
                         BorderBrush="#00000000"
                         FontSize="16"
                         Foreground="White" />
-                x:Name="LabelListeCourse4"
-                MinWidth="2"
-                MinHeight="2"
-                Background="#00403838"
-                BorderBrush="#00000000"
-                FontSize="16"
-                Foreground="White" Margin="30,30,30,30" />
                     <Label
-        Grid.Row="1"
-x:Name="LabelListeCoureur"
-MinWidth="2"
-MinHeight="2"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Foreground="White" Margin="30,80,30,30" />
+                        x:Name="LabelListeCourse5"
+                        MinWidth="2"
+                        MinHeight="2"
+                        Margin="30,30,30,30"
+                        Background="#00403838"
+                        BorderBrush="#00000000"
+                        FontSize="16"
+                        Foreground="White" />
                     <Label
-        Grid.Row="1"
+                        x:Name="LabelListeCoureur"
+                        Grid.Row="1"
+                        MinWidth="2"
+                        MinHeight="2"
+                        Margin="30,80,30,30"
+                        Background="#00403838"
+                        BorderBrush="#00000000"
+                        FontSize="12"
+                        Foreground="White" />
+                    <Label
+                        x:Name="LabelListeCoureur2"
+                        Grid.Row="1"
                         Grid.Column="1"
-x:Name="LabelListeCoureur2"
-MinWidth="2"
-MinHeight="2"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Foreground="White" Margin="30,80,30,30" />
+                        MinWidth="2"
+                        MinHeight="2"
+                        Margin="30,80,30,30"
+                        Background="#00403838"
+                        BorderBrush="#00000000"
+                        FontSize="12"
+                        Foreground="White" />
                     <Label
-        Grid.Row="1"
+                        x:Name="LabelListeCoureur3"
+                        Grid.Row="1"
                         Grid.Column="2"
-x:Name="LabelListeCoureur3"
-MinWidth="2"
-MinHeight="2"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Foreground="White" Margin="30,80,30,30" />
+                        MinWidth="2"
+                        MinHeight="2"
+                        Margin="30,80,30,30"
+                        Background="#00403838"
+                        BorderBrush="#00000000"
+                        FontSize="12"
+                        Foreground="White" />
                     <Label
-        Grid.Row="1"
+                        x:Name="LabelListeCoureur4"
+                        Grid.Row="1"
                         Grid.Column="3"
-x:Name="LabelListeCoureur4"
-MinWidth="2"
-MinHeight="2"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Foreground="White" Margin="30,80,30,30" />
+                        MinWidth="2"
+                        MinHeight="2"
+                        Margin="30,80,30,30"
+                        Background="#00403838"
+                        BorderBrush="#00000000"
+                        FontSize="12"
+                        Foreground="White" />
                     <Label
-        Grid.Row="1"
+                        x:Name="LabelListeCoureur5"
+                        Grid.Row="1"
                         Grid.Column="4"
-x:Name="LabelListeCoureur5"
-MinWidth="2"
-MinHeight="2"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Foreground="White" Margin="30,80,30,30" />
+                        MinWidth="2"
+                        MinHeight="2"
+                        Margin="30,80,30,30"
+                        Background="#00403838"
+                        BorderBrush="#00000000"
+                        FontSize="12"
+                        Foreground="White" />
                 </Grid>
             </TabItem>
             <TabItem Header="Inscription coureur">
@@ -237,19 +244,24 @@ Foreground="White" Margin="30,80,30,30" />
                         <RowDefinition Height="15*" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="20*" />
-                        <ColumnDefinition Width="20*" />
-                        <ColumnDefinition Width="20*" />
-                        <ColumnDefinition Width="20*" />
-                        <ColumnDefinition Width="20*" />
+                        <ColumnDefinition Width="43*" />
+                        <ColumnDefinition Width="24.977" />
+                        <ColumnDefinition Width="38*" />
+                        <ColumnDefinition Width="43*" />
+                        <ColumnDefinition Width="43*" />
+                        <ColumnDefinition Width="43*" />
                     </Grid.ColumnDefinitions>
                     <Rectangle
-                        Grid.Row="1"
+                        Grid.RowSpan="3"
                         Grid.Column="1"
+                        Grid.ColumnSpan="3"
+                        Margin="0,135,214,101"
                         Fill="#33000000" />
                     <Rectangle
-                        Grid.Row="1"
+                        Grid.RowSpan="3"
                         Grid.Column="3"
+                        Grid.ColumnSpan="2"
+                        Margin="214,135,0,101"
                         Fill="#33000000" />
                     <Rectangle
                         Grid.Row="1"
@@ -265,8 +277,8 @@ Foreground="White" Margin="30,80,30,30" />
                         RadiusY="20" />
                     <Rectangle
                         Grid.Row="1"
-                        Grid.Column="1"
-                        Margin="25,25,15,15"
+                        Grid.Column="2"
+                        Margin="0,25,15,15"
                         Fill="#19000000"
                         RadiusX="20"
                         RadiusY="20" />
@@ -276,27 +288,13 @@ Foreground="White" Margin="30,80,30,30" />
                         Grid.Column="0"
                         Width="100"
                         Height="25"
-                        Margin="35,283,25,39"
+                        Margin="62,329,53,86"
                         Background="#FFD420FF"
-                        Checked="radioChoisir0_Checked"
                         Content="Choisir" />
                     <Rectangle
                         Grid.Row="1"
                         Grid.Column="1"
-                        Margin="20,20,20,20"
-                        Fill="#FFFF81FA"
-                        RadiusX="20"
-                        RadiusY="20" />
-                    <Rectangle
-                        Grid.Row="1"
-                        Grid.Column="2"
-                        Margin="25,25,15,15"
-                        Fill="#19000000"
-                        RadiusX="20"
-                        RadiusY="20" />
-                    <Rectangle
-                        Grid.Row="1"
-                        Grid.Column="2"
+                        Grid.ColumnSpan="2"
                         Margin="20,20,20,20"
                         Fill="#FFFF81FA"
                         RadiusX="20"
@@ -329,7 +327,21 @@ Foreground="White" Margin="30,80,30,30" />
                         Fill="#FFFF81FA"
                         RadiusX="20"
                         RadiusY="20" />
-                    <Grid Grid.ColumnSpan="5">
+                    <Rectangle
+                        Grid.Row="1"
+                        Grid.Column="5"
+                        Margin="25,25,15,15"
+                        Fill="#19000000"
+                        RadiusX="20"
+                        RadiusY="20" />
+                    <Rectangle
+                        Grid.Row="1"
+                        Grid.Column="5"
+                        Margin="20,20,20,20"
+                        Fill="#FFFF81FA"
+                        RadiusX="20"
+                        RadiusY="20" />
+                    <Grid Grid.ColumnSpan="6">
                         <Label
                             Padding="5,28,5,5"
                             HorizontalContentAlignment="Center"
@@ -352,55 +364,61 @@ Foreground="White" Margin="30,80,30,30" />
                             BorderBrush="#00000000"
                             FontSize="16"
                             Foreground="White" />
-                x:Name="LabelCourse"
-                MinWidth="2"
-                MinHeight="2"
-                HorizontalAlignment="Center"
-                Background="#00403838"
-                BorderBrush="#00000000"
-                FontSize="24"
-                Content="titre"
-                Foreground="White" Margin="2,5,2,2" />
                         <Label
-x:Name="DistanceCourse"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Distance"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="LabelCourse1"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,5,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="titre"
+                            FontSize="24"
+                            Foreground="White" />
                         <Label
-x:Name="DateCourse"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Date de départ"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="DistanceCourse"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Distance"
+                            FontSize="12"
+                            Foreground="White" />
                         <Label
-x:Name="HeureCourse"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Heure"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="DateCourse"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Date de départ"
+                            FontSize="12"
+                            Foreground="White" />
                         <Label
-x:Name="PrixCourse"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Prix"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="HeureCourse"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Heure"
+                            FontSize="12"
+                            Foreground="White" />
+                        <Label
+                            x:Name="PrixCourse"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Prix"
+                            FontSize="12"
+                            Foreground="White" />
 
 
                         <StackPanel.Resources>
@@ -412,6 +430,7 @@ Foreground="White" Margin="2,10,2,2" />
                     <StackPanel
                         Grid.Row="1"
                         Grid.Column="1"
+                        Grid.ColumnSpan="2"
                         Margin="20,20,20,18">
                         <Label
                             x:Name="LabelCourse2"
@@ -422,55 +441,61 @@ Foreground="White" Margin="2,10,2,2" />
                             BorderBrush="#00000000"
                             FontSize="16"
                             Foreground="White" />
-                x:Name="LabelCourse2"
-                MinWidth="2"
-                MinHeight="2"
-                HorizontalAlignment="Center"
-                Background="#00403838"
-                BorderBrush="#00000000"
-                FontSize="24"
-                Content="titre"
-                Foreground="White" Margin="2,5,2,2" />
                         <Label
-x:Name="DistanceCourse2"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Distance"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="LabelCourse21"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,5,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="titre"
+                            FontSize="24"
+                            Foreground="White" />
                         <Label
-x:Name="DateCourse2"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Date de départ"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="DistanceCourse2"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Distance"
+                            FontSize="12"
+                            Foreground="White" />
                         <Label
-x:Name="HeureCourse2"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Heure"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="DateCourse2"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Date de départ"
+                            FontSize="12"
+                            Foreground="White" />
                         <Label
-x:Name="PrixCourse2"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Prix"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="HeureCourse2"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Heure"
+                            FontSize="12"
+                            Foreground="White" />
+                        <Label
+                            x:Name="PrixCourse2"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Prix"
+                            FontSize="12"
+                            Foreground="White" />
 
                         <StackPanel.Resources>
                             <Style TargetType="Label">
@@ -480,7 +505,7 @@ Foreground="White" Margin="2,10,2,2" />
                     </StackPanel>
                     <StackPanel
                         Grid.Row="1"
-                        Grid.Column="2"
+                        Grid.Column="3"
                         Margin="20,20,20,18">
                         <Label
                             x:Name="LabelCourse3"
@@ -492,55 +517,61 @@ Foreground="White" Margin="2,10,2,2" />
                             Content=""
                             FontSize="16"
                             Foreground="White" />
-                x:Name="LabelCourse3"
-                MinWidth="2"
-                MinHeight="2"
-                HorizontalAlignment="Center"
-                Background="#00403838"
-                BorderBrush="#00000000"
-                FontSize="24"
-                Content="titre"
-                Foreground="White" Margin="2,5,2,2" />
                         <Label
-x:Name="DistanceCourse3"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Distance"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="LabelCourse31"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,5,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="titre"
+                            FontSize="24"
+                            Foreground="White" />
                         <Label
-x:Name="DateCourse3"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Date de départ"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="DistanceCourse3"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Distance"
+                            FontSize="12"
+                            Foreground="White" />
                         <Label
-x:Name="HeureCourse3"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Heure"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="DateCourse3"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Date de départ"
+                            FontSize="12"
+                            Foreground="White" />
                         <Label
-x:Name="PrixCourse3"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Prix"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="HeureCourse3"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Heure"
+                            FontSize="12"
+                            Foreground="White" />
+                        <Label
+                            x:Name="PrixCourse3"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Prix"
+                            FontSize="12"
+                            Foreground="White" />
 
                         <StackPanel.Resources>
                             <Style TargetType="Label">
@@ -550,7 +581,7 @@ Foreground="White" Margin="2,10,2,2" />
                     </StackPanel>
                     <StackPanel
                         Grid.Row="1"
-                        Grid.Column="3"
+                        Grid.Column="4"
                         Margin="20,20,20,18">
                         <Label
                             x:Name="LabelCourse4"
@@ -562,55 +593,61 @@ Foreground="White" Margin="2,10,2,2" />
                             Content=""
                             FontSize="16"
                             Foreground="White" />
-                x:Name="LabelCourse4"
-                MinWidth="2"
-                MinHeight="2"
-                HorizontalAlignment="Center"
-                Background="#00403838"
-                BorderBrush="#00000000"
-                FontSize="24"
-                Content="titre"
-                Foreground="White" Margin="2,5,2,2" />
                         <Label
-x:Name="DistanceCourse4"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Distance"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="LabelCourse41"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,5,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="titre"
+                            FontSize="24"
+                            Foreground="White" />
                         <Label
-x:Name="DateCourse4"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Date de départ"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="DistanceCourse4"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Distance"
+                            FontSize="12"
+                            Foreground="White" />
                         <Label
-x:Name="HeureCourse4"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Heure"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="DateCourse4"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Date de départ"
+                            FontSize="12"
+                            Foreground="White" />
                         <Label
-x:Name="PrixCourse4"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Prix"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="HeureCourse4"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Heure"
+                            FontSize="12"
+                            Foreground="White" />
+                        <Label
+                            x:Name="PrixCourse4"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Prix"
+                            FontSize="12"
+                            Foreground="White" />
 
                         <StackPanel.Resources>
                             <Style TargetType="Label">
@@ -620,7 +657,7 @@ Foreground="White" Margin="2,10,2,2" />
                     </StackPanel>
                     <StackPanel
                         Grid.Row="1"
-                        Grid.Column="4"
+                        Grid.Column="5"
                         Margin="20,20,20,18">
                         <Label
                             x:Name="LabelCourse5"
@@ -631,55 +668,61 @@ Foreground="White" Margin="2,10,2,2" />
                             BorderBrush="#00000000"
                             FontSize="16"
                             Foreground="White" />
-                x:Name="LabelCourse5"
-                MinWidth="2"
-                MinHeight="2"
-                HorizontalAlignment="Center"
-                Background="#00403838"
-                BorderBrush="#00000000"
-                FontSize="24"
-                Content="titre"
-                Foreground="White" Margin="2,5,2,2" />
                         <Label
-x:Name="DistanceCourse5"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Distance"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="LabelCourse51"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,5,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="titre"
+                            FontSize="24"
+                            Foreground="White" />
                         <Label
-x:Name="DateCourse5"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Date de départ"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="DistanceCourse5"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Distance"
+                            FontSize="12"
+                            Foreground="White" />
                         <Label
-x:Name="HeureCourse5"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Heure"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="DateCourse5"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Date de départ"
+                            FontSize="12"
+                            Foreground="White" />
                         <Label
-x:Name="PrixCourse5"
-MinWidth="2"
-MinHeight="2"
-HorizontalAlignment="Center"
-Background="#00403838"
-BorderBrush="#00000000"
-FontSize="12"
-Content="Prix"
-Foreground="White" Margin="2,10,2,2" />
+                            x:Name="HeureCourse5"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Heure"
+                            FontSize="12"
+                            Foreground="White" />
+                        <Label
+                            x:Name="PrixCourse5"
+                            MinWidth="2"
+                            MinHeight="2"
+                            Margin="2,10,2,2"
+                            HorizontalAlignment="Center"
+                            Background="#00403838"
+                            BorderBrush="#00000000"
+                            Content="Prix"
+                            FontSize="12"
+                            Foreground="White" />
 
                         <StackPanel.Resources>
                             <Style TargetType="Label">
@@ -690,43 +733,43 @@ Foreground="White" Margin="2,10,2,2" />
                     <RadioButton
                         x:Name="radioChoisir1"
                         Grid.Row="1"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Width="100"
                         Height="25"
-                        Margin="35,283,25,39"
+                        Margin="37,329,53,86"
                         Background="#FFD420FF"
                         Content="Choisir" />
                     <RadioButton
                         x:Name="radioChoisir2"
                         Grid.Row="1"
-                        Grid.Column="2"
+                        Grid.Column="3"
                         Width="100"
                         Height="25"
-                        Margin="35,283,25,39"
+                        Margin="62,329,52,86"
                         Background="#FFD420FF"
                         Content="Choisir" />
                     <RadioButton
                         x:Name="radioChoisir3"
                         Grid.Row="1"
-                        Grid.Column="3"
+                        Grid.Column="4"
                         Width="100"
                         Height="25"
-                        Margin="30,283,30,39"
+                        Margin="58,329,57,86"
                         Background="#FFD420FF"
                         Content="Choisir" />
                     <RadioButton
                         x:Name="radioChoisir4"
                         Grid.Row="1"
-                        Grid.Column="4"
+                        Grid.Column="5"
                         Width="100"
                         Height="25"
-                        Margin="30,283,30,39"
+                        Margin="58,329,57,86"
                         Background="#FFD420FF"
                         Content="Choisir" />
                     <Button
                         x:Name="Validation"
                         Grid.Row="2"
-                        Grid.ColumnSpan="5"
+                        Grid.ColumnSpan="6"
                         Margin="200,40,200,40"
                         Panel.ZIndex="1"
                         Background="Black"
@@ -737,7 +780,7 @@ Foreground="White" Margin="2,10,2,2" />
                         Foreground="White" />
                     <Rectangle
                         Grid.Row="2"
-                        Grid.ColumnSpan="5"
+                        Grid.ColumnSpan="6"
                         Fill="Black" />
                 </Grid>
             </TabItem>
@@ -754,17 +797,23 @@ Foreground="White" Margin="2,10,2,2" />
                         <Label Margin="0,49,0,0" Content="Selectionnez ville" />
                         <TextBox x:Name="TBSelVille" TextChanged="TBSelVille_TextChanged" />
                         <Label Margin="0,50,0,0" Content="Selectionnez fédération" />
-                        <ComboBox x:Name="ComboBoxFederation" SelectionChanged="ComboBoxFederation_SelectionChanged" ItemsSource="{Binding Federation}" DisplayMemberPath="codeFederation">
+                        <ComboBox
+                            x:Name="ComboBoxFederation"
+                            DisplayMemberPath="codeFederation"
+                            ItemsSource="{Binding Federation}"
+                            SelectionChanged="ComboBoxFederation_SelectionChanged">
                             <ComboBoxItem>Aucun</ComboBoxItem>
                         </ComboBox>
                     </StackPanel>
                     <StackPanel Grid.Column="0">
 
                         <DataGrid
-            x:Name="DataGridCoureur"
-            AutoGenerateColumns="False"
-            IsReadOnly="True"
-            ItemsSource="{Binding dgLesCoureurs}" Background="#00F0F0F0" Height="700">
+                            x:Name="DataGridCoureur"
+                            Height="700"
+                            AutoGenerateColumns="False"
+                            Background="#00F0F0F0"
+                            IsReadOnly="True"
+                            ItemsSource="{Binding dgLesCoureurs}">
 
                             <DataGrid.Columns>
                                 <DataGridTextColumn Binding="{Binding LienPhotoCoureur}" Header="Photo" />
@@ -784,8 +833,20 @@ Foreground="White" Margin="2,10,2,2" />
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button x:Name="Bouton_Deconnexion" Background="#FFDDDDDD" VerticalAlignment="Top" HorizontalAlignment="Right" Width="50" Height="50" Margin="0,25,0,0" Click="Bouton_Deconnexion_Click">
-            <Image Height="40" Source="/Image/image.deco.png" Stretch="Fill" Width="40"/>
+        <Button
+            x:Name="Bouton_Deconnexion"
+            Width="50"
+            Height="50"
+            Margin="0,25,0,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Background="#FFDDDDDD"
+            Click="Bouton_Deconnexion_Click">
+            <Image
+                Width="40"
+                Height="40"
+                Source="/Image/image.deco.png"
+                Stretch="Fill" />
         </Button>
     </Grid>
 </Window>

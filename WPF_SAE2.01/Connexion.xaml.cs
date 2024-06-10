@@ -20,6 +20,7 @@ namespace WPF_SAE2._01
     /// </summary>
     public partial class Window1 : Window
     {
+        public bool connect = false;
         private bool TBlogin_isDefaultText = true;
         private bool Lpassword_isShown = true;
 
@@ -35,7 +36,7 @@ namespace WPF_SAE2._01
                             "Database=SAE201Marathon;" +
                             "Search Path =SchemaSAE201;" +
                             $"uid={TBLogin.Text};" +
-                            $"password={TBPassword.Password.ToString()};";
+                            $"password={TBPassword.Password};";
             try
             {
                 DataAccess.Instance.ConnexionBD(strConnexion);
@@ -45,7 +46,8 @@ namespace WPF_SAE2._01
                 Visibility = Visibility.Hidden;
             }
             catch (Exception ex) { MessageBox.Show("erreur"); }
-                           
+
+             connect = true;
             
         }
         public void Fermer()

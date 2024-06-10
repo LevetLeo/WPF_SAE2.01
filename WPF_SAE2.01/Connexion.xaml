@@ -10,9 +10,9 @@
     Height="720"
     WindowState="Maximized"
     mc:Ignorable="d">
-    <Window.DataContext>
-        <local:DataAccess x:Name="data" />
-    </Window.DataContext>
+    <!--<Window.DataContext>
+        <local:ApplicationData x:Name="data"/>
+    </Window.DataContext>-->
     <Grid Background="#FFD843D2" ContextMenuClosing="Grid_ContextMenuClosing">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="33*" />
