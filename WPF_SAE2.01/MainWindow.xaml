@@ -283,7 +283,6 @@
                         RadiusX="20"
                         RadiusY="20" />
                     <RadioButton
-<<<<<<< HEAD
             x:Name="radioChoisir0"
             Grid.Row="1"
             Grid.Column="0"
@@ -292,17 +291,7 @@
             Margin="35,283,25,39"
             Background="#FFD420FF"
             Content="Choisir"/>
-=======
-                        x:Name="radioChoisir0"
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        Width="100"
-                        Height="25"
-                        Margin="62,329,53,86"
-                        Background="#FFD420FF"
-                        Content="Choisir" />
->>>>>>> 6f49fe968dc246397956f9112df317def91e244b
-                    <Rectangle
+                        <Rectangle
                         Grid.Row="1"
                         Grid.Column="1"
                         Grid.ColumnSpan="2"
